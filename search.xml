@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[不花钱的百度SVIP]]></title>
-    <url>%2F2019%2F06%2F21%2F%E4%B8%8D%E8%8A%B1%E9%92%B1%E7%9A%84%E7%99%BE%E5%BA%A6SVIP%2F</url>
+    <title><![CDATA[不花钱的百度网盘SVIP]]></title>
+    <url>%2F2019%2F06%2F21%2F%E4%B8%8D%E8%8A%B1%E9%92%B1%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98SVIP%2F</url>
     <content type="text"><![CDATA[百度网盘非SVIP下载网速受限，上传文件大小受限怎么办？ 充会员，那是不可能的，哈哈！ 敲黑板，划重点 macOS上先安装好百度网盘 登录账号 执行脚本 1cd ~/Downloads &amp;&amp; git clone https://github.com/CodeTips/BaiduNetdiskPlugin-macOS.git &amp;&amp; ./BaiduNetdiskPlugin-macOS/Other/[Install.sh] 打开百度网盘，开始享受SVIP吧]]></content>
       <categories>
         <category>Mac 相关操作</category>

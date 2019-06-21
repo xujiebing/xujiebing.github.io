@@ -21,7 +21,7 @@
   <meta property="og:type" content="website">
 <meta property="og:title" content="分类">
 <meta property="og:url" content="https://xujiebing.github.io/categories/index.html">
-<meta property="og:site_name" content="xujiebing">
+<meta property="og:site_name" content="一个叫DB的程序猿">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-20T17:04:01.405Z">
 <meta name="twitter:card" content="summary">
@@ -29,7 +29,7 @@
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/categories/index.html">
   
-    <link rel="alternate" href="/atom.xml" title="xujiebing" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="一个叫DB的程序猿" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -37,6 +37,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
   
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
   
   
 </head>
@@ -50,7 +52,7 @@
       
       <div class="profile-block text-center">
         <a id="avatar" href="https://github.com/xujiebing" target="_blank">
-          <img class="img-circle img-rotate" src="/./source/images/avatar.jpg" width="200" height="200">
+          <img class="img-circle img-rotate" src="https://xujiebing.github.io/images/avatar.png" width="200" height="200">
         </a>
         <h2 id="name" class="hidden-xs hidden-sm">一个叫DB的程序猿</h2>
         <h3 id="title" class="hidden-xs hidden-sm hidden-md">好记性不如烂笔头</h3>
@@ -90,7 +92,7 @@
       </button>
     </div>
     <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav ">
+      <ul class="nav navbar-nav main-nav menu-highlight">
         
         
         <li class="menu-item menu-item-home">
@@ -257,7 +259,7 @@
                 <a class="category-link" href="/categories/Mac-相关操作/">Mac 相关操作</a>
               </p>
               <p class="item-title">
-                <a href="/2019/06/21/不花钱的百度SVIP/" class="title">不花钱的百度SVIP</a>
+                <a href="/2019/06/21/不花钱的百度网盘SVIP/" class="title">不花钱的百度网盘SVIP</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-06-21T09:10:44.000Z" itemprop="datePublished">2019-06-21</time>
@@ -307,9 +309,9 @@
             <div class="collection">
               
                 
-<a href="/2019/06/21/不花钱的百度SVIP/" class="collection-item" target="_blank" itemprop="url">
+<a href="/2019/06/21/不花钱的百度网盘SVIP/" class="collection-item" target="_blank" itemprop="url">
   <time datetime="2019-06-21T09:10:44.000Z" itemprop="datePublished">2019-06-21</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 不花钱的百度SVIP
+  <span>&nbsp;&nbsp;&nbsp;</span> 不花钱的百度网盘SVIP
 </a>
 
 
@@ -337,7 +339,7 @@
 
     <div class="copyright">
     	
-        &copy; 2019 xujiebing
+        &copy; 2019 一个叫DB的程序猿
         
         <div class="publishby">
         	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
@@ -374,6 +376,35 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
 
 
 
