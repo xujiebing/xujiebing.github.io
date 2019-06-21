@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Xcode导出ipa文件时四种类型说明]]></title>
+    <url>%2F2019%2F06%2F21%2FXcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[在 iOS 导出 ipa包的时候 会有四个选项： Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用 Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be code signed with the distribution certificate.） Save for Enterprise Deployment 这种主要针对企业级账户下 准备本地服务器分发的app Save for Development Deployment 针对内部测试使用，主要给开发者的设备(具体也为在开发者账户下添加可用设备的udid)。该app包是开发证书编译的（The app will be code signed with your development certificate）]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>打包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac安全性与隐私设置]]></title>
+    <url>%2F2019%2F06%2F21%2FMac%E5%AE%89%E5%85%A8%E6%80%A7%E4%B8%8E%E9%9A%90%E7%A7%81%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[Mac中安装非AppStore下载的应用时经常会软件已损坏，无法安装的情况。这是需要在安全性与隐私中设置允许任何来源 打开终端 执行命令 1sudo spctl --master-disable 打开安全设置选项，就会发现「任何来源」选项回来了 PS:其实对于升级系统前，已经是任何来源选项的，还会显示，不会改变，但别的选项的，升级后就会消失.]]></content>
+      <categories>
+        <category>Mac 相关操作</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[不花钱的百度网盘SVIP]]></title>
     <url>%2F2019%2F06%2F21%2F%E4%B8%8D%E8%8A%B1%E9%92%B1%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98SVIP%2F</url>
     <content type="text"><![CDATA[百度网盘非SVIP下载网速受限，上传文件大小受限怎么办？ 充会员，那是不可能的，哈哈！ 敲黑板，划重点 macOS上先安装好百度网盘 登录账号 执行脚本 1cd ~/Downloads &amp;&amp; git clone https://github.com/CodeTips/BaiduNetdiskPlugin-macOS.git &amp;&amp; ./BaiduNetdiskPlugin-macOS/Other/[Install.sh] 打开百度网盘，开始享受SVIP吧]]></content>
