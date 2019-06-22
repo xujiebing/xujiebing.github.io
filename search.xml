@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[My Gallery]]></title>
-    <url>%2F2019%2F06%2F22%2FMy-Gallery%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Xcode导出ipa文件时四种类型说明]]></title>
     <url>%2F2019%2F06%2F21%2FXcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[在 iOS 导出 ipa包的时候 会有四个选项： Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用 Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be code signed with the distribution certificate.） Save for Enterprise Deployment 这种主要针对企业级账户下 准备本地服务器分发的app Save for Development Deployment 针对内部测试使用，主要给开发者的设备(具体也为在开发者账户下添加可用设备的udid)。该app包是开发证书编译的（The app will be code signed with your development certificate）]]></content>
