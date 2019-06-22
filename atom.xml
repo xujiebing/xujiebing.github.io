@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-21T11:46:55.285Z</updated>
+  <updated>2019-06-22T15:20:44.168Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,101 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS进入后台申请活跃时间</title>
+    <link href="https://xujiebing.github.io/2019/06/22/iOS%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0%E7%94%B3%E8%AF%B7%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4/"/>
+    <id>https://xujiebing.github.io/2019/06/22/iOS进入后台申请活跃时间/</id>
+    <published>2019-06-22T15:19:55.000Z</published>
+    <updated>2019-06-22T15:20:44.168Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;比较简单，废话不多说，直接上代码。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xujiebing/BackgroundTask&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BackgroundTask&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cocoapods创建podspec说明</title>
+    <link href="https://xujiebing.github.io/2019/06/22/Cocoapods%E5%88%9B%E5%BB%BApodspec%E8%AF%B4%E6%98%8E/"/>
+    <id>https://xujiebing.github.io/2019/06/22/Cocoapods创建podspec说明/</id>
+    <published>2019-06-22T14:58:57.000Z</published>
+    <updated>2019-06-22T15:18:04.675Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一-创建远程私有库&quot;&gt;&lt;a href=&quot;#一-创建远程私有库&quot; class=&quot;headerlink&quot; title=&quot;一.创建远程私有库&quot;&gt;&lt;/a&gt;一.创建远程私有库&lt;/h2&gt;&lt;p&gt;创建一个私有的podspec包括如下那么几个步骤: &lt;/p&gt;
+&lt;figure cla
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS SHA1WithRSA加签验签</title>
+    <link href="https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA%E5%8A%A0%E7%AD%BE%E9%AA%8C%E7%AD%BE/"/>
+    <id>https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA加签验签/</id>
+    <published>2019-06-22T14:55:41.000Z</published>
+    <updated>2019-06-22T14:56:59.486Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这篇文章主要介绍一点关于SHA1WithRSA的干货以及本人在开发的过程中遇到的坑 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xujiebing/RSA-SHA1WithRSA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;干
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="算法" scheme="https://xujiebing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解</title>
+    <link href="https://xujiebing.github.io/2019/06/22/UIImageView%E7%9A%84contentModel%E3%80%81%E8%A3%81%E5%89%AA%E3%80%81layer%E5%B1%9E%E6%80%A7%E4%BB%A5%E5%8F%8A%E5%B1%80%E9%83%A8%E6%8B%89%E4%BC%B8%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/</id>
+    <published>2019-06-22T14:46:29.000Z</published>
+    <updated>2019-06-22T14:56:30.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。 &lt;/p&gt;
+&lt;p&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="UI" scheme="https://xujiebing.github.io/tags/UI/"/>
+    
+  </entry>
   
   <entry>
     <title>Xcode导出ipa文件时四种类型说明</title>

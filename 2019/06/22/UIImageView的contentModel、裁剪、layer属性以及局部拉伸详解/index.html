@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>Xcode导出ipa文件时四种类型说明 | 大兵</title>
-  <meta name="description" content="在 iOS 导出 ipa包的时候 会有四个选项：   Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用  Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be">
-<meta name="keywords" content="打包">
+  <title>UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解 | 大兵</title>
+  <meta name="description" content="在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。  Demo链接  contentMode该属性是UIView的属性，表示view内容的填充样式，不同属性的值的效果可参考demo 。conten">
+<meta name="keywords" content="UI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode导出ipa文件时四种类型说明">
-<meta property="og:url" content="https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/index.html">
+<meta property="og:title" content="UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解">
+<meta property="og:url" content="https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="在 iOS 导出 ipa包的时候 会有四个选项：   Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用  Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be">
+<meta property="og:description" content="在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。  Demo链接  contentMode该属性是UIView的属性，表示view内容的填充样式，不同属性的值的效果可参考demo 。conten">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-21T11:46:55.285Z">
+<meta property="og:updated_time" content="2019-06-22T14:56:30.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode导出ipa文件时四种类型说明">
-<meta name="twitter:description" content="在 iOS 导出 ipa包的时候 会有四个选项：   Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用  Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be">
+<meta name="twitter:title" content="UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解">
+<meta name="twitter:description" content="在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。  Demo链接  contentMode该属性是UIView的属性，表示view内容的填充样式，不同属性的值的效果可参考demo 。conten">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/index.html">
+  <link rel="canonical" href="https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/index.html">
   
     <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
   
@@ -346,21 +346,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#contentMode"><span class="toc-number">1.</span> <span class="toc-text">contentMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#contentModel与图片裁剪"><span class="toc-number">2.</span> <span class="toc-text">contentModel与图片裁剪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片的局部拉伸"><span class="toc-number">3.</span> <span class="toc-text">图片的局部拉伸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android的ImageView的相关属性"><span class="toc-number">4.</span> <span class="toc-text">Android的ImageView的相关属性</span></a></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Xcode导出ipa文件时四种类型说明" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Xcode导出ipa文件时四种类型说明
+      UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解
     </h1>
   
 
@@ -368,8 +368,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/06/21/Xcode导出ipa文件时四种类型说明/" class="article-date">
-	  <time datetime="2019-06-21T11:45:19.000Z" itemprop="datePublished">2019-06-21</time>
+	<a href="/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/" class="article-date">
+	  <time datetime="2019-06-22T14:46:29.000Z" itemprop="datePublished">2019-06-22</time>
 	</a>
 </span>
         
@@ -381,25 +381,82 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/打包/">打包</a>
+	<a class="article-tag-link" href="/tags/UI/">UI</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/21/Xcode导出ipa文件时四种类型说明/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>在 iOS 导出 ipa包的时候 会有四个选项： </p>
-<ol>
-<li>Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用 </li>
-<li>Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be code signed with the distribution certificate.） </li>
-<li>Save for Enterprise Deployment 这种主要针对企业级账户下 准备本地服务器分发的app </li>
-<li>Save for Development Deployment 针对内部测试使用，主要给开发者的设备(具体也为在开发者账户下添加可用设备的udid)。该app包是开发证书编译的（The app will be code signed with your development certificate） </li>
-</ol>
+        <p>在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。 </p>
+<p><a href="https://github.com/xujiebing/UIImageViewDemo" target="_blank" rel="noopener">Demo链接</a> </p>
+<h2 id="contentMode"><a href="#contentMode" class="headerlink" title="contentMode"></a>contentMode</h2><p>该属性是UIView的属性，表示view内容的填充样式，不同属性的值的效果可参考demo 。contentModel一共有13种填充模式，分别是： </p>
+<ul>
+<li><p>UIViewContentModeScaleToFill</p>
+<p> 这是图片显示的默认模式。图片进行非等比例缩放，直到填铺满整个View区域。所以往往造成图片的变形。也就是图片的长度上缩放一定的比例填满显示区域，在宽度上缩放一定的比例填满显示区域。</p>
+</li>
+<li><p>UIViewContentModeScaleAspectFit</p>
+<p>这是等比例缩放，所以使用这种缩放模式的图片永远不会变形。图片按一定比例缩放，直到在长度上或者宽度上达到View的边界就停止。没有填满区域就显示View的背景。 </p>
+</li>
+<li><p>UIViewContentModeScaleAspectFill</p>
+<p>这也是等比例缩放，图片也不会变形。这种缩放和上面的ScaleAspectFit正好相反，图片按一定比例缩放，直到最短的边达到View的边界。所以这种缩放一定会铺满View，超出View的图片你可以选择截掉或者不截掉。 </p>
+</li>
+<li><p>UIViewContentModeRedraw</p>
+<p>重绘。该模式比较特别，它不是用来说明如何展示图片的，而是告诉视图在每次设置或者更改frame的时候自动调用drawRect：方法 </p>
+</li>
+<li><p>UIViewContentModeCenter</p>
+<p>等比缩放，居中显示。 </p>
+</li>
+<li><p>UIViewContentModeTop</p>
+<p>等比缩放，顶部对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeBottom</p>
+<p>等比缩放，底部对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeLeft</p>
+<p>等比缩放，左侧对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeRight</p>
+<p>等比缩放，右侧对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeTopLeft</p>
+<p>等比缩放，左上角对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeTopRight</p>
+<p>等比缩放，右上角对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeBottomLeft</p>
+<p>等比缩放，左下角对齐显示。 </p>
+</li>
+<li><p>UIViewContentModeBottomRight</p>
+<p>等比缩放，右下角对齐显示。 </p>
+</li>
+</ul>
+<h2 id="contentModel与图片裁剪"><a href="#contentModel与图片裁剪" class="headerlink" title="contentModel与图片裁剪"></a>contentModel与图片裁剪</h2><p>通过demo效果，我们发现contentModel也可以实现裁剪功能。那么普通的裁剪方法跟contentModel属性有什么区别，我们可以通过demo来观察。 </p>
+<p>layer属性的简单介绍 </p>
+<p>layer是UIView的一个属性，属于CALayer。CALayer可以在以后专门做一个专题来分享，这里只是对layer做个简单的介绍。 </p>
+<p>可以通过设置UIView的CALayer实现阴影、边框、圆角和透明等效果 </p>
+<p>CALayer没有处理事件响应的接口 </p>
+<p>UIView主要实现UI视觉上的管理，CALayer主要实现UI内容的绘制 </p>
+<h2 id="图片的局部拉伸"><a href="#图片的局部拉伸" class="headerlink" title="图片的局部拉伸"></a>图片的局部拉伸</h2><p>根据不同的业务需求，contentModel以及图片裁剪已经不能满足业务需求，这时候局部拉伸就能发挥作用了。 </p>
+<p>-(UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets; </p>
+<p>该方法是图片的局部拉伸方法。UIEdgesets是设置图片拉伸区域距离图片的顶部、左部、下部、有部的距离。例如，一个50*50像素的图片，UIEdgeInsets全部设置为5，表示对图片中间40 * 40的区域进行拉伸。效果参考demo。 </p>
+<h2 id="Android的ImageView的相关属性"><a href="#Android的ImageView的相关属性" class="headerlink" title="Android的ImageView的相关属性"></a>Android的ImageView的相关属性</h2><p>scaleType属性，控制图片缩放或移动 </p>
+<p>属性值说明 </p>
+<p>center无缩放，按原图大小显示图片，当图片宽高大于View的宽高时，截取图片中间部分显示 </p>
+<p>centerCrop按比例拉伸原图直至于填充满View宽高，并显示在View的中间。 </p>
+<p>centerInside当View的宽高&gt;=图片的宽高时，图片居中显示原大小反之将原图按比例缩放至View的宽高居中显示。 </p>
+<p>fitCenter按比例拉伸原图直至等于View某边的宽高，且显示在View的中间 </p>
+<p>fitStart按比例拉伸图片，且显示在View的左上边 </p>
+<p>fitEnd按比例拉伸图片，且显示在View的右下边 </p>
+<p>fitXY拉伸图片（不按比例）以填充View的宽高 </p>
+<p>matrix用矩阵来绘图 </p>
+<p>tint属性，为图片设置渲染颜色，单独设置时，会覆盖掉原有背景图片 </p>
 
       
     </div>
@@ -412,7 +469,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/" title="Xcode导出ipa文件时四种类型说明" target="_blank" rel="external">https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/</a>
+      <a href="https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/" title="UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解" target="_blank" rel="external">https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -445,12 +502,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/" title="UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2019/06/22/iOS-SHA1WithRSA加签验签/" title="iOS SHA1WithRSA加签验签"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2019/06/21/Mac安全性与隐私设置/" title="Mac安全性与隐私设置"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/06/21/Xcode导出ipa文件时四种类型说明/" title="Xcode导出ipa文件时四种类型说明"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
