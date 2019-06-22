@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/links/index.html</loc>
+    
+    <lastmod>2019-06-22T06:50:54.229Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/06/21/Mac%E5%AE%89%E5%85%A8%E6%80%A7%E4%B8%8E%E9%9A%90%E7%A7%81%E8%AE%BE%E7%BD%AE/</loc>
     
     <lastmod>2019-06-21T11:48:27.405Z</lastmod>
@@ -30,7 +37,7 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/links/index.html</loc>
+    <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-06-20T16:01:12.954Z</lastmod>
     
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://xujiebing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-06-20T16:01:12.954Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-06-20T16:01:12.954Z</lastmod>
     
