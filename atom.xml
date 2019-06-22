@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-21T11:46:55.285Z</updated>
+  <updated>2019-06-22T07:49:10.213Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Gallery</title>
+    <link href="https://xujiebing.github.io/2019/06/22/My-Gallery/"/>
+    <id>https://xujiebing.github.io/2019/06/22/My-Gallery/</id>
+    <published>2019-06-22T07:49:10.000Z</published>
+    <updated>2019-06-22T07:49:10.213Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Xcode导出ipa文件时四种类型说明</title>

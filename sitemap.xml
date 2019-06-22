@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/06/22/My-Gallery/</loc>
+    
+    <lastmod>2019-06-22T07:49:10.213Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/links/index.html</loc>
     
-    <lastmod>2019-06-22T07:02:12.085Z</lastmod>
+    <lastmod>2019-06-22T07:44:57.586Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/books/index.html</loc>
+    
+    <lastmod>2019-06-22T07:35:09.616Z</lastmod>
     
   </url>
   
@@ -37,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-06-20T16:01:12.954Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-06-20T16:01:12.954Z</lastmod>
@@ -51,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/tags/index.html</loc>
     
-    <lastmod>2019-06-20T16:01:12.953Z</lastmod>
+    <lastmod>2019-06-20T16:01:12.954Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/books/index.html</loc>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
     
     <lastmod>2019-06-20T16:01:12.953Z</lastmod>
     
