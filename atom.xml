@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-22T15:20:44.168Z</updated>
+  <updated>2019-06-23T16:01:21.511Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1.iOS开发知识体系</title>
+    <link href="https://xujiebing.github.io/2019/06/23/1.iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    <id>https://xujiebing.github.io/2019/06/23/1.iOS开发知识体系/</id>
+    <published>2019-06-23T15:46:18.000Z</published>
+    <updated>2019-06-23T16:01:21.511Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre class=&quot;mermaid&quot;&gt;graph LR
+iOS(iOS知识体系)--&gt;Base(基础)
+iOS--&gt;App(应用开发)
+iOS--&gt;Principle(原理)
+iOS--&gt;NativeAndWeb(原生与前端)
+
+%%基础
+Base--&gt;Base_Code(开
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="iOS开发高手课" scheme="https://xujiebing.github.io/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS进入后台申请活跃时间</title>
