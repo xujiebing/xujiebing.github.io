@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-23T16:01:21.511Z</updated>
+  <updated>2019-06-24T14:14:25.006Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Xcode打包异常集合</title>
+    <link href="https://xujiebing.github.io/2019/06/24/Xcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/"/>
+    <id>https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/</id>
+    <published>2019-06-24T14:10:47.000Z</published>
+    <updated>2019-06-24T14:14:25.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;1-AppStore上传鉴定时报错&quot;&gt;&lt;a href=&quot;#1-AppStore上传鉴定时报错&quot; class=&quot;headerlink&quot; title=&quot;1. AppStore上传鉴定时报错&quot;&gt;&lt;/a&gt;1. AppStore上传鉴定时报错&lt;/h4&gt;&lt;p&gt;Xcode上传A
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
+    
+  </entry>
   
   <entry>
     <title>1.iOS开发知识体系</title>
@@ -146,7 +169,7 @@ Base--&gt;Base_Code(开
     <link href="https://xujiebing.github.io/2019/06/21/Xcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/"/>
     <id>https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/</id>
     <published>2019-06-21T11:45:19.000Z</published>
-    <updated>2019-06-21T11:46:55.285Z</updated>
+    <updated>2019-06-24T14:12:27.041Z</updated>
     
     <summary type="html">
     
@@ -163,7 +186,7 @@ Base--&gt;Base_Code(开
       <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
     
     
-      <category term="打包" scheme="https://xujiebing.github.io/tags/%E6%89%93%E5%8C%85/"/>
+      <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
     
   </entry>
   
