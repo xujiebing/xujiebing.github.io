@@ -18,18 +18,18 @@
   
   
   <title>Xcode打包异常集合 | 大兵</title>
-  <meta name="description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错： Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0">
+  <meta name="description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错：  Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0  这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证 123cd ~mv .itmstransporter/.old_itmstra">
 <meta name="keywords" content="Xcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode打包异常集合">
 <meta property="og:url" content="https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错： Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0">
+<meta property="og:description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错：  Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0  这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证 123cd ~mv .itmstransporter/.old_itmstra">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T14:14:25.006Z">
+<meta property="og:updated_time" content="2019-06-24T14:16:33.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode打包异常集合">
-<meta name="twitter:description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错： Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0">
+<meta name="twitter:description" content="1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错：  Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0  这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证 123cd ~mv .itmstransporter/.old_itmstra">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/index.html">
   
@@ -394,7 +394,12 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h4 id="1-AppStore上传鉴定时报错"><a href="#1-AppStore上传鉴定时报错" class="headerlink" title="1. AppStore上传鉴定时报错"></a>1. AppStore上传鉴定时报错</h4><p>Xcode上传AppStore验证时报错：</p>
-<p><code>Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0</code></p>
+<blockquote>
+<p>Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0</p>
+</blockquote>
+<p>这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mv .itmstransporter/.old_itmstransporter/</span><br><span class="line">&quot;/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/itms/bin/iTMSTransporter&quot;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -405,6 +410,10 @@
 <blockquote class="mt-2x">
   <ul class="post-copyright list-unstyled">
     
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文作者：</strong>
+      <a href="https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/" title="Xcode打包异常集合" target="_blank" rel="external">大兵</a>
+    </li>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
       <a href="https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/" title="Xcode打包异常集合" target="_blank" rel="external">https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/</a>
