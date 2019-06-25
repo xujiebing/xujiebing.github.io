@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SourceTree如何跳过注册直接使用]]></title>
+    <url>%2F2019%2F06%2F25%2FSourceTree%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87%E6%B3%A8%E5%86%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Xcode打包异常集合]]></title>
     <url>%2F2019%2F06%2F24%2FXcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88%2F</url>
     <content type="text"><![CDATA[1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错： Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0 这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证 123cd ~mv .itmstransporter/.old_itmstransporter/&quot;/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/itms/bin/iTMSTransporter&quot;]]></content>
