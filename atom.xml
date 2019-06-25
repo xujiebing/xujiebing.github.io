@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-25T04:34:11.653Z</updated>
+  <updated>2019-06-25T04:48:02.923Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -21,12 +21,22 @@
     <link href="https://xujiebing.github.io/2019/06/25/SourceTree%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87%E6%B3%A8%E5%86%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8/"/>
     <id>https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</id>
     <published>2019-06-25T04:34:11.000Z</published>
-    <updated>2019-06-25T04:34:11.653Z</updated>
+    <updated>2019-06-25T04:48:02.923Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1qKhbs8hZvRa8CypESLb01w&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SourceTree2.7.6&lt;/a&gt; 密码:gjg6&lt;/p&gt;
+
+      
+    
     </summary>
     
+      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Mac" scheme="https://xujiebing.github.io/tags/Mac/"/>
     
   </entry>
   
@@ -58,14 +68,20 @@
     <link href="https://xujiebing.github.io/2019/06/23/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB(%E4%B8%80)/"/>
     <id>https://xujiebing.github.io/2019/06/23/iOS开发知识体系(一)/</id>
     <published>2019-06-23T15:46:18.000Z</published>
-    <updated>2019-06-25T04:36:34.039Z</updated>
+    <updated>2019-06-25T04:37:24.365Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB(%E4%B8%80).png&quot; alt=&quot;iOS开发知识体系(一)&quot;&gt;&lt;/p&gt;
-&lt;pre class=&quot;mermaid&quot;&gt;graph LR
+        &lt;pre class=&quot;mermaid&quot;&gt;graph LR
+iOS(iOS知识体系)--&gt;Base(基础)
+iOS--&gt;App(应用开发)
+iOS--&gt;Principle(原理)
+iOS--&gt;NativeAndWeb(原生与前端)
+
+%%基础
+Base--&gt;Base_Code(开
       
     
     </summary>
