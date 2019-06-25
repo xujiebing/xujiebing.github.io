@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-25T04:48:02.923Z</updated>
+  <updated>2019-06-25T15:43:47.376Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -17,18 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>SourceTree如何跳过注册直接使用</title>
-    <link href="https://xujiebing.github.io/2019/06/25/SourceTree%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87%E6%B3%A8%E5%86%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8/"/>
-    <id>https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</id>
-    <published>2019-06-25T04:34:11.000Z</published>
-    <updated>2019-06-25T04:48:02.923Z</updated>
+    <title>Cocoapods常用操作命令</title>
+    <link href="https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
+    <id>https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/</id>
+    <published>2019-06-25T15:37:46.000Z</published>
+    <updated>2019-06-25T15:43:47.376Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1qKhbs8hZvRa8CypESLb01w&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SourceTree2.7.6&lt;/a&gt; 密码:gjg6&lt;/p&gt;
-
+        &lt;h2 id=&quot;1-Pod安装&quot;&gt;&lt;a href=&quot;#1-Pod安装&quot; class=&quot;headerlink&quot; title=&quot;1.Pod安装&quot;&gt;&lt;/a&gt;1.Pod安装&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;安装&lt;code&gt;podfile&lt;/code&gt;中的远程库&lt;/p&gt;
+&lt;figure c
+      
+    
+    </summary>
+    
+      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SourceTree如何跳过注册直接使用</title>
+    <link href="https://xujiebing.github.io/2019/06/25/SourceTree%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87%E6%B3%A8%E5%86%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8/"/>
+    <id>https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</id>
+    <published>2019-06-25T04:34:11.000Z</published>
+    <updated>2019-06-25T16:03:27.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Mac上SourceTree免注册使用方式&quot;&gt;&lt;a href=&quot;#Mac上SourceTree免注册使用方式&quot; class=&quot;headerlink&quot; title=&quot;Mac上SourceTree免注册使用方式&quot;&gt;&lt;/a&gt;Mac上SourceTree免注册使用方式&lt;/
       
     
     </summary>
@@ -121,7 +145,7 @@ Base--&gt;Base_Code(开
     <link href="https://xujiebing.github.io/2019/06/22/Cocoapods%E5%88%9B%E5%BB%BApodspec%E8%AF%B4%E6%98%8E/"/>
     <id>https://xujiebing.github.io/2019/06/22/Cocoapods创建podspec说明/</id>
     <published>2019-06-22T14:58:57.000Z</published>
-    <updated>2019-06-22T15:18:04.675Z</updated>
+    <updated>2019-06-25T15:37:11.037Z</updated>
     
     <summary type="html">
     
@@ -133,7 +157,7 @@ Base--&gt;Base_Code(开
     
     </summary>
     
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
