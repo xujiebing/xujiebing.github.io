@@ -17,24 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>SourceTree如何跳过注册直接使用 | 大兵</title>
-  <meta name="description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
-<meta name="keywords" content="Mac">
+  <title>App启动速度优化与监控(二) | 大兵</title>
+  <meta name="description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
+<meta name="keywords" content="iOS开发高手课">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SourceTree如何跳过注册直接使用">
-<meta property="og:url" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/index.html">
+<meta property="og:title" content="App启动速度优化与监控(二)">
+<meta property="og:url" content="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
+<meta property="og:description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/1.png">
-<meta property="og:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/2.png">
-<meta property="og:updated_time" content="2019-06-25T16:27:12.919Z">
+<meta property="og:updated_time" content="2019-06-26T12:16:37.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SourceTree如何跳过注册直接使用">
-<meta name="twitter:description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
-<meta name="twitter:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/1.png">
+<meta name="twitter:title" content="App启动速度优化与监控(二)">
+<meta name="twitter:description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/index.html">
+  <link rel="canonical" href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/index.html">
   
     <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
   
@@ -266,7 +263,7 @@
                 <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
-                <a href="../../26/App启动速度优化与监控(二)/" class="title">App启动速度优化与监控(二)</a>
+                <a href="" class="title">App启动速度优化与监控(二)</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-06-26T12:00:46.000Z" itemprop="datePublished">2019-06-26</time>
@@ -281,7 +278,7 @@
                 <a class="category-link" href="../../../../categories/开发工具/">开发工具</a>
               </p>
               <p class="item-title">
-                <a href="../Cocoapods常用操作命令/" class="title">Cocoapods常用操作命令</a>
+                <a href="../../25/Cocoapods常用操作命令/" class="title">Cocoapods常用操作命令</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-06-25T15:37:46.000Z" itemprop="datePublished">2019-06-25</time>
@@ -296,7 +293,7 @@
                 <a class="category-link" href="../../../../categories/开发工具/">开发工具</a>
               </p>
               <p class="item-title">
-                <a href="" class="title">SourceTree如何跳过注册直接使用</a>
+                <a href="../../25/SourceTree如何跳过注册直接使用/" class="title">SourceTree如何跳过注册直接使用</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-06-25T04:34:11.000Z" itemprop="datePublished">2019-06-25</time>
@@ -349,21 +346,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mac上SourceTree免注册使用方式"><span class="toc-number">1.</span> <span class="toc-text">Mac上SourceTree免注册使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载应用"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 下载应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装应用"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 安装应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-删除文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 删除文件</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-App启动"><span class="toc-number">1.</span> <span class="toc-text">一. App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">1. App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">2. App启动三个阶段</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-SourceTree如何跳过注册直接使用" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-App启动速度优化与监控(二)" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      SourceTree如何跳过注册直接使用
+      App启动速度优化与监控(二)
     </h1>
   
 
@@ -372,19 +369,19 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="" class="article-date">
-	  <time datetime="2019-06-25T04:34:11.000Z" itemprop="datePublished">2019-06-25</time>
+	  <time datetime="2019-06-26T12:00:46.000Z" itemprop="datePublished">2019-06-26</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="../../../../categories/开发工具/">开发工具</a>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="../../../../tags/Mac/">Mac</a>
+	<a class="article-tag-link" href="../../../../tags/iOS开发高手课/">iOS开发高手课</a>
   </span>
 
 
@@ -396,16 +393,36 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Mac上SourceTree免注册使用方式"><a href="#Mac上SourceTree免注册使用方式" class="headerlink" title="Mac上SourceTree免注册使用方式"></a>Mac上SourceTree免注册使用方式</h1><p>​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。</p>
-<h3 id="1-下载应用"><a href="#1-下载应用" class="headerlink" title="1. 下载应用"></a>1. 下载应用</h3><p>​        自行下载SourceTree应用，也可以在该链接下载。<a href="https://pan.baidu.com/s/1qKhbs8hZvRa8CypESLb01w" target="_blank" rel="noopener">SourceTree2.7.6</a> 密码:gjg6</p>
-<h3 id="2-安装应用"><a href="#2-安装应用" class="headerlink" title="2. 安装应用"></a>2. 安装应用</h3><p>​        安装下载好的程序，知道这一步</p>
-<p>​        <img src="1.png" alt="1"></p>
-<p>​        然后点击取消安装，关闭SourceTree</p>
-<h3 id="3-删除文件"><a href="#3-删除文件" class="headerlink" title="3. 删除文件"></a>3. 删除文件</h3><p>​        划重点，关键步骤。</p>
-<p>​        右键应用程序中SourceTree，显示包内容，然后在<code>Contents</code>文件夹中搜索<code>Atlassian</code>，结果如图</p>
-<p>​        <img src="2.png" alt="1"></p>
-<p>​        最后一个操作，删除搜索到的所有文件，整个流程结束。</p>
-<p>​        可以愉快的使用SourceTree了。</p>
+        <h2 id="一-App启动"><a href="#一-App启动" class="headerlink" title="一. App启动"></a>一. App启动</h2><h3 id="1-App启动类型"><a href="#1-App启动类型" class="headerlink" title="1. App启动类型"></a>1. App启动类型</h3><ul>
+<li><p>冷启动</p>
+<p>冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。</p>
+</li>
+<li><p>热启动</p>
+<p>热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。</p>
+</li>
+</ul>
+<h3 id="2-App启动三个阶段"><a href="#2-App启动三个阶段" class="headerlink" title="2. App启动三个阶段"></a>2. App启动三个阶段</h3><ul>
+<li><p>main() 函数执行前；</p>
+<p>在 main() 函数执行前，系统主要会做下面几件事情：</p>
+<ul>
+<li>加载可执行文件（App 的.o 文件的集合）；</li>
+<li>加载动态链接库，进行 rebase 指针调整和 bind 符号绑定；</li>
+<li>Objc 运行时的初始处理，包括 Objc 相关类的注册、category 注册、selector 唯一性检查等；</li>
+<li>初始化，包括了执行 +load() 方法、attribute((constructor)) 修饰的函数的调用、创建 C++ 静态全局变量。</li>
+</ul>
+<p>在该阶段可以做一些事情来优化App的启动速度：</p>
+<ul>
+<li>减少动态库加载。每个库本身都有依赖关系，苹果公司建议使用更少的动态库，并且建议在使用动态库的数量较多时，尽量将多个动态库进行合并。数量上，苹果公司最多可以支持 6 个非系统动态库合并为一个。</li>
+<li>减少加载启动后不会去使用的类或者方法。</li>
+<li>+load() 方法里的内容可以放到首屏渲染完成后再执行，或使用 +initialize() 方法替换掉。因为，在一个+load() 方法里，进行运行时方法替换操作会带来 4 毫秒的消耗。不要小看这 4 毫秒，积少成多，执行 +load() 方法对启动速度的影响会越来越大。</li>
+<li>控制 C++ 全局变量的数量。</li>
+</ul>
+</li>
+<li><p>main() 函数执行后；</p>
+</li>
+<li><p>首屏渲染完成后。</p>
+</li>
+</ul>
 
       
     </div>
@@ -418,11 +435,11 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文作者：</strong>
-      <a href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/" title="SourceTree如何跳过注册直接使用" target="_blank" rel="external">大兵</a>
+      <a href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/" title="App启动速度优化与监控(二)" target="_blank" rel="external">大兵</a>
     </li>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/" title="SourceTree如何跳过注册直接使用" target="_blank" rel="external">https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</a>
+      <a href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/" title="App启动速度优化与监控(二)" target="_blank" rel="external">https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -454,13 +471,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="../Cocoapods常用操作命令/" title="Cocoapods常用操作命令"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="../../24/Xcode打包异常集合/" title="Xcode打包异常集合"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="../../25/Cocoapods常用操作命令/" title="Cocoapods常用操作命令"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

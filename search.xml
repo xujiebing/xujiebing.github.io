@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[App启动速度优化与监控]]></title>
-    <url>%2F2019%2F06%2F26%2FApp%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7%2F</url>
-    <content type="text"><![CDATA[一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。 热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。 2. App启动三个阶段 main() 函数执行前； 在 main() 函数执行前，系统主要会做下面几件事情： 加载可执行文件（App 的.o 文件的集合）； 加载动态链接库，进行 rebase 指针调整和 bind 符号绑定； Objc 运行时的初始处理，包括 Objc 相关类的注册、category 注册、selector 唯一性检查等； 初始化，包括了执行 +load() 方法、attribute((constructor)) 修饰的函数的调用、创建 C++ 静态全局变量。 在该阶段可以做一些事情来优化App的启动速度： 减少动态库加载。每个库本身都有依赖关系，苹果公司建议使用更少的动态库，并且建议在使用动态库的数量较多时，尽量将多个动态库进行合并。数量上，苹果公司最多可以支持 6 个非系统动态库合并为一个。 减少加载启动后不会去使用的类或者方法。 +load() 方法里的内容可以放到首屏渲染完成后再执行，或使用 +initialize() 方法替换掉。因为，在一个+load() 方法里，进行运行时方法替换操作会带来 4 毫秒的消耗。不要小看这 4 毫秒，积少成多，执行 +load() 方法对启动速度的影响会越来越大。 控制 C++ 全局变量的数量。 极客时间版权所有: https://time.geekbang.org/column/article/85331 极客时间版权所有: https://time.geekbang.org/column/article/85331 极客时间版权所有: https://time.geekbang.org/column/article/85331 极客时间版权所有: https://time.geekbang.org/column/article/85331 极客时间版权所有: https://time.geekbang.org/column/article/85331 极客时间版权所有: https://time.geekbang.org/column/article/85331 main() 函数执行后； 首屏渲染完成后。]]></content>
+    <title><![CDATA[App启动速度优化与监控(二)]]></title>
+    <url>%2F2019%2F06%2F26%2FApp%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7(%E4%BA%8C)%2F</url>
+    <content type="text"><![CDATA[一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。 热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。 2. App启动三个阶段 main() 函数执行前； 在 main() 函数执行前，系统主要会做下面几件事情： 加载可执行文件（App 的.o 文件的集合）； 加载动态链接库，进行 rebase 指针调整和 bind 符号绑定； Objc 运行时的初始处理，包括 Objc 相关类的注册、category 注册、selector 唯一性检查等； 初始化，包括了执行 +load() 方法、attribute((constructor)) 修饰的函数的调用、创建 C++ 静态全局变量。 在该阶段可以做一些事情来优化App的启动速度： 减少动态库加载。每个库本身都有依赖关系，苹果公司建议使用更少的动态库，并且建议在使用动态库的数量较多时，尽量将多个动态库进行合并。数量上，苹果公司最多可以支持 6 个非系统动态库合并为一个。 减少加载启动后不会去使用的类或者方法。 +load() 方法里的内容可以放到首屏渲染完成后再执行，或使用 +initialize() 方法替换掉。因为，在一个+load() 方法里，进行运行时方法替换操作会带来 4 毫秒的消耗。不要小看这 4 毫秒，积少成多，执行 +load() 方法对启动速度的影响会越来越大。 控制 C++ 全局变量的数量。 main() 函数执行后； 首屏渲染完成后。]]></content>
       <categories>
         <category>iOS</category>
       </categories>
