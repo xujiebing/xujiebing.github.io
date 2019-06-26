@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-25T15:43:47.376Z</updated>
+  <updated>2019-06-26T09:20:09.327Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
     <id>https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/</id>
     <published>2019-06-25T15:37:46.000Z</published>
-    <updated>2019-06-25T15:43:47.376Z</updated>
+    <updated>2019-06-26T09:20:09.327Z</updated>
     
     <summary type="html">
     
       
       
         &lt;h2 id=&quot;1-Pod安装&quot;&gt;&lt;a href=&quot;#1-Pod安装&quot; class=&quot;headerlink&quot; title=&quot;1.Pod安装&quot;&gt;&lt;/a&gt;1.Pod安装&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;安装&lt;code&gt;podfile&lt;/code&gt;中的远程库&lt;/p&gt;
-&lt;figure c
+&lt;li&gt;&lt;p&gt;创建Podfile文件&lt;/p&gt;
+&lt;figure class=&quot;highlight 
       
     
     </summary>

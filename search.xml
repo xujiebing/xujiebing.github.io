@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Cocoapods常用操作命令]]></title>
     <url>%2F2019%2F06%2F25%2FCocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[1.Pod安装 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除制定的缓存文件 1pod cache clean AFNetworking]]></content>
+    <content type="text"><![CDATA[1.Pod安装 创建Podfile文件 1pod init 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除制定的缓存文件 1pod cache clean AFNetworking]]></content>
       <categories>
         <category>开发工具</category>
       </categories>

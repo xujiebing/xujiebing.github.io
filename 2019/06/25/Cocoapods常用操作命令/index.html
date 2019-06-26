@@ -18,18 +18,18 @@
   
   
   <title>Cocoapods常用操作命令 | 大兵</title>
-  <meta name="description" content="1.Pod安装 安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
+  <meta name="description" content="1.Pod安装 创建Podfile文件 1pod init  安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
 <meta name="keywords" content="CocoaPods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cocoapods常用操作命令">
 <meta property="og:url" content="https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="1.Pod安装 安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
+<meta property="og:description" content="1.Pod安装 创建Podfile文件 1pod init  安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-25T15:43:47.376Z">
+<meta property="og:updated_time" content="2019-06-26T09:20:09.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cocoapods常用操作命令">
-<meta name="twitter:description" content="1.Pod安装 安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
+<meta name="twitter:description" content="1.Pod安装 创建Podfile文件 1pod init  安装podfile中的远程库 1pod install  安装podfile中的远程库，但不更新本地spec文件   2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list  删除制定的缓存文件 1pod cache clean AFNetworking">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/index.html">
   
@@ -394,8 +394,11 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h2 id="1-Pod安装"><a href="#1-Pod安装" class="headerlink" title="1.Pod安装"></a>1.Pod安装</h2><ul>
+<li><p>创建Podfile文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod init</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>安装<code>podfile</code>中的远程库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装<code>podfile</code>中的远程库，但不更新本地spec文件</p>
 </li>
