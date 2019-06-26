@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-06-26T09:20:09.327Z</updated>
+  <updated>2019-06-26T12:13:15.615Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>App启动速度优化与监控</title>
+    <link href="https://xujiebing.github.io/2019/06/26/App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7/"/>
+    <id>https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/</id>
+    <published>2019-06-26T12:00:46.000Z</published>
+    <updated>2019-06-26T12:13:15.615Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一-App启动&quot;&gt;&lt;a href=&quot;#一-App启动&quot; class=&quot;headerlink&quot; title=&quot;一. App启动&quot;&gt;&lt;/a&gt;一. App启动&lt;/h2&gt;&lt;h3 id=&quot;1-App启动类型&quot;&gt;&lt;a href=&quot;#1-App启动类型&quot; class=&quot;head
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="iOS开发高手课" scheme="https://xujiebing.github.io/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Cocoapods常用操作命令</title>
