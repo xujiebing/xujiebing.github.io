@@ -18,18 +18,18 @@
   
   
   <title>App启动速度优化与监控(二) | 大兵</title>
-  <meta name="description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
+  <meta name="description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
 <meta name="keywords" content="iOS开发高手课">
 <meta property="og:type" content="article">
 <meta property="og:title" content="App启动速度优化与监控(二)">
 <meta property="og:url" content="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
+<meta property="og:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-26T12:16:37.183Z">
+<meta property="og:updated_time" content="2019-06-27T02:21:03.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App启动速度优化与监控(二)">
-<meta name="twitter:description" content="一. App启动1. App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   2. App启动三个阶段 main() 函数执行前； 在 mai">
+<meta name="twitter:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/index.html">
   
@@ -346,7 +346,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-App启动"><span class="toc-number">1.</span> <span class="toc-text">一. App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">1. App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">2. App启动三个阶段</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动"><span class="toc-number">1.</span> <span class="toc-text">App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">App启动三个阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动速度优化"><span class="toc-number">2.</span> <span class="toc-text">App启动速度优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能级别的启动优化"><span class="toc-number">2.1.</span> <span class="toc-text">功能级别的启动优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法级别的启动优化"><span class="toc-number">2.2.</span> <span class="toc-text">方法级别的启动优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#优化对资源的操作"><span class="toc-number">2.2.1.</span> <span class="toc-text">优化对资源的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对App启动方法耗时进行监控"><span class="toc-number">2.2.2.</span> <span class="toc-text">对App启动方法耗时进行监控</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -393,7 +393,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="一-App启动"><a href="#一-App启动" class="headerlink" title="一. App启动"></a>一. App启动</h2><h3 id="1-App启动类型"><a href="#1-App启动类型" class="headerlink" title="1. App启动类型"></a>1. App启动类型</h3><ul>
+        <h2 id="App启动"><a href="#App启动" class="headerlink" title="App启动"></a>App启动</h2><h3 id="App启动类型"><a href="#App启动类型" class="headerlink" title="App启动类型"></a>App启动类型</h3><ul>
 <li><p>冷启动</p>
 <p>冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。</p>
 </li>
@@ -401,7 +401,7 @@
 <p>热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。</p>
 </li>
 </ul>
-<h3 id="2-App启动三个阶段"><a href="#2-App启动三个阶段" class="headerlink" title="2. App启动三个阶段"></a>2. App启动三个阶段</h3><ul>
+<h3 id="App启动三个阶段"><a href="#App启动三个阶段" class="headerlink" title="App启动三个阶段"></a>App启动三个阶段</h3><ul>
 <li><p>main() 函数执行前；</p>
 <p>在 main() 函数执行前，系统主要会做下面几件事情：</p>
 <ul>
@@ -419,11 +419,25 @@
 </ul>
 </li>
 <li><p>main() 函数执行后；</p>
+<p>main() 函数执行后的阶段，指的是从 main() 函数执行开始，到 appDelegate 的 didFinishLaunchingWithOptions方法里首屏渲染相关方法执行完成。</p>
+<p>首页的业务代码都是要在这个阶段，也就是首屏渲染前执行的，主要包括：</p>
+<ul>
+<li>首屏初始化所需配置文件的读写操作；</li>
+<li>首屏列表大数据的读取；</li>
+<li>首屏渲染的大量计算等。</li>
+</ul>
 </li>
 <li><p>首屏渲染完成后。</p>
+<p>首屏渲染后的这个阶段，主要完成的是，非首屏其他业务服务模块的初始化、监听的注册、配置文件的读取等。从函数上来看，这个阶段指的就是截止到 didFinishLaunchingWithOptions 方法作用域内执行首屏渲染之后的所有方法执行完成。简单说的话，这个阶段就是从渲染完成时开始，到 didFinishLaunchingWithOptions 方法作用域结束时结束。</p>
+<p>这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。</p>
 </li>
 </ul>
-
+<h2 id="App启动速度优化"><a href="#App启动速度优化" class="headerlink" title="App启动速度优化"></a>App启动速度优化</h2><h3 id="功能级别的启动优化"><a href="#功能级别的启动优化" class="headerlink" title="功能级别的启动优化"></a>功能级别的启动优化</h3><p>功能级别的启动优化要从main()函数执行后这个阶段下手。思路：</p>
+<blockquote>
+<p>main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。</p>
+</blockquote>
+<h3 id="方法级别的启动优化"><a href="#方法级别的启动优化" class="headerlink" title="方法级别的启动优化"></a>方法级别的启动优化</h3><h4 id="优化对资源的操作"><a href="#优化对资源的操作" class="headerlink" title="优化对资源的操作"></a>优化对资源的操作</h4><p>将主线程上线耗时方法滞后或者异步执行。通常情况下，耗时较长的方法主要发生在计算大量数据的情况下，具体的表现就是加载、编辑、存储图片和文件等资源。</p>
+<h4 id="对App启动方法耗时进行监控"><a href="#对App启动方法耗时进行监控" class="headerlink" title="对App启动方法耗时进行监控"></a>对App启动方法耗时进行监控</h4>
       
     </div>
     <div class="article-footer">
