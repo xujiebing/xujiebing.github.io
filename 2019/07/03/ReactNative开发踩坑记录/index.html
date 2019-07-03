@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="大兵的博客">
 <meta property="og:description" content="Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runI">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-03T02:58:55.617Z">
+<meta property="og:updated_time" content="2019-07-03T03:05:01.876Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative开发踩坑记录">
 <meta name="twitter:description" content="Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runI">
@@ -393,12 +393,17 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="Could-not-find-iPhone-XXX"><a href="#Could-not-find-iPhone-XXX" class="headerlink" title="Could not find iPhone XXX"></a>Could not find iPhone XXX</h3><p>描述：</p>
+        <h3 id="Could-not-find-iPhone-XXX"><a href="#Could-not-find-iPhone-XXX" class="headerlink" title="Could not find iPhone XXX"></a>Could not find iPhone XXX</h3><p><strong>描述：</strong></p>
 <p>终端运行<code>react-native run-ios</code>时报错，无法找到模拟器，通过<code>xcrun simctl list devices</code>命令查看本地模拟器列表，已经包含了运行的模拟器</p>
-<p>原因：</p>
+<p><strong>原因：</strong></p>
 <p>不能再通过cli运行<code>react-native run-ios</code></p>
-<p>解决方案：</p>
-<p>进入<code>/node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js</code>,将<code>if (!version.startsWith(&#39;iOS&#39;) &amp;&amp; !version.startsWith(&#39;tvOS&#39;))</code>修改为<code>if (!version.startsWith(&#39;com.apple.CoreSimulator.SimRuntime.iOS&#39;) &amp;&amp; !version.startsWith(&#39;com.apple.CoreSimulator.SimRuntime.tvOS&#39;))</code></p>
+<p><strong>解决方案：</strong></p>
+<p>进入<code>/node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js</code>文件,将</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (!version.startsWith(&apos;iOS&apos;) &amp;&amp; !version.startsWith(&apos;tvOS&apos;))</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (!version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.iOS&apos;) &amp;&amp; !version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.tvOS&apos;))</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
