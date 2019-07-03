@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="大兵的博客">
 <meta property="og:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-27T02:21:03.921Z">
+<meta property="og:updated_time" content="2019-07-03T01:29:42.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App启动速度优化与监控(二)">
 <meta name="twitter:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
@@ -346,7 +346,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动"><span class="toc-number">1.</span> <span class="toc-text">App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">App启动三个阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动速度优化"><span class="toc-number">2.</span> <span class="toc-text">App启动速度优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能级别的启动优化"><span class="toc-number">2.1.</span> <span class="toc-text">功能级别的启动优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法级别的启动优化"><span class="toc-number">2.2.</span> <span class="toc-text">方法级别的启动优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#优化对资源的操作"><span class="toc-number">2.2.1.</span> <span class="toc-text">优化对资源的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对App启动方法耗时进行监控"><span class="toc-number">2.2.2.</span> <span class="toc-text">对App启动方法耗时进行监控</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动"><span class="toc-number">1.</span> <span class="toc-text">App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">App启动三个阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看App启动耗时"><span class="toc-number">2.</span> <span class="toc-text">查看App启动耗时</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看main-调用前花费的总时间"><span class="toc-number">2.1.</span> <span class="toc-text">查看main()调用前花费的总时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看加载了多少动态库"><span class="toc-number">2.2.</span> <span class="toc-text">查看加载了多少动态库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看Main函数启动后的耗时"><span class="toc-number">2.3.</span> <span class="toc-text">查看Main函数启动后的耗时</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动速度优化"><span class="toc-number">3.</span> <span class="toc-text">App启动速度优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能级别的启动优化"><span class="toc-number">3.1.</span> <span class="toc-text">功能级别的启动优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法级别的启动优化"><span class="toc-number">3.2.</span> <span class="toc-text">方法级别的启动优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#优化对资源的操作"><span class="toc-number">3.2.1.</span> <span class="toc-text">优化对资源的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对App启动方法耗时进行监控"><span class="toc-number">3.2.2.</span> <span class="toc-text">对App启动方法耗时进行监控</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何做一个方法级别启动耗时检查工具来辅助分析和监控？"><span class="toc-number">4.</span> <span class="toc-text">如何做一个方法级别启动耗时检查工具来辅助分析和监控？</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -432,12 +432,40 @@
 <p>这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。</p>
 </li>
 </ul>
+<h2 id="查看App启动耗时"><a href="#查看App启动耗时" class="headerlink" title="查看App启动耗时"></a>查看App启动耗时</h2><h3 id="查看main-调用前花费的总时间"><a href="#查看main-调用前花费的总时间" class="headerlink" title="查看main()调用前花费的总时间"></a>查看main()调用前花费的总时间</h3><p>在Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Arguments-&gt;Environment Variables-&gt;<code>DYLD_PRINT_STATISTICS</code>设置为YES，就可以在控制台中查看main函数执行前总共花费的多长时间。</p>
+<h3 id="查看加载了多少动态库"><a href="#查看加载了多少动态库" class="headerlink" title="查看加载了多少动态库"></a>查看加载了多少动态库</h3><p>在Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Diagnostics-&gt;Logging-&gt;勾选Dynamic Library Loads，就可以在控制台中查看本项目中加载的所有动态库（包括系统的和自己的）。</p>
+<h3 id="查看Main函数启动后的耗时"><a href="#查看Main函数启动后的耗时" class="headerlink" title="查看Main函数启动后的耗时"></a>查看Main函数启动后的耗时</h3><p>main函数调用后的耗时，可以使用一些工具来监控，有一种非常笨但是很实用的方法，就是通过打点，在didFinishLaunchingWithOptions开始前打一个点，在App显示完成第一个界面再打一个点，计算两个点之间的耗时，就可以知道main函数调用后到界面显示出来的耗时了，但是这样只能笼统的知道总的耗时，并不能准确的知道时间花在了哪里。</p>
+<p>如果想用这个打点法的话，推荐一个打点工具<a href="https://links.jianshu.com/go?to=%5Bhttps%3A%2F%2Fgithub.com%2Fbeiliao-mobile%2FBLStopwatch%5D(https%3A%2F%2Fgithub.com%2Fbeiliao-mobile%2FBLStopwatch)" target="_blank" rel="noopener">BLStopwatch</a></p>
 <h2 id="App启动速度优化"><a href="#App启动速度优化" class="headerlink" title="App启动速度优化"></a>App启动速度优化</h2><h3 id="功能级别的启动优化"><a href="#功能级别的启动优化" class="headerlink" title="功能级别的启动优化"></a>功能级别的启动优化</h3><p>功能级别的启动优化要从main()函数执行后这个阶段下手。思路：</p>
 <blockquote>
 <p>main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。</p>
 </blockquote>
 <h3 id="方法级别的启动优化"><a href="#方法级别的启动优化" class="headerlink" title="方法级别的启动优化"></a>方法级别的启动优化</h3><h4 id="优化对资源的操作"><a href="#优化对资源的操作" class="headerlink" title="优化对资源的操作"></a>优化对资源的操作</h4><p>将主线程上线耗时方法滞后或者异步执行。通常情况下，耗时较长的方法主要发生在计算大量数据的情况下，具体的表现就是加载、编辑、存储图片和文件等资源。</p>
-<h4 id="对App启动方法耗时进行监控"><a href="#对App启动方法耗时进行监控" class="headerlink" title="对App启动方法耗时进行监控"></a>对App启动方法耗时进行监控</h4>
+<h4 id="对App启动方法耗时进行监控"><a href="#对App启动方法耗时进行监控" class="headerlink" title="对App启动方法耗时进行监控"></a>对App启动方法耗时进行监控</h4><ol>
+<li><p>定时抓取主线程上的方法调用栈，计算一段时间里各个方法耗时</p>
+<ul>
+<li><p>定时间隔设置得长了，会漏掉一些方法，从而导致检查出来的耗时不精确</p>
+</li>
+<li><p>而定时间隔设置得短了，抓取堆栈这个方法本身调用过多也会影响整体耗时，导致结果不准确</p>
+</li>
+</ul>
+<p>这个定时时间小于所有方法的执行时间(如：0.002秒)，那么基本就能监控到所有方法，但是这样计算出来的整体耗时不够准确。一般将这个时间间隔设置成0.01秒，这样虽然很多方法耗时不准确，但是整体耗时比较准确。所以这种方式虽然单个方法耗时不是非常准确，但是相对来说，整体耗时精度够用。如，Xcode自带TimeProfiler就是采用这种方式计算的。</p>
+</li>
+<li><p>对 objc_msgSend 方法进行 hook 来掌握所有方法的执行耗时。</p>
+<ul>
+<li>hook 方法的意思是，在原方法开始执行时换成执行其他你指定的方法，或者在原有方法执行前后执行你指定的方法，来达到掌握和改变指定方法的目的</li>
+<li>hook objc_msgSend 这种方式的优点是非常精确，而缺点是只能针对 Objective-C 的方法。当然，对于 c 方法和 block 也不是没有办法，你可以使用 libffi 的 ffi_call 来达成 hook，但缺点就是编写维护相关工具门槛高</li>
+</ul>
+<p>综上，如果对于检查结果精准度要求高的话，我比较推荐你使用 hook objc_msgSend 方式来检查启动方法的执行耗时。</p>
+</li>
+</ol>
+<h2 id="如何做一个方法级别启动耗时检查工具来辅助分析和监控？"><a href="#如何做一个方法级别启动耗时检查工具来辅助分析和监控？" class="headerlink" title="如何做一个方法级别启动耗时检查工具来辅助分析和监控？"></a>如何做一个方法级别启动耗时检查工具来辅助分析和监控？</h2><p>由于能力有限，根据第一种方法做出来一个计算某个线程的耗时工具，放在了<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2F308823810%2FBSMonitorTimeTool" target="_blank" rel="noopener">这里BSMonitorTimeTool</a>，大致思路如下：</p>
+<ol>
+<li>通过定时器，每隔0.01s，获取一次主线程的函数堆栈，将函数名称、函数地址、函数耗时模型化为<code>TimeModel</code>，保存在<code>callStackDict</code>中，其中key为函数地址，value为TimeModel</li>
+<li>定时执行的回调中，每次都判断函数地址是否存在，如果已经存在此函数地址，就讲对应的TimeModel中的耗时增加0.01s；如果不存在此函数地址，就初始化一个TimeModel，并将时间设置为0.01s。</li>
+<li>当主界面显示完成之后，输出此<code>callStackDict</code>，即可查看主线程中每个方法的耗时</li>
+</ol>
+
       
     </div>
     <div class="article-footer">
