@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-03T01:29:42.624Z</updated>
+  <updated>2019-07-03T02:58:55.617Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ReactNative开发踩坑记录</title>
+    <link href="https://xujiebing.github.io/2019/07/03/ReactNative%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/</id>
+    <published>2019-07-03T02:48:58.000Z</published>
+    <updated>2019-07-03T02:58:55.617Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Could-not-find-iPhone-XXX&quot;&gt;&lt;a href=&quot;#Could-not-find-iPhone-XXX&quot; class=&quot;headerlink&quot; title=&quot;Could not find iPhone XXX&quot;&gt;&lt;/a&gt;Could not f
+      
+    
+    </summary>
+    
+      <category term="ReactNative" scheme="https://xujiebing.github.io/categories/ReactNative/"/>
+    
+    
+      <category term="React" scheme="https://xujiebing.github.io/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>App启动速度优化与监控(二)</title>
