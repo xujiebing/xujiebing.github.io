@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-03T03:05:01.876Z</updated>
+  <updated>2019-07-04T22:48:15.963Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS申请后台活跃时间</title>
+    <link href="https://xujiebing.github.io/2019/07/05/iOS%E7%94%B3%E8%AF%B7%E5%90%8E%E5%8F%B0%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4/"/>
+    <id>https://xujiebing.github.io/2019/07/05/iOS申请后台活跃时间/</id>
+    <published>2019-07-04T22:48:15.000Z</published>
+    <updated>2019-07-04T22:48:15.963Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ReactNative开发踩坑记录</title>

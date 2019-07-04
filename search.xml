@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS申请后台活跃时间]]></title>
+    <url>%2F2019%2F07%2F05%2FiOS%E7%94%B3%E8%AF%B7%E5%90%8E%E5%8F%B0%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[ReactNative开发踩坑记录]]></title>
     <url>%2F2019%2F07%2F03%2FReactNative%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js文件,将 1if (!version.startsWith(&apos;iOS&apos;) &amp;&amp; !version.startsWith(&apos;tvOS&apos;)) 修改为 1if (!version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.iOS&apos;) &amp;&amp; !version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.tvOS&apos;))]]></content>
