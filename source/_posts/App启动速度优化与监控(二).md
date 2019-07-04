@@ -106,8 +106,12 @@ main函数调用后的耗时，可以使用一些工具来监控，有一种非�
 
 ## 如何做一个方法级别启动耗时检查工具来辅助分析和监控？
 
-由于能力有限，根据第一种方法做出来一个计算某个线程的耗时工具，放在了[这里BSMonitorTimeTool](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2F308823810%2FBSMonitorTimeTool)，大致思路如下：
+根据TimeProfiler原理，实现了一个计算主线程上所有方法耗时的[工具(点我)](https://github.com/xujiebing/DBMonitorTime)，大致思路如下：
 
 1. 通过定时器，每隔0.01s，获取一次主线程的函数堆栈，将函数名称、函数地址、函数耗时模型化为`TimeModel`，保存在`callStackDict`中，其中key为函数地址，value为TimeModel
 2. 定时执行的回调中，每次都判断函数地址是否存在，如果已经存在此函数地址，就讲对应的TimeModel中的耗时增加0.01s；如果不存在此函数地址，就初始化一个TimeModel，并将时间设置为0.01s。
 3. 当主界面显示完成之后，输出此`callStackDict`，即可查看主线程中每个方法的耗时
+
+
+
+> ## 欢迎各位大佬指教
