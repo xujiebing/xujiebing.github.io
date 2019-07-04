@@ -13,9 +13,15 @@ type:
 
 ## 1.Pod安装
 
+* 创建Podfile文件
+
+  ```ruby
+  pod init
+  ```
+
 * 安装`podfile`中的远程库
 
-  ```
+  ```ruby
   pod install
   ```
 
