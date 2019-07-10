@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-04T22:48:15.963Z</updated>
+  <updated>2019-07-04T23:01:40.049Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -21,11 +21,20 @@
     <link href="https://xujiebing.github.io/2019/07/05/iOS%E7%94%B3%E8%AF%B7%E5%90%8E%E5%8F%B0%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4/"/>
     <id>https://xujiebing.github.io/2019/07/05/iOS申请后台活跃时间/</id>
     <published>2019-07-04T22:48:15.000Z</published>
-    <updated>2019-07-04T22:48:15.963Z</updated>
+    <updated>2019-07-04T23:01:40.049Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。&lt;/p&gt;
+&lt;p&gt;苹果在4.0以后提供了一种申请后台时间的机制：&lt;/p&gt;
+&lt;fi
+      
+    
     </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
     
     
   </entry>
@@ -54,11 +63,11 @@
   </entry>
   
   <entry>
-    <title>App启动速度优化与监控(二)</title>
-    <link href="https://xujiebing.github.io/2019/06/26/App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7(%E4%BA%8C)/"/>
-    <id>https://xujiebing.github.io/2019/06/26/App启动速度优化与监控(二)/</id>
+    <title>App启动速度优化与监控</title>
+    <link href="https://xujiebing.github.io/2019/06/26/App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7/"/>
+    <id>https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/</id>
     <published>2019-06-26T12:00:46.000Z</published>
-    <updated>2019-07-04T11:57:34.278Z</updated>
+    <updated>2019-07-10T12:00:16.567Z</updated>
     
     <summary type="html">
     
@@ -72,7 +81,7 @@
       <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
     
     
-      <category term="iOS开发高手课" scheme="https://xujiebing.github.io/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
     
   </entry>
   
@@ -81,7 +90,7 @@
     <link href="https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
     <id>https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/</id>
     <published>2019-06-25T15:37:46.000Z</published>
-    <updated>2019-06-26T09:20:09.327Z</updated>
+    <updated>2019-07-08T03:08:59.395Z</updated>
     
     <summary type="html">
     
@@ -148,11 +157,11 @@
   </entry>
   
   <entry>
-    <title>iOS开发知识体系(一)</title>
-    <link href="https://xujiebing.github.io/2019/06/23/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB(%E4%B8%80)/"/>
-    <id>https://xujiebing.github.io/2019/06/23/iOS开发知识体系(一)/</id>
+    <title>iOS开发知识体系</title>
+    <link href="https://xujiebing.github.io/2019/06/23/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    <id>https://xujiebing.github.io/2019/06/23/iOS开发知识体系/</id>
     <published>2019-06-23T15:46:18.000Z</published>
-    <updated>2019-06-25T04:37:24.365Z</updated>
+    <updated>2019-07-10T12:00:30.341Z</updated>
     
     <summary type="html">
     
@@ -173,7 +182,7 @@ Base--&gt;Base_Code(开
       <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
     
     
-      <category term="iOS开发高手课" scheme="https://xujiebing.github.io/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
     
   </entry>
   

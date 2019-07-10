@@ -18,14 +18,17 @@
   
   
   <title>iOS申请后台活跃时间 | 大兵</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。 苹果在4.0以后提供了一种申请后台时间的机制： 1(UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void (">
+<meta property="og:type" content="article">
 <meta property="og:title" content="iOS申请后台活跃时间">
 <meta property="og:url" content="https://xujiebing.github.io/2019/07/05/iOS申请后台活跃时间/index.html">
 <meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。 苹果在4.0以后提供了一种申请后台时间的机制： 1(UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void (">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-04T22:48:15.963Z">
+<meta property="og:updated_time" content="2019-07-04T23:01:40.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS申请后台活跃时间">
+<meta name="twitter:description" content="由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。 苹果在4.0以后提供了一种申请后台时间的机制： 1(UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void (">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/07/05/iOS申请后台活跃时间/index.html">
   
@@ -211,7 +214,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +224,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS开发高手课/">iOS开发高手课</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/学习笔记-iOS/">学习笔记-iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +234,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="../../../../tags/CocoaPods/" style="font-size: 13.5px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 14px;">Mac</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.5px;">Xcode</a> <a href="../../../../tags/iOS开发高手课/" style="font-size: 13.5px;">iOS开发高手课</a> <a href="../../../../tags/算法/" style="font-size: 13px;">算法</a>
+      <a href="../../../../tags/CocoaPods/" style="font-size: 13.5px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 14px;">Mac</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.5px;">Xcode</a> <a href="../../../../tags/学习笔记-iOS/" style="font-size: 13.5px;">学习笔记-iOS</a> <a href="../../../../tags/算法/" style="font-size: 13px;">算法</a>
     </div>
   </div>
 
@@ -256,7 +259,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
                 <a href="" class="title">iOS申请后台活跃时间</a>
@@ -289,7 +292,7 @@
                 <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
-                <a href="../../../06/26/App启动速度优化与监控(二)/" class="title">App启动速度优化与监控(二)</a>
+                <a href="../../../06/26/App启动速度优化与监控/" class="title">App启动速度优化与监控</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-06-26T12:00:46.000Z" itemprop="datePublished">2019-06-26</time>
@@ -369,6 +372,11 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
+  </span>
+
         
 
         
@@ -379,7 +387,29 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。</p>
+<p>苹果在4.0以后提供了一种申请后台时间的机制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void (^)(void))handler</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>声明：</p>
+</blockquote>
+<p>标记要开始一个新的长期运行的后台任务</p>
+<blockquote>
+<p>参数：</p>
+</blockquote>
+<p>handler </p>
+<p>应用程序后台剩余时间快到达为0的时候的一个处理回调，你应该使用这个回调来做一些清理工作和后台任务结束的标记，未能明确地结束任务将导致APP的终止，这个处理回调将在主线程中被同步调用。</p>
+<blockquote>
+<p>返回值：</p>
+</blockquote>
+<p>一个新的后台任务的唯一的标示符，你必须将这个值传给endBackgroundTask:方法来标记任务的结束。如果无法在后台运行这个方法将返回UIBackgroundTaskInvalid。</p>
+<blockquote>
+<p>描述：</p>
+</blockquote>
+<p>这个方法会让你的app转到后台以后继续运行一段时间，你可以在一个任务未完成将会导致影响用户体验的情况下调用此方法。例如，你可以调用次方法来获取足够的时间来传输一个很重要的文件到远程服务器或者至少尝试标记一些错误。你不应该随意的调用这个方法来保持你的app在后台长期运行。</p>
+<p>实现比较简单，<a href="https://github.com/xujiebing/BackgroundTask" target="_blank" rel="noopener">点我查看Demo</a></p>
+
       
     </div>
     <div class="article-footer">

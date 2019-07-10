@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[iOS申请后台活跃时间]]></title>
     <url>%2F2019%2F07%2F05%2FiOS%E7%94%B3%E8%AF%B7%E5%90%8E%E5%8F%B0%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。 苹果在4.0以后提供了一种申请后台时间的机制： 1(UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void (^)(void))handler 声明： 标记要开始一个新的长期运行的后台任务 参数： handler 应用程序后台剩余时间快到达为0的时候的一个处理回调，你应该使用这个回调来做一些清理工作和后台任务结束的标记，未能明确地结束任务将导致APP的终止，这个处理回调将在主线程中被同步调用。 返回值： 一个新的后台任务的唯一的标示符，你必须将这个值传给endBackgroundTask:方法来标记任务的结束。如果无法在后台运行这个方法将返回UIBackgroundTaskInvalid。 描述： 这个方法会让你的app转到后台以后继续运行一段时间，你可以在一个任务未完成将会导致影响用户体验的情况下调用此方法。例如，你可以调用次方法来获取足够的时间来传输一个很重要的文件到远程服务器或者至少尝试标记一些错误。你不应该随意的调用这个方法来保持你的app在后台长期运行。 实现比较简单，点我查看Demo]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[ReactNative开发踩坑记录]]></title>
@@ -17,20 +20,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[App启动速度优化与监控(二)]]></title>
-    <url>%2F2019%2F06%2F26%2FApp%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7(%E4%BA%8C)%2F</url>
+    <title><![CDATA[App启动速度优化与监控]]></title>
+    <url>%2F2019%2F06%2F26%2FApp%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7%2F</url>
     <content type="text"><![CDATA[App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。 热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。 App启动三个阶段 main() 函数执行前； 在 main() 函数执行前，系统主要会做下面几件事情： 加载可执行文件（App 的.o 文件的集合）； 加载动态链接库，进行 rebase 指针调整和 bind 符号绑定； Objc 运行时的初始处理，包括 Objc 相关类的注册、category 注册、selector 唯一性检查等； 初始化，包括了执行 +load() 方法、attribute((constructor)) 修饰的函数的调用、创建 C++ 静态全局变量。 在该阶段可以做一些事情来优化App的启动速度： 减少动态库加载。每个库本身都有依赖关系，苹果公司建议使用更少的动态库，并且建议在使用动态库的数量较多时，尽量将多个动态库进行合并。数量上，苹果公司最多可以支持 6 个非系统动态库合并为一个。 减少加载启动后不会去使用的类或者方法。 +load() 方法里的内容可以放到首屏渲染完成后再执行，或使用 +initialize() 方法替换掉。因为，在一个+load() 方法里，进行运行时方法替换操作会带来 4 毫秒的消耗。不要小看这 4 毫秒，积少成多，执行 +load() 方法对启动速度的影响会越来越大。 控制 C++ 全局变量的数量。 main() 函数执行后； main() 函数执行后的阶段，指的是从 main() 函数执行开始，到 appDelegate 的 didFinishLaunchingWithOptions方法里首屏渲染相关方法执行完成。 首页的业务代码都是要在这个阶段，也就是首屏渲染前执行的，主要包括： 首屏初始化所需配置文件的读写操作； 首屏列表大数据的读取； 首屏渲染的大量计算等。 首屏渲染完成后。 首屏渲染后的这个阶段，主要完成的是，非首屏其他业务服务模块的初始化、监听的注册、配置文件的读取等。从函数上来看，这个阶段指的就是截止到 didFinishLaunchingWithOptions 方法作用域内执行首屏渲染之后的所有方法执行完成。简单说的话，这个阶段就是从渲染完成时开始，到 didFinishLaunchingWithOptions 方法作用域结束时结束。 这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。 查看App启动耗时查看main()调用前花费的总时间在Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Arguments-&gt;Environment Variables-&gt;DYLD_PRINT_STATISTICS设置为YES，就可以在控制台中查看main函数执行前总共花费的多长时间。 查看加载了多少动态库在Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Diagnostics-&gt;Logging-&gt;勾选Dynamic Library Loads，就可以在控制台中查看本项目中加载的所有动态库（包括系统的和自己的）。 查看Main函数启动后的耗时main函数调用后的耗时，可以使用一些工具来监控，有一种非常笨但是很实用的方法，就是通过打点，在didFinishLaunchingWithOptions开始前打一个点，在App显示完成第一个界面再打一个点，计算两个点之间的耗时，就可以知道main函数调用后到界面显示出来的耗时了，但是这样只能笼统的知道总的耗时，并不能准确的知道时间花在了哪里。 如果想用这个打点法的话，推荐一个打点工具BLStopwatch App启动速度优化功能级别的启动优化功能级别的启动优化要从main()函数执行后这个阶段下手。思路： main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。 方法级别的启动优化优化对资源的操作将主线程上线耗时方法滞后或者异步执行。通常情况下，耗时较长的方法主要发生在计算大量数据的情况下，具体的表现就是加载、编辑、存储图片和文件等资源。 对App启动方法耗时进行监控 定时抓取主线程上的方法调用栈，计算一段时间里各个方法耗时 定时间隔设置得长了，会漏掉一些方法，从而导致检查出来的耗时不精确 而定时间隔设置得短了，抓取堆栈这个方法本身调用过多也会影响整体耗时，导致结果不准确 这个定时时间小于所有方法的执行时间(如：0.002秒)，那么基本就能监控到所有方法，但是这样计算出来的整体耗时不够准确。一般将这个时间间隔设置成0.01秒，这样虽然很多方法耗时不准确，但是整体耗时比较准确。所以这种方式虽然单个方法耗时不是非常准确，但是相对来说，整体耗时精度够用。如，Xcode自带TimeProfiler就是采用这种方式计算的。 对 objc_msgSend 方法进行 hook 来掌握所有方法的执行耗时。 hook 方法的意思是，在原方法开始执行时换成执行其他你指定的方法，或者在原有方法执行前后执行你指定的方法，来达到掌握和改变指定方法的目的 hook objc_msgSend 这种方式的优点是非常精确，而缺点是只能针对 Objective-C 的方法。当然，对于 c 方法和 block 也不是没有办法，你可以使用 libffi 的 ffi_call 来达成 hook，但缺点就是编写维护相关工具门槛高 综上，如果对于检查结果精准度要求高的话，我比较推荐你使用 hook objc_msgSend 方式来检查启动方法的执行耗时。 如何做一个方法级别启动耗时检查工具来辅助分析和监控？根据TimeProfiler原理，实现了一个计算主线程上所有方法耗时的工具(点我)，大致思路如下： 通过定时器，每隔0.01s，获取一次主线程的函数堆栈，将函数名称、函数地址、函数耗时模型化为TimeModel，保存在callStackDict中，其中key为函数地址，value为TimeModel 定时执行的回调中，每次都判断函数地址是否存在，如果已经存在此函数地址，就讲对应的TimeModel中的耗时增加0.01s；如果不存在此函数地址，就初始化一个TimeModel，并将时间设置为0.01s。 当主界面显示完成之后，输出此callStackDict，即可查看主线程中每个方法的耗时 欢迎各位大佬指教]]></content>
       <categories>
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>iOS开发高手课</tag>
+        <tag>学习笔记-iOS</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Cocoapods常用操作命令]]></title>
     <url>%2F2019%2F06%2F25%2FCocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[1.Pod安装 创建Podfile文件 1pod init 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除制定的缓存文件 1pod cache clean AFNetworking]]></content>
+    <content type="text"><![CDATA[1.Pod安装 创建Podfile文件 1pod init 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除制定的缓存文件 1pod cache clean AFNetworking 3.踩坑记录 [!] Attempt to read non existent folder ‘/Users/xxx’ 检查一下上述报错路径中是否包含中文，如果有请更改为全英文路径再重新pod install]]></content>
       <categories>
         <category>开发工具</category>
       </categories>
@@ -61,14 +64,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[iOS开发知识体系(一)]]></title>
-    <url>%2F2019%2F06%2F23%2FiOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB(%E4%B8%80)%2F</url>
+    <title><![CDATA[iOS开发知识体系]]></title>
+    <url>%2F2019%2F06%2F23%2FiOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%2F</url>
     <content type="text"><![CDATA[graph LR iOS(iOS知识体系)-->Base(基础) iOS-->App(应用开发) iOS-->Principle(原理) iOS-->NativeAndWeb(原生与前端) %%基础 Base-->Base_Code(开发阶段) Base-->Base_Test(调试测试阶段) Base-->Base_Release(发布阶段) Base-->Base_Online(上线阶段) Base_Code-->Base_Code0(启动流程) Base_Code-->Base_Code1(界面布局) Base_Code-->Base_Code2(架构设计) Base_Test-->Base_Test0(提速调试) Base_Test-->Base_Test1(静态分析) Base_Release-->Base_Release0(自动埋点) Base_Release-->Base_Release1(体积优化) Base_Online-->Base_Online0(崩溃分析) Base_Online-->Base_Online1(卡顿监控) Base_Online-->Base_Online2(日志搜集) Base_Online-->Base_Online3(性能监控) Base_Online-->Base_Online4(多线程问题) Base_Online-->Base_Online5(电量问题) %%应用开发 App-->App0(GUI框架) App0-->App0_0(UIKit) App0-->App0_1(Core Animation) App0-->App0_2(Core Graphics) App0-->App0_3(Core Image) App0-->App0_4(OpenGL ES) App-->App1(响应式框架) App1-->App1_0(ReactCocoa) App1-->App1_1(RxSwift) App1-->App1_2(EasyReact) App-->App2(动画) App2-->App2_0(Pop) App2-->App2_1(RZTransitions) App-->App3(A/B方案) App-->App4(消息总线) App4-->App4_0(PromiseKit) App4-->App4_1(SwiftTask) App-->App5(JSON处理) App5-->App5_0(JSONModel) App5-->App5_1(Mantle) App5-->App5_2(JSONDecoder) App-->App6(布局框架) App6-->App6_0(Masonry) App6-->App6_1(SnapKit) App6-->App6_2(Cartography) App6-->App6_3(Yoga) App-->App7(富文本) App7-->App7_0(YYText) App7-->App7_1(DTCoreText) App-->App8(TDD/BDD) App-->App9(编码规范) %%原理 Principle-->Principle0(系统内核 XNU) Principle-->Principle1(AOP) Principle1-->Principle1_0(Runtime Method Swizzling) Principle1-->Principle1_1(libffi) Principle-->Principle2(内存管理) Principle-->Principle3(编译) %%原生与前端 NativeAndWeb-->NativeAndWeb0(JavaScriptCore) NativeAndWeb-->NativeAndWeb1(跨端方案) NativeAndWeb1-->NativeAndWeb1_0(React Native) NativeAndWeb1-->NativeAndWeb1_1(Weex) NativeAndWeb1-->NativeAndWeb1_2(Flutter) NativeAndWeb1-->NativeAndWeb1_3(H5) NativeAndWeb-->NativeAndWeb2(布局区别) NativeAndWeb2-->NativeAndWeb2_0(原生布局) NativeAndWeb2-->NativeAndWeb2_1(前端布局) NativeAndWeb-->NativeAndWeb3(渲染区别) NativeAndWeb3-->NativeAndWeb3_0(原生渲染) NativeAndWeb3-->NativeAndWeb3_1(React Native渲染) NativeAndWeb3-->NativeAndWeb3_2(Flutter渲染) NativeAndWeb-->NativeAndWeb4(动态化方案分析) NativeAndWeb4-->NativeAndWeb4_0(WaxPatch) NativeAndWeb4-->NativeAndWeb4_1(JSPatch) NativeAndWeb4-->NativeAndWeb4_2(OCS) NativeAndWeb4-->NativeAndWeb4_3(低风险方案)]]></content>
       <categories>
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>iOS开发高手课</tag>
+        <tag>学习笔记-iOS</tag>
       </tags>
   </entry>
   <entry>
