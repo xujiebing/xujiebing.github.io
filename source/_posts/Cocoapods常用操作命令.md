@@ -41,5 +41,9 @@ type:
   pod cache clean AFNetworking
   ```
 
-  
+## 3.踩坑记录
+
+* **[!] Attempt to read non existent folder '/Users/xxx'**
+
+  检查一下上述报错路径中是否包含`中文`，如果有请更改为全英文路径再重新`pod install`
 
