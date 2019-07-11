@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-04T23:01:40.049Z</updated>
+  <updated>2019-07-11T01:52:05.518Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Auto Layout自动布局</title>
+    <link href="https://xujiebing.github.io/2019/07/10/Auto-Layout%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80/"/>
+    <id>https://xujiebing.github.io/2019/07/10/Auto-Layout自动布局/</id>
+    <published>2019-07-10T12:04:21.000Z</published>
+    <updated>2019-07-11T01:52:05.518Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Auto Layout ，是苹果公司提供的一个基于约束布局，动态计算视图大小和位置的库，并且已经集成到了 Xcode 开发环境里。&lt;/p&gt;
+&lt;p&gt;在引入 Auto Layout 这种自动布局方式之前，iOS 开发都是采用手动布局的方式。而手动布局的方式，原始落后、界面开发维
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS申请后台活跃时间</title>
