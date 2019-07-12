@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-11T01:52:05.518Z</updated>
+  <updated>2019-07-12T03:22:55.984Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计合理的架构</title>
+    <link href="https://xujiebing.github.io/2019/07/12/%E8%AE%BE%E8%AE%A1%E5%90%88%E7%90%86%E7%9A%84%E6%9E%B6%E6%9E%84/"/>
+    <id>https://xujiebing.github.io/2019/07/12/设计合理的架构/</id>
+    <published>2019-07-11T22:40:39.000Z</published>
+    <updated>2019-07-12T03:22:55.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单架构向大型项目架构演进中，解决三个问题，即：模块粒度应该如何划分？如何分层？多团队如何协作？而在这其中，模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。&lt;/p&gt;
+&lt;h1 id=&quot;模块粒度应该怎么划分&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>Auto Layout自动布局</title>
