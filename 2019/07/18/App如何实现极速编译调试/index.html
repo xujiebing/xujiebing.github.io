@@ -28,7 +28,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/1.png">
 <meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/2.gif">
-<meta property="og:updated_time" content="2019-07-18T04:40:16.668Z">
+<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/3.gif">
+<meta property="og:updated_time" content="2019-07-19T03:43:33.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App如何实现极速编译调试">
 <meta name="twitter:description" content="虽然动态链接器的实际应用能够帮助我们缩短App编译时间，但是每次修改代码之后还是需要重新启动App，再走一遍调试流程。对于我们开发人员来说，提高编译调试的速度就是提高生产力。那么，目前有哪些工具是可以实现动态调试的呢？ Swift PlaygroundPlayground是 Xcode 里集成的一个能够快速、实时调试程序的工具，可以实现所见即所得的效果，如下图所示：  Flutter Hot Re">
@@ -401,7 +402,9 @@
 <p><img src="1.png" alt></p>
 <h2 id="Flutter-Hot-Reload"><a href="#Flutter-Hot-Reload" class="headerlink" title="Flutter Hot Reload"></a>Flutter Hot Reload</h2><p>Flutter 是 Google 开发的一个跨平台开发框架，调试也是快速实时的。官方的效果动画如下：</p>
 <p><img src="2.gif" alt></p>
-<h2 id="Injection-for-Xcode"><a href="#Injection-for-Xcode" class="headerlink" title="Injection for Xcode"></a>Injection for Xcode</h2>
+<h2 id="Injection-for-Xcode"><a href="#Injection-for-Xcode" class="headerlink" title="Injection for Xcode"></a>Injection for Xcode</h2><p>Injection 的工具可以动态地将 Swift 或 Objective-C 的代码在已运行的程序中执行，以加快调试速度，同时保证程序不用重启。John Holdsworth 也提供了动画演示效果，如下：</p>
+<p><img src="3.gif" alt></p>
+
       
     </div>
     <div class="article-footer">
