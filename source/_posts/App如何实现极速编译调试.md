@@ -67,9 +67,11 @@ Injection 的工具可以动态地将 Swift 或 Objective-C 的代码在已运�
 ![](4.png)
 
 > 注意：InjectionIII 的File Watcher选项要保持选中状态
+
+
 5. 运行项目
 
-​        按照第4步选择完项目路径后，先在`Xcode Command+R`运行一下你的项目，控制台提示如下信息，即表示`InjectionIII`连接成功，连接成功的话`InjectionIII`标志会由蓝变橙（可能不同`InjectionIII`版本颜色不太一样）。
+   按照第4步选择完项目路径后，先在`Xcode Command+R`运行一下你的项目，控制台提示如下信息，即表示`InjectionIII`连接成功，连接成功的话`InjectionIII`标志会由蓝变橙（可能不同`InjectionIII`版本颜色不太一样）。
 
 ![](4.png)
 
