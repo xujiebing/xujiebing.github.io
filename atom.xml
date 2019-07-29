@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-07-24T22:50:15.060Z</updated>
+  <updated>2019-07-25T22:38:46.291Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>埋点方案实现</title>
+    <link href="https://xujiebing.github.io/2019/07/26/%E5%9F%8B%E7%82%B9%E6%96%B9%E6%A1%88%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://xujiebing.github.io/2019/07/26/埋点方案实现/</id>
+    <published>2019-07-25T22:38:02.000Z</published>
+    <updated>2019-07-25T22:38:46.291Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何利用Clang为App提质</title>
+    <link href="https://xujiebing.github.io/2019/07/25/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Clang%E4%B8%BAApp%E6%8F%90%E8%B4%A8/"/>
+    <id>https://xujiebing.github.io/2019/07/25/如何利用Clang为App提质/</id>
+    <published>2019-07-24T22:51:49.000Z</published>
+    <updated>2019-07-24T22:52:14.058Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>OC代码静态分析工具</title>
@@ -445,37 +481,6 @@ Base--&gt;Base_Code(开
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;执行命令&lt;/p&gt;
 &lt;figu
-      
-    
-    </summary>
-    
-      <category term="Mac相关" scheme="https://xujiebing.github.io/categories/Mac%E7%9B%B8%E5%85%B3/"/>
-    
-    
-      <category term="Mac" scheme="https://xujiebing.github.io/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不花钱的百度网盘SVIP</title>
-    <link href="https://xujiebing.github.io/2019/06/21/%E4%B8%8D%E8%8A%B1%E9%92%B1%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98SVIP/"/>
-    <id>https://xujiebing.github.io/2019/06/21/不花钱的百度网盘SVIP/</id>
-    <published>2019-06-21T09:10:44.000Z</published>
-    <updated>2019-06-21T11:48:19.970Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;百度网盘非SVIP下载网速受限，上传文件大小受限怎么办？&lt;/p&gt;
-&lt;p&gt;充会员，那是不可能的，哈哈！&lt;/p&gt;
-&lt;p&gt;敲黑板，划重点&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;macOS上先安装好百度网盘&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;登录账号&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;执
       
     
     </summary>
