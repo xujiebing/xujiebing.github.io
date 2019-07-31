@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>ReactNative开发踩坑记录 | 大兵</title>
-  <meta name="description" content="Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runI">
-<meta name="keywords" content="React">
+  <title>ipa包大小优化 | 大兵</title>
+  <meta name="description" content="官方 App ThinningApp Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。 App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。  App Slicing，会在你向 iTunes Connec">
+<meta name="keywords" content="学习笔记-iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ReactNative开发踩坑记录">
-<meta property="og:url" content="https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/index.html">
+<meta property="og:title" content="ipa包大小优化">
+<meta property="og:url" content="https://xujiebing.github.io/2019/07/30/ipa包大小优化/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runI">
+<meta property="og:description" content="官方 App ThinningApp Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。 App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。  App Slicing，会在你向 iTunes Connec">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-03T03:05:01.876Z">
+<meta property="og:updated_time" content="2019-07-31T23:04:08.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactNative开发踩坑记录">
-<meta name="twitter:description" content="Could not find iPhone XXX描述： 终端运行react-native run-ios时报错，无法找到模拟器，通过xcrun simctl list devices命令查看本地模拟器列表，已经包含了运行的模拟器 原因： 不能再通过cli运行react-native run-ios 解决方案： 进入/node_modules/react-native/local-cli/runI">
+<meta name="twitter:title" content="ipa包大小优化">
+<meta name="twitter:description" content="官方 App ThinningApp Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。 App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。  App Slicing，会在你向 iTunes Connec">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/index.html">
+  <link rel="canonical" href="https://xujiebing.github.io/2019/07/30/ipa包大小优化/index.html">
   
     <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
   
@@ -263,7 +263,7 @@
                 <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
-                <a href="../../30/ipa包大小优化/" class="title">ipa包大小优化</a>
+                <a href="" class="title">ipa包大小优化</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-07-29T22:45:03.000Z" itemprop="datePublished">2019-07-30</time>
@@ -346,21 +346,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Could-not-find-iPhone-XXX"><span class="toc-number">1.</span> <span class="toc-text">Could not find iPhone XXX</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#官方-App-Thinning"><span class="toc-number">1.</span> <span class="toc-text">官方 App Thinning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#无用图片资源"><span class="toc-number">2.</span> <span class="toc-text">无用图片资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片资源压缩"><span class="toc-number">3.</span> <span class="toc-text">图片资源压缩</span></a></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-ReactNative开发踩坑记录" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-ipa包大小优化" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      ReactNative开发踩坑记录
+      ipa包大小优化
     </h1>
   
 
@@ -369,19 +369,19 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="" class="article-date">
-	  <time datetime="2019-07-03T02:48:58.000Z" itemprop="datePublished">2019-07-03</time>
+	  <time datetime="2019-07-29T22:45:03.000Z" itemprop="datePublished">2019-07-30</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="../../../../categories/ReactNative/">ReactNative</a>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="../../../../tags/React/">React</a>
+	<a class="article-tag-link" href="../../../../tags/学习笔记-iOS/">学习笔记-iOS</a>
   </span>
 
 
@@ -393,17 +393,27 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="Could-not-find-iPhone-XXX"><a href="#Could-not-find-iPhone-XXX" class="headerlink" title="Could not find iPhone XXX"></a>Could not find iPhone XXX</h3><p><strong>描述：</strong></p>
-<p>终端运行<code>react-native run-ios</code>时报错，无法找到模拟器，通过<code>xcrun simctl list devices</code>命令查看本地模拟器列表，已经包含了运行的模拟器</p>
-<p><strong>原因：</strong></p>
-<p>不能再通过cli运行<code>react-native run-ios</code></p>
-<p><strong>解决方案：</strong></p>
-<p>进入<code>/node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js</code>文件,将</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (!version.startsWith(&apos;iOS&apos;) &amp;&amp; !version.startsWith(&apos;tvOS&apos;))</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (!version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.iOS&apos;) &amp;&amp; !version.startsWith(&apos;com.apple.CoreSimulator.SimRuntime.tvOS&apos;))</span><br></pre></td></tr></table></figure>
-
+        <h2 id="官方-App-Thinning"><a href="#官方-App-Thinning" class="headerlink" title="官方 App Thinning"></a>官方 App Thinning</h2><p>App Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。</p>
+<p>App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。</p>
+<ul>
+<li>App Slicing，会在你向 iTunes Connect 上传 App 后，对 App 做切割，创建不同的变体，这样就可以适用到不同的设备。</li>
+<li>On-Demand Resources，主要是为游戏多关卡场景服务的。它会根据用户的关卡进度下载随后几个关卡的资源，并且已经过关的资源也会被删掉，这样就可以减少初装 App 的包大小。</li>
+<li>Bitcode ，是针对特定设备进行包大小优化，优化不明显。</li>
+</ul>
+<h2 id="无用图片资源"><a href="#无用图片资源" class="headerlink" title="无用图片资源"></a>无用图片资源</h2><p>删除无用图片的过程，可以概括为下面这 6 大步。</p>
+<ol>
+<li>通过 find 命令获取 App 安装包中的所有资源文件，比如 find /Users/daiming/Project/ -name。</li>
+<li>设置用到的资源的类型，比如 jpg、gif、png、webp。</li>
+<li>使用正则匹配在源码中找出使用到的资源名，比如 pattern = @”@”(.+?)””。</li>
+<li>使用 find 命令找到的所有资源文件，再去掉代码中使用到的资源文件，剩下的就是无用资源了。</li>
+<li>对于按照规则设置的资源名，我们需要在匹配使用资源的正则表达式里添加相应的规则，比如 @“image_%d”。</li>
+<li>确认无用资源后，就可以对这些无用资源执行删除操作了。这个删除操作，你可以使用 NSFileManger 系统类提供的功能来完成。</li>
+</ol>
+<blockquote>
+<p>工具<a href="https://github.com/tinymind/LSUnusedResources" target="_blank" rel="noopener">LSUnusedResources</a></p>
+</blockquote>
+<h2 id="图片资源压缩"><a href="#图片资源压缩" class="headerlink" title="图片资源压缩"></a>图片资源压缩</h2><p>对于 App 来说，图片资源总会在安装包里占个大头儿。对它们最好的处理，就是在不损失图片质量的前提下尽可能地作压缩。目前比较好的压缩方案是，将图片转成 WebP。<a href="https://developers.google.com/speed/webp/" target="_blank" rel="noopener">WebP</a> 是 Google 公司的一个开源项目。</p>
+<p>** 为什么选择WebP**</p>
 
       
     </div>
@@ -416,11 +426,11 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文作者：</strong>
-      <a href="https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/" title="ReactNative开发踩坑记录" target="_blank" rel="external">大兵</a>
+      <a href="https://xujiebing.github.io/2019/07/30/ipa包大小优化/" title="ipa包大小优化" target="_blank" rel="external">大兵</a>
     </li>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/" title="ReactNative开发踩坑记录" target="_blank" rel="external">https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/</a>
+      <a href="https://xujiebing.github.io/2019/07/30/ipa包大小优化/" title="ipa包大小优化" target="_blank" rel="external">https://xujiebing.github.io/2019/07/30/ipa包大小优化/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -452,13 +462,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="../../05/iOS申请后台活跃时间/" title="iOS申请后台活跃时间"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="../../../06/26/App启动速度优化与监控/" title="App启动速度优化与监控"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="../../26/埋点方案实现/" title="埋点方案实现"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
