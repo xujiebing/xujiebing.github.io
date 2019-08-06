@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-08-01T01:33:51.930Z</updated>
+  <updated>2019-08-06T01:29:33.796Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>iOS 崩溃千奇百怪，如何全面监控</title>
+    <link href="https://xujiebing.github.io/2019/08/06/iOS-%E5%B4%A9%E6%BA%83%E5%8D%83%E5%A5%87%E7%99%BE%E6%80%AA%EF%BC%8C%E5%A6%82%E4%BD%95%E5%85%A8%E9%9D%A2%E7%9B%91%E6%8E%A7/"/>
+    <id>https://xujiebing.github.io/2019/08/06/iOS-崩溃千奇百怪，如何全面监控/</id>
+    <published>2019-08-05T23:22:25.000Z</published>
+    <updated>2019-08-06T01:29:33.796Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;常见的崩溃情况&quot;&gt;&lt;a href=&quot;#常见的崩溃情况&quot; class=&quot;headerlink&quot; title=&quot;常见的崩溃情况&quot;&gt;&lt;/a&gt;常见的崩溃情况&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;数组越界：在取数据索引时越界，App 会发生崩溃。还有一种情况，就是给数组添加了 nil
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ipa包大小优化</title>
     <link href="https://xujiebing.github.io/2019/07/30/ipa%E5%8C%85%E5%A4%A7%E5%B0%8F%E4%BC%98%E5%8C%96/"/>
     <id>https://xujiebing.github.io/2019/07/30/ipa包大小优化/</id>
     <published>2019-07-29T22:45:03.000Z</published>
-    <updated>2019-08-01T01:33:51.930Z</updated>
+    <updated>2019-08-01T23:15:41.532Z</updated>
     
     <summary type="html">
     
@@ -458,32 +482,6 @@ Base--&gt;Base_Code(开
     
     
       <category term="UI" scheme="https://xujiebing.github.io/tags/UI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Xcode导出ipa文件时四种类型说明</title>
-    <link href="https://xujiebing.github.io/2019/06/21/Xcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/"/>
-    <id>https://xujiebing.github.io/2019/06/21/Xcode导出ipa文件时四种类型说明/</id>
-    <published>2019-06-21T11:45:19.000Z</published>
-    <updated>2019-06-24T14:12:27.041Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在 iOS 导出 ipa包的时候 会有四个选项： &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用 &lt;/li&gt;
-&lt;li&gt;Save for Ad Hoc Dep
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
     
   </entry>
   

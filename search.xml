@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS 崩溃千奇百怪，如何全面监控]]></title>
+    <url>%2F2019%2F08%2F06%2FiOS-%E5%B4%A9%E6%BA%83%E5%8D%83%E5%A5%87%E7%99%BE%E6%80%AA%EF%BC%8C%E5%A6%82%E4%BD%95%E5%85%A8%E9%9D%A2%E7%9B%91%E6%8E%A7%2F</url>
+    <content type="text"><![CDATA[常见的崩溃情况 数组越界：在取数据索引时越界，App 会发生崩溃。还有一种情况，就是给数组添加了 nil 会崩溃。 多线程问题：在子线程中进行 UI 更新可能会发生崩溃。多个线程进行数据的读取操作，因为处理时机不一致，比如有一个线程在置空数据的同时另一个线程在读取这个数据，可能会出现崩溃情况。 主线程无响应：如果主线程超过系统规定的时间无响应，就会被 Watchdog 杀掉。这时，崩溃问题对应的异常编码是 0x8badf00d。关于这个异常编码，我还会在后文和你说明。 野指针：指针指向一个已删除的对象访问内存区域时，会出现野指针崩溃。野指针问题是需要我们重点关注的，因为它是导致 App 崩溃的最常见，也是最难定位的一种情况。 常见的崩溃情况分类信号可捕获的分类 KVO问题 NSNotification线程问题 数组越界 野指针等 信号不可捕获的分类 后台任务超时 内存打爆 主线程卡顿超阈值等]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>学习笔记-iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ipa包大小优化]]></title>
     <url>%2F2019%2F07%2F30%2Fipa%E5%8C%85%E5%A4%A7%E5%B0%8F%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[官方 App ThinningApp Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。 App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。 App Slicing，会在你向 iTunes Connect 上传 App 后，对 App 做切割，创建不同的变体，这样就可以适用到不同的设备。 On-Demand Resources，主要是为游戏多关卡场景服务的。它会根据用户的关卡进度下载随后几个关卡的资源，并且已经过关的资源也会被删掉，这样就可以减少初装 App 的包大小。 Bitcode ，是针对特定设备进行包大小优化，优化不明显。 无用图片资源删除无用图片的过程，可以概括为下面这 6 大步。 通过 find 命令获取 App 安装包中的所有资源文件，比如 find /Users/daiming/Project/ -name。 设置用到的资源的类型，比如 jpg、gif、png、webp。 使用正则匹配在源码中找出使用到的资源名，比如 pattern = @”@”(.+?)””。 使用 find 命令找到的所有资源文件，再去掉代码中使用到的资源文件，剩下的就是无用资源了。 对于按照规则设置的资源名，我们需要在匹配使用资源的正则表达式里添加相应的规则，比如 @“image_%d”。 确认无用资源后，就可以对这些无用资源执行删除操作了。这个删除操作，你可以使用 NSFileManger 系统类提供的功能来完成。 工具LSUnusedResources 图片资源压缩对于 App 来说，图片资源总会在安装包里占个大头儿。对它们最好的处理，就是在不损失图片质量的前提下尽可能地作压缩。目前比较好的压缩方案是，将图片转成 WebP。WebP 是 Google 公司的一个开源项目。 为什么选择WebP WebP 压缩率高，而且肉眼看不出差异，同时支持有损和无损两种压缩模式。比如，将 Gif 图转为 Animated WebP ，有损压缩模式下可减少 64% 大小，无损压缩模式下可减少 19% 大小。 WebP 支持 Alpha 透明和 24-bit 颜色数，不会像 PNG8 那样因为色彩不够而出现毛边。 代码瘦身]]></content>
+    <content type="text"><![CDATA[官方 App ThinningApp Thinning 是由苹果公司推出的一项可以改善 App 下载进程的新技术，主要是为了解决用户下载 App 耗费过高流量的问题，同时还可以节省用户 iOS 设备的存储空间。 App Thinning 有三种方式，包括：App Slicing、Bitcode、On-Demand Resources。 App Slicing，会在你向 iTunes Connect 上传 App 后，对 App 做切割，创建不同的变体，这样就可以适用到不同的设备。 On-Demand Resources，主要是为游戏多关卡场景服务的。它会根据用户的关卡进度下载随后几个关卡的资源，并且已经过关的资源也会被删掉，这样就可以减少初装 App 的包大小。 Bitcode ，是针对特定设备进行包大小优化，优化不明显。 无用图片资源删除无用图片的过程，可以概括为下面这 6 大步。 通过 find 命令获取 App 安装包中的所有资源文件，比如 find /Users/daiming/Project/ -name。 设置用到的资源的类型，比如 jpg、gif、png、webp。 使用正则匹配在源码中找出使用到的资源名，比如 pattern = @”@”(.+?)””。 使用 find 命令找到的所有资源文件，再去掉代码中使用到的资源文件，剩下的就是无用资源了。 对于按照规则设置的资源名，我们需要在匹配使用资源的正则表达式里添加相应的规则，比如 @“image_%d”。 确认无用资源后，就可以对这些无用资源执行删除操作了。这个删除操作，你可以使用 NSFileManger 系统类提供的功能来完成。 工具LSUnusedResources 图片资源压缩对于 App 来说，图片资源总会在安装包里占个大头儿。对它们最好的处理，就是在不损失图片质量的前提下尽可能地作压缩。目前比较好的压缩方案是，将图片转成 WebP。WebP 是 Google 公司的一个开源项目。 为什么选择WebP WebP 压缩率高，而且肉眼看不出差异，同时支持有损和无损两种压缩模式。比如，将 Gif 图转为 Animated WebP ，有损压缩模式下可减少 64% 大小，无损压缩模式下可减少 19% 大小。 WebP 支持 Alpha 透明和 24-bit 颜色数，不会像 PNG8 那样因为色彩不够而出现毛边。 代码瘦身App 的安装包主要是由资源和可执行文件组成的，所以我们在掌握了对图片资源的处理方式后，需要再一起来看看对可执行文件的瘦身方法。 可执行文件就是 Mach-O 文件，其大小是由代码量决定的。通常情况下，对可执行文件进行瘦身，就是找到并删除无用代码的过程。而查找无用代码时，我们可以按照找无用图片的思路，即： 首先，找出方法和类的全集； 然后，找到使用过的方法和类； 接下来，取二者的差集得到无用代码； 最后，由人工确认无用代码可删除后，进行删除即可。 通过 AppCode 找出无用代码检测结果说明 无用类：Unused class 是无用类，Unused import statement 是无用类引入声明，Unused property 是无用的属性； 无用方法：Unused method 是无用的方法，Unused parameter 是无用参数，Unused instance variable 是无用的实例变量，Unused local variable 是无用的局部变量，Unused value 是无用的值； 无用宏：Unused macro 是无用的宏。 无用全局：Unused global declaration 是无用全局声明。 AppCode 静态检查的问题： JSONModel 里定义了未使用的协议会被判定为无用协议； 如果子类使用了父类的方法，父类的这个方法不会被认为使用了； 通过点的方式使用属性，该属性会被认为没有使用； 使用 performSelector 方式调用的方法也检查不出来，比如 self performSelector:@selector(arrivalRefreshTime)； 运行时声明类的情况检查不出来。比如通过 NSClassFromString 方式调用的类会被查出为没有使用的类，比如 layerClass = NSClassFromString(@“SMFloatLayer”)。还有以 [[self class] accessToken] 这样不指定类名的方式使用的类，会被认为该类没有被使用。像 UITableView 的自定义的 Cell 使用 registerClass，这样的情况也会认为这个 Cell 没有被使用。 基于以上种种原因，使用 AppCode 检查出来的无用代码，还需要人工二次确认才能够安全删除掉。]]></content>
       <categories>
         <category>iOS</category>
       </categories>
