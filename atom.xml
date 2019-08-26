@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-08-06T01:29:33.796Z</updated>
+  <updated>2019-08-26T23:29:05.502Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>利用RunLoop监控卡顿</title>
+    <link href="https://xujiebing.github.io/2019/08/20/%E5%88%A9%E7%94%A8RunLoop%E7%9B%91%E6%8E%A7%E5%8D%A1%E9%A1%BF/"/>
+    <id>https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/</id>
+    <published>2019-08-19T23:19:51.000Z</published>
+    <updated>2019-08-26T23:29:05.502Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;导致卡顿的原因&quot;&gt;&lt;a href=&quot;#导致卡顿的原因&quot; class=&quot;headerlink&quot; title=&quot;导致卡顿的原因&quot;&gt;&lt;/a&gt;导致卡顿的原因&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;复杂 UI 、图文混排的绘制量过大；&lt;/li&gt;
+&lt;li&gt;在主线程上做网络同步请求；&lt;/l
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="学习笔记-iOS" scheme="https://xujiebing.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>iOS 崩溃千奇百怪，如何全面监控</title>
     <link href="https://xujiebing.github.io/2019/08/06/iOS-%E5%B4%A9%E6%BA%83%E5%8D%83%E5%A5%87%E7%99%BE%E6%80%AA%EF%BC%8C%E5%A6%82%E4%BD%95%E5%85%A8%E9%9D%A2%E7%9B%91%E6%8E%A7/"/>
     <id>https://xujiebing.github.io/2019/08/06/iOS-崩溃千奇百怪，如何全面监控/</id>
     <published>2019-08-05T23:22:25.000Z</published>
-    <updated>2019-08-06T01:29:33.796Z</updated>
+    <updated>2019-08-06T23:14:43.659Z</updated>
     
     <summary type="html">
     
@@ -365,7 +390,7 @@
     <link href="https://xujiebing.github.io/2019/06/23/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://xujiebing.github.io/2019/06/23/iOS开发知识体系/</id>
     <published>2019-06-23T15:46:18.000Z</published>
-    <updated>2019-07-10T12:00:30.341Z</updated>
+    <updated>2019-08-26T23:28:22.566Z</updated>
     
     <summary type="html">
     
@@ -458,30 +483,6 @@ Base--&gt;Base_Code(开
     
     
       <category term="算法" scheme="https://xujiebing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解</title>
-    <link href="https://xujiebing.github.io/2019/06/22/UIImageView%E7%9A%84contentModel%E3%80%81%E8%A3%81%E5%89%AA%E3%80%81layer%E5%B1%9E%E6%80%A7%E4%BB%A5%E5%8F%8A%E5%B1%80%E9%83%A8%E6%8B%89%E4%BC%B8%E8%AF%A6%E8%A7%A3/"/>
-    <id>https://xujiebing.github.io/2019/06/22/UIImageView的contentModel、裁剪、layer属性以及局部拉伸详解/</id>
-    <published>2019-06-22T14:46:29.000Z</published>
-    <updated>2019-06-22T14:56:30.197Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在我们开发过程中，UIImageView是一个使用频率相对较高的控件。那么对该控件做一个全面的认识，会对我们业务开发起到十分重要的作用。这篇文章主要讲解UIImageView的contentMode属性和图片的裁剪关系，layer属性以及图片的局部拉伸。 &lt;/p&gt;
-&lt;p&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="UI" scheme="https://xujiebing.github.io/tags/UI/"/>
     
   </entry>
   

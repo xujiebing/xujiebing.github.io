@@ -17,24 +17,23 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>SourceTree如何跳过注册直接使用 | 大兵</title>
-  <meta name="description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
-<meta name="keywords" content="Mac">
+  <title>利用RunLoop监控卡顿 | 大兵</title>
+  <meta name="description" content="导致卡顿的原因 复杂 UI 、图文混排的绘制量过大； 在主线程上做网络同步请求； 在主线程做大量的 IO 操作； 运算量过大，CPU 持续高占用； 死锁和主子线程抢锁。  RunLoop原理RunLoop 是 iOS 开发中的一个基础概念，为了帮助你理解并用好这个对象，接下来我会先和你介绍一下它可以做哪些事儿，以及它为什么可以做成这些事儿。 RunLoop 这个对象，在 iOS 里由 CFRunL">
+<meta name="keywords" content="学习笔记-iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SourceTree如何跳过注册直接使用">
-<meta property="og:url" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/index.html">
+<meta property="og:title" content="利用RunLoop监控卡顿">
+<meta property="og:url" content="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
+<meta property="og:description" content="导致卡顿的原因 复杂 UI 、图文混排的绘制量过大； 在主线程上做网络同步请求； 在主线程做大量的 IO 操作； 运算量过大，CPU 持续高占用； 死锁和主子线程抢锁。  RunLoop原理RunLoop 是 iOS 开发中的一个基础概念，为了帮助你理解并用好这个对象，接下来我会先和你介绍一下它可以做哪些事儿，以及它为什么可以做成这些事儿。 RunLoop 这个对象，在 iOS 里由 CFRunL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/1.png">
-<meta property="og:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/2.png">
-<meta property="og:updated_time" content="2019-06-25T16:27:12.919Z">
+<meta property="og:image" content="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/1.png">
+<meta property="og:updated_time" content="2019-08-26T23:29:05.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SourceTree如何跳过注册直接使用">
-<meta name="twitter:description" content="Mac上SourceTree免注册使用方式​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。 1. 下载应用​        自行下载SourceTree应用，也可以在该链接下载。SourceTree2.7.6 密码:gjg6 2. 安装应用​        安装下载好的程序，知道">
-<meta name="twitter:image" content="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/1.png">
+<meta name="twitter:title" content="利用RunLoop监控卡顿">
+<meta name="twitter:description" content="导致卡顿的原因 复杂 UI 、图文混排的绘制量过大； 在主线程上做网络同步请求； 在主线程做大量的 IO 操作； 运算量过大，CPU 持续高占用； 死锁和主子线程抢锁。  RunLoop原理RunLoop 是 iOS 开发中的一个基础概念，为了帮助你理解并用好这个对象，接下来我会先和你介绍一下它可以做哪些事儿，以及它为什么可以做成这些事儿。 RunLoop 这个对象，在 iOS 里由 CFRunL">
+<meta name="twitter:image" content="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/1.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/index.html">
+  <link rel="canonical" href="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/index.html">
   
     <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
   
@@ -266,7 +265,7 @@
                 <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
-                <a href="../../../08/20/利用RunLoop监控卡顿/" class="title">利用RunLoop监控卡顿</a>
+                <a href="" class="title">利用RunLoop监控卡顿</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-08-19T23:19:51.000Z" itemprop="datePublished">2019-08-20</time>
@@ -281,7 +280,7 @@
                 <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
-                <a href="../../../08/06/iOS-崩溃千奇百怪，如何全面监控/" class="title">iOS 崩溃千奇百怪，如何全面监控</a>
+                <a href="../../06/iOS-崩溃千奇百怪，如何全面监控/" class="title">iOS 崩溃千奇百怪，如何全面监控</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-08-05T23:22:25.000Z" itemprop="datePublished">2019-08-06</time>
@@ -349,21 +348,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mac上SourceTree免注册使用方式"><span class="toc-number">1.</span> <span class="toc-text">Mac上SourceTree免注册使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载应用"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 下载应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装应用"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 安装应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-删除文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 删除文件</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#导致卡顿的原因"><span class="toc-number">1.</span> <span class="toc-text">导致卡顿的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RunLoop原理"><span class="toc-number">2.</span> <span class="toc-text">RunLoop原理</span></a></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-SourceTree如何跳过注册直接使用" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-利用RunLoop监控卡顿" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      SourceTree如何跳过注册直接使用
+      利用RunLoop监控卡顿
     </h1>
   
 
@@ -372,19 +371,19 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="" class="article-date">
-	  <time datetime="2019-06-25T04:34:11.000Z" itemprop="datePublished">2019-06-25</time>
+	  <time datetime="2019-08-19T23:19:51.000Z" itemprop="datePublished">2019-08-20</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="../../../../categories/开发工具/">开发工具</a>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="../../../../tags/Mac/">Mac</a>
+	<a class="article-tag-link" href="../../../../tags/学习笔记-iOS/">学习笔记-iOS</a>
   </span>
 
 
@@ -396,16 +395,47 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Mac上SourceTree免注册使用方式"><a href="#Mac上SourceTree免注册使用方式" class="headerlink" title="Mac上SourceTree免注册使用方式"></a>Mac上SourceTree免注册使用方式</h1><p>​        为什么我会总结这篇文章，想必不用多少。SourceTree的注册问题一直是个头疼的问题，一次无意中发现这么个骚操作，预计记录下来。话不多少，开始正题。</p>
-<h3 id="1-下载应用"><a href="#1-下载应用" class="headerlink" title="1. 下载应用"></a>1. 下载应用</h3><p>​        自行下载SourceTree应用，也可以在该链接下载。<a href="https://pan.baidu.com/s/1qKhbs8hZvRa8CypESLb01w" target="_blank" rel="noopener">SourceTree2.7.6</a> 密码:gjg6</p>
-<h3 id="2-安装应用"><a href="#2-安装应用" class="headerlink" title="2. 安装应用"></a>2. 安装应用</h3><p>​        安装下载好的程序，知道这一步</p>
-<p>​        <img src="1.png" alt="1"></p>
-<p>​        然后点击取消安装，关闭SourceTree</p>
-<h3 id="3-删除文件"><a href="#3-删除文件" class="headerlink" title="3. 删除文件"></a>3. 删除文件</h3><p>​        划重点，关键步骤。</p>
-<p>​        右键应用程序中SourceTree，显示包内容，然后在<code>Contents</code>文件夹中搜索<code>Atlassian</code>，结果如图</p>
-<p>​        <img src="2.png" alt="1"></p>
-<p>​        最后一个操作，删除搜索到的所有文件，整个流程结束。</p>
-<p>​        可以愉快的使用SourceTree了。</p>
+        <h2 id="导致卡顿的原因"><a href="#导致卡顿的原因" class="headerlink" title="导致卡顿的原因"></a>导致卡顿的原因</h2><ul>
+<li>复杂 UI 、图文混排的绘制量过大；</li>
+<li>在主线程上做网络同步请求；</li>
+<li>在主线程做大量的 IO 操作；</li>
+<li>运算量过大，CPU 持续高占用；</li>
+<li>死锁和主子线程抢锁。</li>
+</ul>
+<h2 id="RunLoop原理"><a href="#RunLoop原理" class="headerlink" title="RunLoop原理"></a>RunLoop原理</h2><p>RunLoop 是 iOS 开发中的一个基础概念，为了帮助你理解并用好这个对象，接下来我会先和你介绍一下它可以做哪些事儿，以及它为什么可以做成这些事儿。</p>
+<p>RunLoop 这个对象，在 iOS 里由 CFRunLoop 实现。简单来说，RunLoop 是用来监听输入源，进行调度处理的。这里的输入源可以是输入设备、网络、周期性或者延迟时间、异步回调。RunLoop 会接收两种类型的输入源：一种是来自另一个线程或者来自不同应用的异步消息；另一种是来自预订时间或者重复间隔的同步事件。</p>
+<p>RunLoop 的目的是，当有事件要去处理时保持线程忙，当没有事件要处理时让线程进入休眠。所以，了解 RunLoop 原理不光能够运用到监控卡顿上，还可以提高用户的交互体验。通过将那些繁重而不紧急会大量占用 CPU 的任务（比如图片加载），放到空闲的 RunLoop 模式里执行，就可以避开在 UITrackingRunLoopMode 这个 RunLoop 模式时是执行。UITrackingRunLoopMode 是用户进行滚动操作时会切换到的 RunLoop 模式，避免在这个 RunLoop 模式执行繁重的 CPU 任务，就能避免影响用户交互操作上体验。</p>
+<p><strong>RunLoop执行原理</strong></p>
+<ol>
+<li><p>通知 observers：RunLoop 要开始进入 loop 了。紧接着就进入 loop。</p>
+</li>
+<li><p>开启一个 do while 来保活线程。通知 Observers：RunLoop 会触发 Timer 回调、Source0 回调，接着执行加入的 block。</p>
+</li>
+<li><p>回调触发后，通知 Observers：RunLoop 的线程将进入休眠（sleep）状态。</p>
+</li>
+<li><p>进入休眠后，会等待 mach_port 的消息，以再次唤醒。只有在下面四个事件出现时才会被再次唤醒：</p>
+<ul>
+<li>基于 port 的 Source 事件；</li>
+<li>Timer 时间到；</li>
+<li>RunLoop 超时；</li>
+<li>被调用者唤醒。</li>
+</ul>
+</li>
+<li><p>唤醒时通知 Observer：RunLoop 的线程刚刚被唤醒了。</p>
+</li>
+<li><p>RunLoop 被唤醒后就要开始处理消息了：</p>
+<ul>
+<li>如果是 Timer 时间到的话，就触发 Timer 的回调；</li>
+<li>如果是 dispatch 的话，就执行 block；</li>
+<li>如果是 source1 事件的话，就处理这个事件。</li>
+</ul>
+<p>消息执行完后，就执行加到 loop 里的 block。</p>
+</li>
+<li><p>根据当前 RunLoop 的状态来判断是否需要走下一个 loop。当被外部强制停止或 loop 超时时，就不继续下一个 loop 了，否则继续走下一个 loop 。</p>
+</li>
+</ol>
+<p><strong>整个过程示意图</strong></p>
+<p><img src="1.png" alt="1"> </p>
 
       
     </div>
@@ -418,11 +448,11 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文作者：</strong>
-      <a href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/" title="SourceTree如何跳过注册直接使用" target="_blank" rel="external">大兵</a>
+      <a href="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/" title="利用RunLoop监控卡顿" target="_blank" rel="external">大兵</a>
     </li>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/" title="SourceTree如何跳过注册直接使用" target="_blank" rel="external">https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</a>
+      <a href="https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/" title="利用RunLoop监控卡顿" target="_blank" rel="external">https://xujiebing.github.io/2019/08/20/利用RunLoop监控卡顿/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -454,13 +484,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="../Cocoapods常用操作命令/" title="Cocoapods常用操作命令"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="../../24/Xcode打包异常集合/" title="Xcode打包异常集合"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="../../06/iOS-崩溃千奇百怪，如何全面监控/" title="iOS 崩溃千奇百怪，如何全面监控"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
