@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-09-22T15:16:41.291Z</updated>
+  <updated>2019-09-22T22:46:04.401Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基础算法之字符串类</title>
+    <link href="https://xujiebing.github.io/2019/09/22/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB/"/>
+    <id>https://xujiebing.github.io/2019/09/22/基础算法之字符串类/</id>
+    <published>2019-09-22T15:49:53.000Z</published>
+    <updated>2019-09-22T22:46:04.401Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;字符串翻转&quot;&gt;&lt;a href=&quot;#字符串翻转&quot; class=&quot;headerlink&quot; title=&quot;字符串翻转&quot;&gt;&lt;/a&gt;字符串翻转&lt;/h3&gt;&lt;p&gt;给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。&lt;/p&gt;
+&lt;p&gt;示例 1:&lt;/
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://xujiebing.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="算法" scheme="https://xujiebing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>利用RunLoop监控卡顿</title>
@@ -459,30 +483,6 @@ Base--&gt;Base_Code(开
     
     
       <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS SHA1WithRSA加签验签</title>
-    <link href="https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA%E5%8A%A0%E7%AD%BE%E9%AA%8C%E7%AD%BE/"/>
-    <id>https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA加签验签/</id>
-    <published>2019-06-22T14:55:41.000Z</published>
-    <updated>2019-09-22T15:16:41.284Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这篇文章主要介绍一点关于SHA1WithRSA的干货以及本人在开发的过程中遇到的坑 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/xujiebing/RSA-SHA1WithRSA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;干
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="算法" scheme="https://xujiebing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
