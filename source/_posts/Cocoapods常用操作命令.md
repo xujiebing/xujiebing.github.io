@@ -35,7 +35,7 @@ type:
   pod cache list
   ```
 
-* 删除制定的缓存文件
+* 删除指定的缓存文件
 
   ```ruby
   pod cache clean AFNetworking

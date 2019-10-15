@@ -3,7 +3,7 @@ title: iOS 崩溃千奇百怪，如何全面监控
 toc: true
 date: 2019-08-06 07:22:25
 tags:
-- 学习笔记-iOS
+- Objective-C
 categories:
 - iOS
 ---

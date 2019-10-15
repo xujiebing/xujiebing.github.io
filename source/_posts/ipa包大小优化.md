@@ -3,7 +3,7 @@ title: ipa包大小优化
 toc: true
 date: 2019-07-30 06:45:03
 tags:
-- 学习笔记-iOS
+- Objective-C
 categories:
 - iOS
 ---
