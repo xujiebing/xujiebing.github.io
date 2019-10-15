@@ -19,7 +19,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -30,7 +30,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -41,7 +41,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -52,7 +52,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -63,7 +63,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -74,7 +74,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -85,7 +85,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -96,7 +96,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -107,7 +107,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -118,7 +118,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -128,6 +128,9 @@
       <categories>
         <category>iOS</category>
       </categories>
+      <tags>
+        <tag>Objective-C</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[ReactNative开发踩坑记录]]></title>
@@ -148,7 +151,7 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
   </entry>
   <entry>
@@ -192,16 +195,8 @@
         <category>iOS</category>
       </categories>
       <tags>
-        <tag>学习笔记-iOS</tag>
+        <tag>Objective-C</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[iOS进入后台申请活跃时间]]></title>
-    <url>%2F2019%2F06%2F22%2FiOS%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0%E7%94%B3%E8%AF%B7%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4%2F</url>
-    <content type="text"><![CDATA[比较简单，废话不多说，直接上代码。 BackgroundTask]]></content>
-      <categories>
-        <category>iOS</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[Cocoapods创建podspec说明]]></title>
@@ -222,6 +217,7 @@
         <category>iOS</category>
       </categories>
       <tags>
+        <tag>Objective-C</tag>
         <tag>算法</tag>
       </tags>
   </entry>
@@ -233,6 +229,7 @@
         <category>iOS</category>
       </categories>
       <tags>
+        <tag>Objective-C</tag>
         <tag>UI</tag>
       </tags>
   </entry>
