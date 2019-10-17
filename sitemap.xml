@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/10/16/%E5%B8%B8%E7%94%A8App/</loc>
+    
+    <lastmod>2019-10-15T23:49:01.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/2019/10/16/No-1-%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2019-10-15T23:39:31.235Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/2019/06/21/Xcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2019-10-15T23:07:41.965Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/2019/06/24/Xcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</loc>
+    
+    <lastmod>2019-10-15T23:07:01.491Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2019-10-15T23:00:41.705Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA%E5%8A%A0%E7%AD%BE%E9%AA%8C%E7%AD%BE/</loc>
     
     <lastmod>2019-10-13T14:51:35.438Z</lastmod>
@@ -128,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/links/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/categories/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.297Z</lastmod>
@@ -142,9 +170,9 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/links/index.html</loc>
     
-    <lastmod>2019-09-22T15:16:41.296Z</lastmod>
+    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
     
   </url>
   
@@ -156,23 +184,16 @@
   </url>
   
   <url>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.296Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/06/21/%E4%B8%8D%E8%8A%B1%E9%92%B1%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98SVIP/</loc>
     
     <lastmod>2019-09-22T15:16:41.290Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xujiebing.github.io/2019/06/21/Xcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/</loc>
-    
-    <lastmod>2019-09-22T15:16:41.284Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xujiebing.github.io/2019/06/24/Xcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</loc>
-    
-    <lastmod>2019-09-22T15:16:41.284Z</lastmod>
     
   </url>
   
@@ -187,13 +208,6 @@
     <loc>https://xujiebing.github.io/2019/07/03/ReactNative%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2019-09-22T15:16:41.278Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2019-09-22T15:16:41.277Z</lastmod>
     
   </url>
   

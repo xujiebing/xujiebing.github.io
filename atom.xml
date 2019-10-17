@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-09-22T22:46:04.401Z</updated>
+  <updated>2019-10-15T23:49:01.601Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用App</title>
+    <link href="https://xujiebing.github.io/2019/10/16/%E5%B8%B8%E7%94%A8App/"/>
+    <id>https://xujiebing.github.io/2019/10/16/常用App/</id>
+    <published>2019-10-15T23:04:30.000Z</published>
+    <updated>2019-10-15T23:49:01.601Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="其他" scheme="https://xujiebing.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>No.1 概念</title>
+    <link href="https://xujiebing.github.io/2019/10/16/No-1-%E6%A6%82%E5%BF%B5/"/>
+    <id>https://xujiebing.github.io/2019/10/16/No-1-概念/</id>
+    <published>2019-10-15T22:58:55.000Z</published>
+    <updated>2019-10-15T23:39:31.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-iOS应用逆向工程的作用&quot;&gt;&lt;a href=&quot;#1-iOS应用逆向工程的作用&quot; class=&quot;headerlink&quot; title=&quot;1. iOS应用逆向工程的作用&quot;&gt;&lt;/a&gt;1. iOS应用逆向工程的作用&lt;/h2&gt;&lt;p&gt;iOS逆向工程主要有两个作用：&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="逆向工程" scheme="https://xujiebing.github.io/categories/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>基础算法之字符串类</title>
@@ -345,7 +383,7 @@
     <link href="https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
     <id>https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/</id>
     <published>2019-06-25T15:37:46.000Z</published>
-    <updated>2019-09-22T15:16:41.277Z</updated>
+    <updated>2019-10-15T23:00:41.705Z</updated>
     
     <summary type="html">
     
@@ -393,7 +431,7 @@
     <link href="https://xujiebing.github.io/2019/06/24/Xcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/"/>
     <id>https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/</id>
     <published>2019-06-24T14:10:47.000Z</published>
-    <updated>2019-09-22T15:16:41.284Z</updated>
+    <updated>2019-10-15T23:07:01.491Z</updated>
     
     <summary type="html">
     
@@ -404,7 +442,7 @@
     
     </summary>
     
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
@@ -438,56 +476,6 @@ Base--&gt;Base_Code(开
     
     
       <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cocoapods创建podspec说明</title>
-    <link href="https://xujiebing.github.io/2019/06/22/Cocoapods%E5%88%9B%E5%BB%BApodspec%E8%AF%B4%E6%98%8E/"/>
-    <id>https://xujiebing.github.io/2019/06/22/Cocoapods创建podspec说明/</id>
-    <published>2019-06-22T14:58:57.000Z</published>
-    <updated>2019-09-22T15:16:41.276Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一-创建远程私有库&quot;&gt;&lt;a href=&quot;#一-创建远程私有库&quot; class=&quot;headerlink&quot; title=&quot;一.创建远程私有库&quot;&gt;&lt;/a&gt;一.创建远程私有库&lt;/h2&gt;&lt;p&gt;创建一个私有的podspec包括如下那么几个步骤: &lt;/p&gt;
-&lt;figure cla
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS SHA1WithRSA加签验签</title>
-    <link href="https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA%E5%8A%A0%E7%AD%BE%E9%AA%8C%E7%AD%BE/"/>
-    <id>https://xujiebing.github.io/2019/06/22/iOS-SHA1WithRSA加签验签/</id>
-    <published>2019-06-22T14:55:41.000Z</published>
-    <updated>2019-10-13T14:51:35.438Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这篇文章主要介绍一点关于SHA1WithRSA的干货以及本人在开发的过程中遇到的坑 &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/xujiebing/RSA-SHA1WithRSA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;干
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-      <category term="算法" scheme="https://xujiebing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

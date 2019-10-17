@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用App]]></title>
+    <url>%2F2019%2F10%2F16%2F%E5%B8%B8%E7%94%A8App%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[No.1 概念]]></title>
+    <url>%2F2019%2F10%2F16%2FNo-1-%E6%A6%82%E5%BF%B5%2F</url>
+    <content type="text"><![CDATA[1. iOS应用逆向工程的作用iOS逆向工程主要有两个作用： 分析目标程序，拿到关键信息，可以归类于安全相关的逆向工程 借鉴他人的程序功能来开发自己的软件，可以归类于开发相关的逆向工程 1.1 安全相关的逆向工程 评定安全等级 逆向恶意软件 检查软件后门 去除软件使用限制 1.2 开发相关的逆向工程 逆向系统API 借鉴别的软件 2. iOS应用逆向工程的过程 系统分析 代码分析 3. iOS应用逆向工程的工具iOS逆向工程的工具主要分为四大类： 监测工具 反汇编工具（disassembler） 调试工具（debugger） 开发工具 3.1 监测工具 Reveal snoop-it introspy 3.2 反汇编工具 IDA 支持Windows、Linux、OSX平台和多种处理器架构 Hopper 主要针对苹果操作系统 3.3 调试工具iOS逆向过程中主要使用的是LLDB 3.4 开发工具 Xcode Theos]]></content>
+      <categories>
+        <category>逆向工程</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[基础算法之字符串类]]></title>
     <url>%2F2019%2F09%2F22%2F%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%2F</url>
     <content type="text"><![CDATA[字符串翻转给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。 示例 1: 输入: “Let’s take LeetCode contest”输出: “s’teL ekat edoCteeL tsetnoc” 注意：在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。 1234567function revertWords(string) &#123; let array = string.split(' ') let result = array.map(item =&gt; &#123; return item.split('').reverse().join('') &#125;) return result.join(' ')&#125; 计算二进制子串给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1是组合在一起的。重复出现的子串要计算它们出现的次数。 示例 1 : 输入: “00110011”输出: 6解释: 有6个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。 请注意，一些重复出现的子串要计算它们出现的次数。另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。 1234567891011121314151617181920function subStringArray(string) &#123; let x = string.split(&apos;0&apos;).length - 1 let y = string.split(&apos;1&apos;).length - 1 let length = x &gt; y ? y : x var subArray = [] for (var i = 1; i &lt;= length; i++) &#123; subArray.push(&apos;0&apos;.repeat(i) + &apos;1&apos;.repeat(i)) subArray.push(&apos;1&apos;.repeat(i) + &apos;0&apos;.repeat(i)) &#125; var result = [] subArray.map(item =&gt; &#123; let count = string.split(item).length if (count &gt; 1) &#123; for (var i = 1; i &lt; count; i++) &#123; result.push(item) &#125; &#125; &#125;) return result;&#125;]]></content>
@@ -157,7 +173,7 @@
   <entry>
     <title><![CDATA[Cocoapods常用操作命令]]></title>
     <url>%2F2019%2F06%2F25%2FCocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[1.Pod安装 创建Podfile文件 1pod init 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除制定的缓存文件 1pod cache clean AFNetworking 3.踩坑记录 [!] Attempt to read non existent folder ‘/Users/xxx’ 检查一下上述报错路径中是否包含中文，如果有请更改为全英文路径再重新pod install]]></content>
+    <content type="text"><![CDATA[1.Pod安装 创建Podfile文件 1pod init 安装podfile中的远程库 1pod install 安装podfile中的远程库，但不更新本地spec文件 2.缓存相关 查看所有spec文件的缓存，可以直接到路径下删除文件 1pod cache list 删除指定的缓存文件 1pod cache clean AFNetworking 3.踩坑记录 [!] Attempt to read non existent folder ‘/Users/xxx’ 检查一下上述报错路径中是否包含中文，如果有请更改为全英文路径再重新pod install]]></content>
       <categories>
         <category>开发工具</category>
       </categories>
@@ -181,7 +197,7 @@
     <url>%2F2019%2F06%2F24%2FXcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88%2F</url>
     <content type="text"><![CDATA[1. AppStore上传鉴定时报错Xcode上传AppStore验证时报错： Unable to download a software component: com.apple.transporter.mediatoolkit/1.13.0 这个错误是下载jar包失败，按照以下步骤执行，执行完之后，重新上传验证 123cd ~mv .itmstransporter/.old_itmstransporter/&quot;/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/itms/bin/iTMSTransporter&quot;]]></content>
       <categories>
-        <category>iOS</category>
+        <category>开发工具</category>
       </categories>
       <tags>
         <tag>Xcode</tag>
@@ -238,7 +254,7 @@
     <url>%2F2019%2F06%2F21%2FXcode%E5%AF%BC%E5%87%BAipa%E6%96%87%E4%BB%B6%E6%97%B6%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[在 iOS 导出 ipa包的时候 会有四个选项： Save for iOS App Store Deployment 保存到本地 准备上传App Store 或者在越狱的iOS设备上使用 Save for Ad Hoc Deployment 保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be code signed with the distribution certificate.） Save for Enterprise Deployment 这种主要针对企业级账户下 准备本地服务器分发的app Save for Development Deployment 针对内部测试使用，主要给开发者的设备(具体也为在开发者账户下添加可用设备的udid)。该app包是开发证书编译的（The app will be code signed with your development certificate）]]></content>
       <categories>
-        <category>iOS</category>
+        <category>开发工具</category>
       </categories>
       <tags>
         <tag>Xcode</tag>
