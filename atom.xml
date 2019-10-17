@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-10-15T23:49:01.601Z</updated>
+  <updated>2019-10-17T10:21:16.754Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac Launchpad(启动台)图标大小调整</title>
+    <link href="https://xujiebing.github.io/2019/10/17/Mac%20Launchpad(%E5%90%AF%E5%8A%A8%E5%8F%B0)%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E8%B0%83%E6%95%B4/"/>
+    <id>https://xujiebing.github.io/2019/10/17/Mac Launchpad(启动台)图标大小调整/</id>
+    <published>2019-10-17T10:12:13.000Z</published>
+    <updated>2019-10-17T10:21:16.754Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;打开终端（Terminal），输入一下命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 调整每页列数&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+      <category term="Mac相关" scheme="https://xujiebing.github.io/categories/Mac%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="Mac" scheme="https://xujiebing.github.io/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>常用App</title>
@@ -33,11 +58,11 @@
   </entry>
   
   <entry>
-    <title>No.1 概念</title>
-    <link href="https://xujiebing.github.io/2019/10/16/No-1-%E6%A6%82%E5%BF%B5/"/>
-    <id>https://xujiebing.github.io/2019/10/16/No-1-概念/</id>
+    <title>No.1 越狱iOS平台简介</title>
+    <link href="https://xujiebing.github.io/2019/10/16/No-1-%E8%B6%8A%E7%8B%B1iOS%E5%B9%B3%E5%8F%B0%E7%AE%80%E4%BB%8B/"/>
+    <id>https://xujiebing.github.io/2019/10/16/No-1-越狱iOS平台简介/</id>
     <published>2019-10-15T22:58:55.000Z</published>
-    <updated>2019-10-15T23:39:31.235Z</updated>
+    <updated>2019-10-17T15:00:07.363Z</updated>
     
     <summary type="html">
     
@@ -446,36 +471,6 @@
     
     
       <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS开发知识体系</title>
-    <link href="https://xujiebing.github.io/2019/06/23/iOS%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
-    <id>https://xujiebing.github.io/2019/06/23/iOS开发知识体系/</id>
-    <published>2019-06-23T15:46:18.000Z</published>
-    <updated>2019-10-13T14:48:03.588Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre class=&quot;mermaid&quot;&gt;graph LR
-iOS(iOS知识体系)--&gt;Base(基础)
-iOS--&gt;App(应用开发)
-iOS--&gt;Principle(原理)
-iOS--&gt;NativeAndWeb(原生与前端)
-
-%%基础
-Base--&gt;Base_Code(开
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
     
   </entry>
   

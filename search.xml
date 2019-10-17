@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac Launchpad(启动台)图标大小调整]]></title>
+    <url>%2F2019%2F10%2F17%2FMac%20Launchpad(%E5%90%AF%E5%8A%A8%E5%8F%B0)%E5%9B%BE%E6%A0%87%E5%A4%A7%E5%B0%8F%E8%B0%83%E6%95%B4%2F</url>
+    <content type="text"><![CDATA[打开终端（Terminal），输入一下命令 1. 调整每页列数 1defaults write com.apple.dock springboard-columns -int 10 2. 调整每页行数 1defaults write com.apple.dock springboard-rows -int 8 3. 重置Launchpad 1defaults write com.apple.dock ResetLaunchPad -bool TRUE 4. 重启Dock 1killall Dock 设置完毕，进入启动台查看效果 5. 恢复默认设置 1234defaults write com.apple.dock springboard-rows Defaultdefaults write com.apple.dock springboard-columns Defaultdefaults write com.apple.dock ResetLaunchPad -bool TRUEkillall Dock]]></content>
+      <categories>
+        <category>Mac相关</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常用App]]></title>
     <url>%2F2019%2F10%2F16%2F%E5%B8%B8%E7%94%A8App%2F</url>
     <content type="text"></content>
@@ -9,8 +20,8 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[No.1 概念]]></title>
-    <url>%2F2019%2F10%2F16%2FNo-1-%E6%A6%82%E5%BF%B5%2F</url>
+    <title><![CDATA[No.1 越狱iOS平台简介]]></title>
+    <url>%2F2019%2F10%2F16%2FNo-1-%E8%B6%8A%E7%8B%B1iOS%E5%B9%B3%E5%8F%B0%E7%AE%80%E4%BB%8B%2F</url>
     <content type="text"><![CDATA[1. iOS应用逆向工程的作用iOS逆向工程主要有两个作用： 分析目标程序，拿到关键信息，可以归类于安全相关的逆向工程 借鉴他人的程序功能来开发自己的软件，可以归类于开发相关的逆向工程 1.1 安全相关的逆向工程 评定安全等级 逆向恶意软件 检查软件后门 去除软件使用限制 1.2 开发相关的逆向工程 逆向系统API 借鉴别的软件 2. iOS应用逆向工程的过程 系统分析 代码分析 3. iOS应用逆向工程的工具iOS逆向工程的工具主要分为四大类： 监测工具 反汇编工具（disassembler） 调试工具（debugger） 开发工具 3.1 监测工具 Reveal snoop-it introspy 3.2 反汇编工具 IDA 支持Windows、Linux、OSX平台和多种处理器架构 Hopper 主要针对苹果操作系统 3.3 调试工具iOS逆向过程中主要使用的是LLDB 3.4 开发工具 Xcode Theos]]></content>
       <categories>
         <category>逆向工程</category>
