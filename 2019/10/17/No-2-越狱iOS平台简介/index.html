@@ -17,27 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>App如何实现极速编译调试 | 大兵</title>
-  <meta name="description" content="虽然动态链接器的实际应用能够帮助我们缩短App编译时间，但是每次修改代码之后还是需要重新启动App，再走一遍调试流程。对于我们开发人员来说，提高编译调试的速度就是提高生产力。那么，目前有哪些工具是可以实现动态调试的呢？ Swift PlaygroundPlayground是 Xcode 里集成的一个能够快速、实时调试程序的工具，可以实现所见即所得的效果，如下图所示：  Flutter Hot Re">
-<meta name="keywords" content="Objective-C">
+  <title>No.2 越狱iOS平台简介 | 大兵</title>
+  <meta name="description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App如何实现极速编译调试">
-<meta property="og:url" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/index.html">
+<meta property="og:title" content="No.2 越狱iOS平台简介">
+<meta property="og:url" content="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/index.html">
 <meta property="og:site_name" content="大兵的博客">
-<meta property="og:description" content="虽然动态链接器的实际应用能够帮助我们缩短App编译时间，但是每次修改代码之后还是需要重新启动App，再走一遍调试流程。对于我们开发人员来说，提高编译调试的速度就是提高生产力。那么，目前有哪些工具是可以实现动态调试的呢？ Swift PlaygroundPlayground是 Xcode 里集成的一个能够快速、实时调试程序的工具，可以实现所见即所得的效果，如下图所示：  Flutter Hot Re">
+<meta property="og:description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/1.png">
-<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/2.gif">
-<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/3.gif">
-<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/4.png">
-<meta property="og:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/4.png">
-<meta property="og:updated_time" content="2019-10-13T14:45:42.041Z">
+<meta property="og:updated_time" content="2019-10-17T16:39:54.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App如何实现极速编译调试">
-<meta name="twitter:description" content="虽然动态链接器的实际应用能够帮助我们缩短App编译时间，但是每次修改代码之后还是需要重新启动App，再走一遍调试流程。对于我们开发人员来说，提高编译调试的速度就是提高生产力。那么，目前有哪些工具是可以实现动态调试的呢？ Swift PlaygroundPlayground是 Xcode 里集成的一个能够快速、实时调试程序的工具，可以实现所见即所得的效果，如下图所示：  Flutter Hot Re">
-<meta name="twitter:image" content="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/1.png">
+<meta name="twitter:title" content="No.2 越狱iOS平台简介">
+<meta name="twitter:description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/index.html">
+  <link rel="canonical" href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/index.html">
   
     <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
   
@@ -269,7 +263,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="../../../10/23/No-3-OSX工具集/" class="title">No.3 OSX工具集</a>
+                <a href="../../23/No-3-OSX工具集/" class="title">No.3 OSX工具集</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-10-23T15:40:29.000Z" itemprop="datePublished">2019-10-23</time>
@@ -284,7 +278,7 @@
                 <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
               </p>
               <p class="item-title">
-                <a href="../../../10/17/No-2-越狱iOS平台简介/" class="title">No.2 越狱iOS平台简介</a>
+                <a href="" class="title">No.2 越狱iOS平台简介</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-10-17T15:07:55.000Z" itemprop="datePublished">2019-10-17</time>
@@ -299,7 +293,7 @@
                 <a class="category-link" href="../../../../categories/Mac相关/">Mac相关</a>
               </p>
               <p class="item-title">
-                <a href="../../../10/17/Mac Launchpad(启动台)图标大小调整/" class="title">Mac Launchpad(启动台)图标大小调整</a>
+                <a href="../Mac Launchpad(启动台)图标大小调整/" class="title">Mac Launchpad(启动台)图标大小调整</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-10-17T10:12:13.000Z" itemprop="datePublished">2019-10-17</time>
@@ -314,7 +308,7 @@
                 <a class="category-link" href="../../../../categories/其他/">其他</a>
               </p>
               <p class="item-title">
-                <a href="../../../10/16/常用App/" class="title">常用App</a>
+                <a href="../../16/常用App/" class="title">常用App</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-10-15T23:04:30.000Z" itemprop="datePublished">2019-10-16</time>
@@ -329,7 +323,7 @@
                 <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
               </p>
               <p class="item-title">
-                <a href="../../../10/16/No-1-iOS逆向工程简介/" class="title">No.1 iOS逆向工程简介</a>
+                <a href="../../16/No-1-iOS逆向工程简介/" class="title">No.1 iOS逆向工程简介</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-10-15T22:58:55.000Z" itemprop="datePublished">2019-10-16</time>
@@ -352,21 +346,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift-Playground"><span class="toc-number">1.</span> <span class="toc-text">Swift Playground</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flutter-Hot-Reload"><span class="toc-number">2.</span> <span class="toc-text">Flutter Hot Reload</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Injection-for-Xcode"><span class="toc-number">3.</span> <span class="toc-text">Injection for Xcode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Injection工作原理"><span class="toc-number">3.1.</span> <span class="toc-text">Injection工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#InjectionIII使用方法"><span class="toc-number">3.2.</span> <span class="toc-text">InjectionIII使用方法</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#越狱iOS平台简介"><span class="toc-number">1.</span> <span class="toc-text">越狱iOS平台简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-iOS系统结构"><span class="toc-number">1.1.</span> <span class="toc-text">1. iOS系统结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-iOS目录结构简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 iOS目录结构简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-iOS文件权限简介"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 iOS文件权限简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-iOS二进制文件类型"><span class="toc-number">1.2.</span> <span class="toc-text">2. iOS二进制文件类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Application"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 Application</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-bundle"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">2.1.1 bundle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-App目录结构"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">2.1.2 App目录结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-系统App-VS-StoreApp"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">2.1.3 系统App VS.StoreApp</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Dynamic-Library"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 Dynamic Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Daemon"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 Daemon</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-App如何实现极速编译调试" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-No-2-越狱iOS平台简介" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      App如何实现极速编译调试
+      No.2 越狱iOS平台简介
     </h1>
   
 
@@ -375,19 +369,19 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="" class="article-date">
-	  <time datetime="2019-07-17T23:07:19.000Z" itemprop="datePublished">2019-07-18</time>
+	  <time datetime="2019-10-17T15:07:55.000Z" itemprop="datePublished">2019-10-17</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
+    <a class="article-category-link" href="../../../../categories/逆向工程/">逆向工程</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="../../../../tags/Objective-C/">Objective-C</a>
+	<a class="article-tag-link" href="../../../../tags/iOS/">iOS</a>
   </span>
 
 
@@ -399,65 +393,51 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>虽然动态链接器的实际应用能够帮助我们缩短App编译时间，但是每次修改代码之后还是需要重新启动App，再走一遍调试流程。对于我们开发人员来说，提高编译调试的速度就是提高生产力。那么，目前有哪些工具是可以实现动态调试的呢？</p>
-<h2 id="Swift-Playground"><a href="#Swift-Playground" class="headerlink" title="Swift Playground"></a>Swift Playground</h2><p>Playground是 Xcode 里集成的一个能够快速、实时调试程序的工具，可以实现所见即所得的效果，如下图所示：</p>
-<p><img src="1.png" alt></p>
-<h2 id="Flutter-Hot-Reload"><a href="#Flutter-Hot-Reload" class="headerlink" title="Flutter Hot Reload"></a>Flutter Hot Reload</h2><p>Flutter 是 Google 开发的一个跨平台开发框架，调试也是快速实时的。官方的效果动画如下：</p>
-<p><img src="2.gif" alt></p>
-<h2 id="Injection-for-Xcode"><a href="#Injection-for-Xcode" class="headerlink" title="Injection for Xcode"></a>Injection for Xcode</h2><p>Injection 的工具可以动态地将 Swift 或 Objective-C 的代码在已运行的程序中执行，以加快调试速度，同时保证程序不用重启。John Holdsworth 也提供了动画演示效果，如下：</p>
-<p><img src="3.gif" alt></p>
-<h3 id="Injection工作原理"><a href="#Injection工作原理" class="headerlink" title="Injection工作原理"></a>Injection工作原理</h3><ol>
-<li>Injection 会监听源代码文件的变化，如果文件被改动了，Injection Server 就会执行 rebuildClass 重新进行编译、打包成动态库，也就是 .dylib 文件。编译、打包成动态库后使用 writeSting 方法通过 Socket 通知运行的 App。</li>
-<li>Server 会在后台发送和监听 Socket 消息，实现逻辑在 InjectionServer.mm 的 runInBackground 方法里。Client 也会开启一个后台去发送和监听 Socket 消息，实现逻辑在 InjectionClient.mm里的 runInBackground 方法里。</li>
-<li>Client 接收到消息后会调用 inject(tmpfile: String) 方法，运行时进行类的动态替换。inject(tmpfile: String) 方法的代码大部分都是做新类动态替换旧类。inject(tmpfile: String) 的入参 tmpfile 是动态库的文件路径，那么这个动态库是如何加载到可执行文件里的呢？具体的实现在 inject(tmpfile: String) 方法开始里。</li>
-<li>dlopen 会把 tmpfile 动态库文件载入运行的 App 里，返回指针 dl。接下来，dlsym 会得到 tmpfile 动态库的符号地址，然后就可以处理类的替换工作了。当类的方法都被替换后，我们就可以开始重新绘制界面了。整个过程无需重新编译和重启 App，至此使用动态库方式极速调试的目的就达成了。</li>
-</ol>
-<blockquote>
-<p><a href="https://github.com/johnno1962/InjectionIII" target="_blank" rel="noopener">Injection源码</a></p>
-</blockquote>
-<h3 id="InjectionIII使用方法"><a href="#InjectionIII使用方法" class="headerlink" title="InjectionIII使用方法"></a>InjectionIII使用方法</h3><ol>
-<li><p>从AppStore下载<code>InjectionIII</code></p>
+        <h1 id="越狱iOS平台简介"><a href="#越狱iOS平台简介" class="headerlink" title="越狱iOS平台简介"></a>越狱iOS平台简介</h1><h2 id="1-iOS系统结构"><a href="#1-iOS系统结构" class="headerlink" title="1. iOS系统结构"></a>1. iOS系统结构</h2><p>常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。</p>
+<p>因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。</p>
+<p>因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。</p>
+<h3 id="1-1-iOS目录结构简介"><a href="#1-1-iOS目录结构简介" class="headerlink" title="1.1 iOS目录结构简介"></a>1.1 iOS目录结构简介</h3><p>Filesystem Hierarchy Standard（以下简称FHS）为类UNIX操作系统的文件目录结构制定了一套标准，它的初衷之一是让用户预知文件或目录的存放位置。OSX在此基础上形成了自己的hier(7)框架。类UNIX操作系统的常见目录结构如下所示。</p>
+<pre><code>·/：根目录，以斜杠表示，其他所有文件和目录在根目录下展开。
+·/bin：“binary”的简写，存放提供用户级基础功能的二进制文件，如ls、ps等。
+·/boot：存放能使系统成功启动的所有文件。iOS中此目录为空。
+·/dev：“device”的简写，存放BSD设备文件。每个文件代表系统的一个块设备或字符设备，一般来说，“块设备”以块为单位传输数据，如硬盘；而“字符设备”以字符为单位传输数据，如调制解调器。
+·/sbin：“system binaries”的简写，存放提供系统级基础功能的二进制文件，如netstat、reboot等。
+·/etc：“Et Cetera”的简写，存放系统脚本及配置文件，如passwd、hosts等。在iOS中，/etc是一个符号链接，实际指向/private/etc。
+·/lib：存放系统库文件、内核模块及设备驱动等。iOS中此目录为空。
+·/mnt：“mount”的简写，存放临时的文件系统挂载点。iOS中此目录为空。
+·/private：存放两个目录，分别是/private/etc和/private/var。
+·/tmp：临时目录。在iOS中，/tmp是一个符号链接，实际指向/private/var/tmp。
+·/usr：包含了大多数用户工具和程序。/usr/bin包含那些/bin和/sbin中未出现的基础功能，如nm、killall等；/usr/include包含所有的标准C头文件；/usr/lib存放库文件。
+·/var：“variable”的简写，存放一些经常更改的文件，比如日志、用户数据、临时文件等。其中/var/mobile和/var/root分别存放了mobile用户和root用户的文件，是重点关注的目录。</code></pre><p>上述目录中的内容多用于系统底层，逆向难度较大，作为初学者，暂时不用在其中投入太多精力。建议初学者从学和练的角度出发，循序渐进，由易到难，先从熟悉的内容开刀，这样效率更高。</p>
+<p>作为iOS开发者，日常操作所对应的功能模块大多来自iOS的独有目录，如下所示。</p>
+<pre><code>·/Applications：存放所有的系统App和来自于Cydia的App，不包括StoreApp。
+·/Developer：如果一台设备连接Xcode后被指定为调试用机（如图2-4所示），Xcode就会在iOS中生成这个目录，其中会含有一些调试需要的工具和数据。
+·/Library：存放一些提供系统支持的数据。其中/Library/MobileSubstrate下存放了所有基于CydiaSubstrate（原名MobileSubstrate）的插件。
+·/System/Library：iOS文件系统中最重要的目录之一，存放大量系统组件，其目录结构如图2-7所示。</code></pre><p>在逆向工程的初学阶段，需要重点关注<code>·/System/Library</code></p>
+<h3 id="1-2-iOS文件权限简介"><a href="#1-2-iOS文件权限简介" class="headerlink" title="1.2 iOS文件权限简介"></a>1.2 iOS文件权限简介</h3><p>iOS是一个多用户操作系统。“用户”是一个抽象的概念，代表对操作系统的所有权和使用权；“组”使用户的一种组织方式，一个组可以包含多个用户，一个用户也可以属于多个组。</p>
+<p>iOS中的每一个文件都有一个属主用户和一个属主组，每个文件都有一系列的权限。iOS用3位（bit）来表示文件的权限，iOS用3位（bit）来表示文件的权限，从高位到低位分别是r（read）权限、w（write）权限，以及x（execute）权限。文件与用户的关系存在以下三种可能性：</p>
+<pre><code>* 此用户是属主用户；
+* 此用户不是属主用户，但在属主组里；
+* 此用户既不是属主用户，又不在属主组里。</code></pre><p>所以需要用3*3位来表示一个文件的权限，如果某一位为1，则这一位代表的权限生效，否则无效。例如，111101101代表rwxr-xr-x，即该文件的属主用户拥有r、w、x权限，而属主组和其他所有人只具有r和x权限；同时，二进制的111101101转换成十六进制是755，也是一种常见的权限表示法。</p>
+<h2 id="2-iOS二进制文件类型"><a href="#2-iOS二进制文件类型" class="headerlink" title="2. iOS二进制文件类型"></a>2. iOS二进制文件类型</h2><p>iOS逆向初学阶段，我们目标是是Application、Dynamic Library（简称dylib）和Daemon这三类二进制文件，对它们的了解越深入，逆向工程就会越顺利。</p>
+<h3 id="2-1-Application"><a href="#2-1-Application" class="headerlink" title="2.1 Application"></a>2.1 Application</h3><h4 id="2-1-1-bundle"><a href="#2-1-1-bundle" class="headerlink" title="2.1.1 bundle"></a>2.1.1 bundle</h4><p>bundle的概念来源于NeXTSTEP,它不是一个文件，而是一个按照某种标准来组织的一个目录，其中包含了二进制文件以及运行所需的资源。</p>
+<p>普通APP中的framework是以bundle形式存在的；越狱iOS中常见的PerferenceBundle本质也是bundle。Framework也是bundle，但framework的bundle中存放的是一个dylib，而不是可执行文件。</p>
+<h4 id="2-1-2-App目录结构"><a href="#2-1-2-App目录结构" class="headerlink" title="2.1.2 App目录结构"></a>2.1.2 App目录结构</h4><ol>
+<li><p><strong>Info.plist</strong></p>
+<p> 记录APP基本信息</p>
 </li>
-<li><p>设置<code>AppDelegate.m</code></p>
-<p>打开你的源码，在<code>AppDelegate.m</code>的<code>didFinishLaunchingWithOptions</code>方法添加一行代码：</p>
+<li><p><strong>可执行文件</strong></p>
 </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#if DEBUG</span><br><span class="line">    // iOS</span><br><span class="line">    [[NSBundle bundleWithPath:@&quot;/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle&quot;] load];</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p>设置<code>ViewController</code></p>
-<p>在需要修改界面的ViewController添加方法，所有修改控件的代码都写在这里面。</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- (void)injected &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><p>设置<code>InjectionIII</code></p>
-<p>打开<code>InjectionIII</code>工具，选择<code>Open Project</code>，选择你的代码所在的路径，然后点击<code>Select Project Directory</code>保存。</p>
-</li>
-</ol>
-<p><img src="4.png" alt></p>
-<blockquote>
-<p>注意：InjectionIII 的File Watcher选项要保持选中状态</p>
-</blockquote>
-<ol start="5">
-<li><p>运行项目</p>
-<p>按照第4步选择完项目路径后，先在<code>Xcode Command+R</code>运行一下你的项目，控制台提示如下信息，即表示<code>InjectionIII</code>连接成功，连接成功的话<code>InjectionIII</code>标志会由蓝变橙（可能不同<code>InjectionIII</code>版本颜色不太一样）。</p>
+<li><p><strong>Lproj</strong></p>
+<p> lproj目录下存放的是各种本地化的字符串(.strings)</p>
 </li>
 </ol>
-<p><img src="4.png" alt></p>
-<blockquote>
-<p> 控制台提示信息</p>
-</blockquote>
-<p>连接成功后，就可以在第3步中的<code>- (void)injected;</code>方法中修改控件、添加控件了，修改完毕<code>Command+S</code>保存一下代码，立刻就在模拟器上显示修改的信息了。</p>
-<blockquote>
-<p>需要注意的两点：</p>
-<ol>
-<li>InjectionIII工具只对模拟器有效，真机无效。</li>
-<li>在<code>injected</code>方法里面修改的代码，再次Command+R运行时不会起作用。因为代码里面只声明了injected方法，并没有去调用，所以不会生效；我们Command+S保存代码后生效，是因为在保存后通过InjectionIII工具读取<code>injected</code>方法里面修改的代码，“告诉”模拟器哪儿修改了，是InjectionIII起的作用。<strong>因此我们需要把修改的代码放到合适的位置，让程序一运行就会执行。</strong></li>
+<h4 id="2-1-3-系统App-VS-StoreApp"><a href="#2-1-3-系统App-VS-StoreApp" class="headerlink" title="2.1.3 系统App VS.StoreApp"></a>2.1.3 系统App VS.StoreApp</h4><ol>
+<li>目录结构</li>
+<li>安装包格式与权限</li>
+<li>沙盒（sandbox）</li>
 </ol>
-</blockquote>
-
+<h3 id="2-2-Dynamic-Library"><a href="#2-2-Dynamic-Library" class="headerlink" title="2.2 Dynamic Library"></a>2.2 Dynamic Library</h3><h3 id="2-3-Daemon"><a href="#2-3-Daemon" class="headerlink" title="2.3 Daemon"></a>2.3 Daemon</h3>
       
     </div>
     <div class="article-footer">
@@ -469,11 +449,11 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文作者：</strong>
-      <a href="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/" title="App如何实现极速编译调试" target="_blank" rel="external">大兵</a>
+      <a href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/" title="No.2 越狱iOS平台简介" target="_blank" rel="external">大兵</a>
     </li>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/" title="App如何实现极速编译调试" target="_blank" rel="external">https://xujiebing.github.io/2019/07/18/App如何实现极速编译调试/</a>
+      <a href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/" title="No.2 越狱iOS平台简介" target="_blank" rel="external">https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -506,12 +486,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="../../23/OC代码静态分析工具/" title="OC代码静态分析工具"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="../../23/No-3-OSX工具集/" title="No.3 OSX工具集"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="../../16/链接器：符号是怎么绑定到地址上的/" title="链接器：符号是怎么绑定到地址上的"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="../Mac Launchpad(启动台)图标大小调整/" title="Mac Launchpad(启动台)图标大小调整"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

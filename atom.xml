@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-10-17T10:21:16.754Z</updated>
+  <updated>2019-10-23T15:40:29.930Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>No.3 OSX工具集</title>
+    <link href="https://xujiebing.github.io/2019/10/23/No-3-OSX%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+    <id>https://xujiebing.github.io/2019/10/23/No-3-OSX工具集/</id>
+    <published>2019-10-23T15:40:29.000Z</published>
+    <updated>2019-10-23T15:40:29.930Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>No.2 越狱iOS平台简介</title>
+    <link href="https://xujiebing.github.io/2019/10/17/No-2-%E8%B6%8A%E7%8B%B1iOS%E5%B9%B3%E5%8F%B0%E7%AE%80%E4%BB%8B/"/>
+    <id>https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/</id>
+    <published>2019-10-17T15:07:55.000Z</published>
+    <updated>2019-10-17T16:39:54.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;越狱iOS平台简介&quot;&gt;&lt;a href=&quot;#越狱iOS平台简介&quot; class=&quot;headerlink&quot; title=&quot;越狱iOS平台简介&quot;&gt;&lt;/a&gt;越狱iOS平台简介&lt;/h1&gt;&lt;h2 id=&quot;1-iOS系统结构&quot;&gt;&lt;a href=&quot;#1-iOS系统结构&quot; class
+      
+    
+    </summary>
+    
+      <category term="逆向工程" scheme="https://xujiebing.github.io/categories/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac Launchpad(启动台)图标大小调整</title>
@@ -58,24 +95,25 @@
   </entry>
   
   <entry>
-    <title>No.1 越狱iOS平台简介</title>
-    <link href="https://xujiebing.github.io/2019/10/16/No-1-%E8%B6%8A%E7%8B%B1iOS%E5%B9%B3%E5%8F%B0%E7%AE%80%E4%BB%8B/"/>
-    <id>https://xujiebing.github.io/2019/10/16/No-1-越狱iOS平台简介/</id>
+    <title>No.1 iOS逆向工程简介</title>
+    <link href="https://xujiebing.github.io/2019/10/16/No-1-iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%AE%80%E4%BB%8B/"/>
+    <id>https://xujiebing.github.io/2019/10/16/No-1-iOS逆向工程简介/</id>
     <published>2019-10-15T22:58:55.000Z</published>
-    <updated>2019-10-17T15:00:07.363Z</updated>
+    <updated>2019-10-17T15:03:51.286Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;1-iOS应用逆向工程的作用&quot;&gt;&lt;a href=&quot;#1-iOS应用逆向工程的作用&quot; class=&quot;headerlink&quot; title=&quot;1. iOS应用逆向工程的作用&quot;&gt;&lt;/a&gt;1. iOS应用逆向工程的作用&lt;/h2&gt;&lt;p&gt;iOS逆向工程主要有两个作用：&lt;/p&gt;
-
+        &lt;h1 id=&quot;iOS逆向工程简介&quot;&gt;&lt;a href=&quot;#iOS逆向工程简介&quot; class=&quot;headerlink&quot; title=&quot;iOS逆向工程简介&quot;&gt;&lt;/a&gt;iOS逆向工程简介&lt;/h1&gt;&lt;h2 id=&quot;1-iOS应用逆向工程的作用&quot;&gt;&lt;a href=&quot;#1-iOS应用逆向工程
       
     
     </summary>
     
       <category term="逆向工程" scheme="https://xujiebing.github.io/categories/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
     
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -425,52 +463,6 @@
     
     
       <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SourceTree如何跳过注册直接使用</title>
-    <link href="https://xujiebing.github.io/2019/06/25/SourceTree%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87%E6%B3%A8%E5%86%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8/"/>
-    <id>https://xujiebing.github.io/2019/06/25/SourceTree如何跳过注册直接使用/</id>
-    <published>2019-06-25T04:34:11.000Z</published>
-    <updated>2019-09-22T15:16:41.279Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Mac上SourceTree免注册使用方式&quot;&gt;&lt;a href=&quot;#Mac上SourceTree免注册使用方式&quot; class=&quot;headerlink&quot; title=&quot;Mac上SourceTree免注册使用方式&quot;&gt;&lt;/a&gt;Mac上SourceTree免注册使用方式&lt;/
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Mac" scheme="https://xujiebing.github.io/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Xcode打包异常集合</title>
-    <link href="https://xujiebing.github.io/2019/06/24/Xcode%E6%89%93%E5%8C%85%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/"/>
-    <id>https://xujiebing.github.io/2019/06/24/Xcode打包异常集合/</id>
-    <published>2019-06-24T14:10:47.000Z</published>
-    <updated>2019-10-15T23:07:01.491Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;1-AppStore上传鉴定时报错&quot;&gt;&lt;a href=&quot;#1-AppStore上传鉴定时报错&quot; class=&quot;headerlink&quot; title=&quot;1. AppStore上传鉴定时报错&quot;&gt;&lt;/a&gt;1. AppStore上传鉴定时报错&lt;/h4&gt;&lt;p&gt;Xcode上传A
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Xcode" scheme="https://xujiebing.github.io/tags/Xcode/"/>
     
   </entry>
   
