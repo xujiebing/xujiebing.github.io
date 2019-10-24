@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[class-dump安装]]></title>
+    <url>%2F2019%2F10%2F24%2Fclass-dump%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[class-dump安装由于Mac系统10.11 引入安全防护程序Rootless有些系统目录中不允许添加文件 但是class-dump需要在每个文件夹下均可以正常使用 所以就需要配置环境变量 下面是10.12安装class-dump的方法 1.下载class-dump官网下载 将下载好的包解压，解压之后有一个class-dump文件，这就是我们的目标文件 2.安装在终端中按顺序执行 1234cd ~/mkdir binsudo -scd ~/bin 将class-dump复制到bin文件夹下，继续终端中执行 123chmod 777 class-dumpcd ~/vim ~/.bash_profile 在编辑区域将export PATH=$HOME/bin/:$PATH复制到最后一行 最后执行 1source ~/.bash_profile 安装结束 3.测试终端输入 1class-dump 输出结果结果为下面所示，既安装成功 1234567891011121314151617181920class-dump 3.5 (64 bit)Usage: class-dump [options] &lt;mach-o-file&gt; where options are: -a show instance variable offsets -A show implementation addresses --arch &lt;arch&gt; choose a specific architecture from a universal binary (ppc, ppc64, i386, x86_64, armv6, armv7, armv7s, arm64) -C &lt;regex&gt; only display classes matching regular expression -f &lt;str&gt; find string in method name -H generate header files in current directory, or directory specified with -o -I sort classes, categories, and protocols by inheritance (overrides -s) -o &lt;dir&gt; output directory used for -H -r recursively expand frameworks and fixed VM shared libraries -s sort classes and categories by name -S sort methods by name -t suppress header in output, for testing --list-arches list the arches in the file, then exit --sdk-ios specify iOS SDK version (will look in /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS&lt;version&gt;.sdk --sdk-mac specify Mac OS X version (will look in /Developer/SDKs/MacOSX&lt;version&gt;.sdk --sdk-root specify the full SDK root path (or use --sdk-ios/--sdk-mac for a shortcut)]]></content>
+      <categories>
+        <category>开发工具</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[No.3 OSX工具集]]></title>
     <url>%2F2019%2F10%2F23%2FNo-3-OSX%E5%B7%A5%E5%85%B7%E9%9B%86%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[主要的工具有四个： class-dump Theos Reveal IDA 1.class-dump下载安装请看这]]></content>
       <categories>
         <category>逆向工程</category>
       </categories>

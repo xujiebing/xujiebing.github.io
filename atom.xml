@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-10-23T15:41:50.160Z</updated>
+  <updated>2019-10-24T13:49:37.473Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -17,13 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>class-dump安装</title>
+    <link href="https://xujiebing.github.io/2019/10/24/class-dump%E5%AE%89%E8%A3%85/"/>
+    <id>https://xujiebing.github.io/2019/10/24/class-dump安装/</id>
+    <published>2019-10-24T13:35:40.000Z</published>
+    <updated>2019-10-24T13:49:37.473Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;class-dump安装&quot;&gt;&lt;a href=&quot;#class-dump安装&quot; class=&quot;headerlink&quot; title=&quot;class-dump安装&quot;&gt;&lt;/a&gt;class-dump安装&lt;/h1&gt;&lt;p&gt;由于Mac系统10.11 引入安全防护程序Rootless有
+      
+    
+    </summary>
+    
+      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>No.3 OSX工具集</title>
     <link href="https://xujiebing.github.io/2019/10/23/No-3-OSX%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     <id>https://xujiebing.github.io/2019/10/23/No-3-OSX工具集/</id>
     <published>2019-10-23T15:40:29.000Z</published>
-    <updated>2019-10-23T15:41:50.160Z</updated>
+    <updated>2019-10-24T22:40:51.781Z</updated>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;主要的工具有四个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;class-dump&lt;/li&gt;
+&lt;li&gt;Theos&lt;/li&gt;
+&lt;li&gt;Reveal&lt;/li&gt;
+&lt;li&gt;IDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;1-class-dump&quot;&gt;&lt;a href=&quot;#1-class-dump&quot; cl
+      
     
     </summary>
     
@@ -442,31 +475,6 @@
     
     
       <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cocoapods常用操作命令</title>
-    <link href="https://xujiebing.github.io/2019/06/25/Cocoapods%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>https://xujiebing.github.io/2019/06/25/Cocoapods常用操作命令/</id>
-    <published>2019-06-25T15:37:46.000Z</published>
-    <updated>2019-10-15T23:00:41.705Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;1-Pod安装&quot;&gt;&lt;a href=&quot;#1-Pod安装&quot; class=&quot;headerlink&quot; title=&quot;1.Pod安装&quot;&gt;&lt;/a&gt;1.Pod安装&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;创建Podfile文件&lt;/p&gt;
-&lt;figure class=&quot;highlight 
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="https://xujiebing.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="CocoaPods" scheme="https://xujiebing.github.io/tags/CocoaPods/"/>
     
   </entry>
   
