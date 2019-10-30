@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/06/22/Cocoapods%E5%88%9B%E5%BB%BApodspec%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2019-10-27T15:43:33.331Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/10/23/No-3-OSX%E5%B7%A5%E5%85%B7%E9%9B%86/</loc>
     
-    <lastmod>2019-10-24T22:40:51.781Z</lastmod>
+    <lastmod>2019-10-24T22:55:50.789Z</lastmod>
     
   </url>
   
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.298Z</lastmod>
@@ -191,9 +191,9 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/links/index.html</loc>
+    <loc>https://xujiebing.github.io/tags/index.html</loc>
     
-    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
     
   </url>
   
@@ -205,14 +205,21 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/books/index.html</loc>
+    <loc>https://xujiebing.github.io/links/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/books/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
@@ -243,13 +250,6 @@
     <loc>https://xujiebing.github.io/2019/06/21/Mac%E5%AE%89%E5%85%A8%E6%80%A7%E4%B8%8E%E9%9A%90%E7%A7%81%E8%AE%BE%E7%BD%AE/</loc>
     
     <lastmod>2019-09-22T15:16:41.277Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xujiebing.github.io/2019/06/22/Cocoapods%E5%88%9B%E5%BB%BApodspec%E8%AF%B4%E6%98%8E/</loc>
-    
-    <lastmod>2019-09-22T15:16:41.276Z</lastmod>
     
   </url>
   

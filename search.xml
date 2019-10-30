@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[No.3 OSX工具集]]></title>
     <url>%2F2019%2F10%2F23%2FNo-3-OSX%E5%B7%A5%E5%85%B7%E9%9B%86%2F</url>
-    <content type="text"><![CDATA[主要的工具有四个： class-dump Theos Reveal IDA 1.class-dump下载安装请看这]]></content>
+    <content type="text"><![CDATA[主要的工具有四个： class-dump Theos Reveal IDA 1.class-dump下载安装请看这 1.1定位App的可执行文件]]></content>
       <categories>
         <category>逆向工程</category>
       </categories>
