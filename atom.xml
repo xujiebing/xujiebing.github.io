@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-10-24T13:49:37.473Z</updated>
+  <updated>2019-10-30T07:22:59.319Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组件化生命周期管理</title>
+    <link href="https://xujiebing.github.io/2019/10/30/%E7%BB%84%E4%BB%B6%E5%8C%96%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/"/>
+    <id>https://xujiebing.github.io/2019/10/30/组件化生命周期管理/</id>
+    <published>2019-10-30T03:50:41.000Z</published>
+    <updated>2019-10-30T07:22:59.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;组件化之生命周期管理&quot;&gt;&lt;a href=&quot;#组件化之生命周期管理&quot; class=&quot;headerlink&quot; title=&quot;组件化之生命周期管理&quot;&gt;&lt;/a&gt;组件化之生命周期管理&lt;/h1&gt;&lt;p&gt;组件化过程中，不同模块可能需要实现&lt;code&gt;UIApplicationDe
+      
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
+    
+      <category term="组件化" scheme="https://xujiebing.github.io/tags/%E7%BB%84%E4%BB%B6%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>class-dump安装</title>
@@ -452,29 +477,6 @@
     
     
       <category term="React" scheme="https://xujiebing.github.io/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>App启动速度优化与监控</title>
-    <link href="https://xujiebing.github.io/2019/06/26/App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E4%B8%8E%E7%9B%91%E6%8E%A7/"/>
-    <id>https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/</id>
-    <published>2019-06-26T12:00:46.000Z</published>
-    <updated>2019-10-13T14:45:29.349Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;App启动&quot;&gt;&lt;a href=&quot;#App启动&quot; class=&quot;headerlink&quot; title=&quot;App启动&quot;&gt;&lt;/a&gt;App启动&lt;/h2&gt;&lt;h3 id=&quot;App启动类型&quot;&gt;&lt;a href=&quot;#App启动类型&quot; class=&quot;headerlink&quot; title=
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
     
   </entry>
   
