@@ -191,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.298Z</lastmod>
@@ -205,9 +198,9 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/categories/index.html</loc>
+    <loc>https://xujiebing.github.io/tags/index.html</loc>
     
-    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
     
   </url>
   
@@ -219,14 +212,21 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/books/index.html</loc>
+    <loc>https://xujiebing.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/books/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
