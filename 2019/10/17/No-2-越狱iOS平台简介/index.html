@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>No.2 越狱iOS平台简介 | 大兵</title>
+  <meta name="description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No.2 越狱iOS平台简介">
+<meta property="og:url" content="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/index.html">
+<meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-17T16:39:54.402Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="No.2 越狱iOS平台简介">
+<meta name="twitter:description" content="越狱iOS平台简介1. iOS系统结构常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。 因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。 因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。 1.1 iOS目录结构简介F">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+  
+  
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/xujiebing" target="_blank">
+          <img class="img-circle img-rotate" src="../../../../images/avatar.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">大兵的博客</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">好记性不如烂笔头</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 杭州·中国</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="../../../../.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="../../../../archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="../../../../categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="../../../../tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="../../../../repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="../../../../books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="../../../../links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="../../../../about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xujiebing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="../../../../atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.25px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/10/">十月 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/07/">七月 2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/06/">六月 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/iOS/">iOS</a>
+              </p>
+              <p class="item-title">
+                <a href="../../30/组件化生命周期管理/" class="title">组件化生命周期管理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-30T03:50:41.000Z" itemprop="datePublished">2019-10-30</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/开发工具/">开发工具</a>
+              </p>
+              <p class="item-title">
+                <a href="../../24/class-dump安装/" class="title">class-dump安装</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-24T13:35:40.000Z" itemprop="datePublished">2019-10-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
+              </p>
+              <p class="item-title">
+                <a href="../../23/No-3-OSX工具集/" class="title">No.3 OSX工具集</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-23T15:40:29.000Z" itemprop="datePublished">2019-10-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
+              </p>
+              <p class="item-title">
+                <a href="" class="title">No.2 越狱iOS平台简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-17T15:07:55.000Z" itemprop="datePublished">2019-10-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/Mac相关/">Mac相关</a>
+              </p>
+              <p class="item-title">
+                <a href="../Mac Launchpad(启动台)图标大小调整/" class="title">Mac Launchpad(启动台)图标大小调整</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-17T10:12:13.000Z" itemprop="datePublished">2019-10-17</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#越狱iOS平台简介"><span class="toc-number">1.</span> <span class="toc-text">越狱iOS平台简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-iOS系统结构"><span class="toc-number">1.1.</span> <span class="toc-text">1. iOS系统结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-iOS目录结构简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 iOS目录结构简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-iOS文件权限简介"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 iOS文件权限简介</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-iOS二进制文件类型"><span class="toc-number">1.2.</span> <span class="toc-text">2. iOS二进制文件类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Application"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 Application</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-bundle"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">2.1.1 bundle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-App目录结构"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">2.1.2 App目录结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-系统App-VS-StoreApp"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">2.1.3 系统App VS.StoreApp</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Dynamic-Library"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 Dynamic Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Daemon"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 Daemon</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-No-2-越狱iOS平台简介" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      No.2 越狱iOS平台简介
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="" class="article-date">
+	  <time datetime="2019-10-17T15:07:55.000Z" itemprop="datePublished">2019-10-17</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="../../../../categories/逆向工程/">逆向工程</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="../../../../tags/iOS/">iOS</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.4k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="越狱iOS平台简介"><a href="#越狱iOS平台简介" class="headerlink" title="越狱iOS平台简介"></a>越狱iOS平台简介</h1><h2 id="1-iOS系统结构"><a href="#1-iOS系统结构" class="headerlink" title="1. iOS系统结构"></a>1. iOS系统结构</h2><p>常规渠道的App，苹果开放的能直接访问iOS系统的接口非常有限，开发者只需要根据文档完成开发即可。</p>
+<p>因为权限极低，AppStore的App不能访问自身目录以外的绝大多数文件；而iOS一但越狱，来自Cydia的App就可以拥有比普通App更高的权限。</p>
+<p>因为逆向的对象来自iOS，所以访问iOS全系统文件时开展iOS逆向工程的首要前提。</p>
+<h3 id="1-1-iOS目录结构简介"><a href="#1-1-iOS目录结构简介" class="headerlink" title="1.1 iOS目录结构简介"></a>1.1 iOS目录结构简介</h3><p>Filesystem Hierarchy Standard（以下简称FHS）为类UNIX操作系统的文件目录结构制定了一套标准，它的初衷之一是让用户预知文件或目录的存放位置。OSX在此基础上形成了自己的hier(7)框架。类UNIX操作系统的常见目录结构如下所示。</p>
+<pre><code>·/：根目录，以斜杠表示，其他所有文件和目录在根目录下展开。
+·/bin：“binary”的简写，存放提供用户级基础功能的二进制文件，如ls、ps等。
+·/boot：存放能使系统成功启动的所有文件。iOS中此目录为空。
+·/dev：“device”的简写，存放BSD设备文件。每个文件代表系统的一个块设备或字符设备，一般来说，“块设备”以块为单位传输数据，如硬盘；而“字符设备”以字符为单位传输数据，如调制解调器。
+·/sbin：“system binaries”的简写，存放提供系统级基础功能的二进制文件，如netstat、reboot等。
+·/etc：“Et Cetera”的简写，存放系统脚本及配置文件，如passwd、hosts等。在iOS中，/etc是一个符号链接，实际指向/private/etc。
+·/lib：存放系统库文件、内核模块及设备驱动等。iOS中此目录为空。
+·/mnt：“mount”的简写，存放临时的文件系统挂载点。iOS中此目录为空。
+·/private：存放两个目录，分别是/private/etc和/private/var。
+·/tmp：临时目录。在iOS中，/tmp是一个符号链接，实际指向/private/var/tmp。
+·/usr：包含了大多数用户工具和程序。/usr/bin包含那些/bin和/sbin中未出现的基础功能，如nm、killall等；/usr/include包含所有的标准C头文件；/usr/lib存放库文件。
+·/var：“variable”的简写，存放一些经常更改的文件，比如日志、用户数据、临时文件等。其中/var/mobile和/var/root分别存放了mobile用户和root用户的文件，是重点关注的目录。</code></pre><p>上述目录中的内容多用于系统底层，逆向难度较大，作为初学者，暂时不用在其中投入太多精力。建议初学者从学和练的角度出发，循序渐进，由易到难，先从熟悉的内容开刀，这样效率更高。</p>
+<p>作为iOS开发者，日常操作所对应的功能模块大多来自iOS的独有目录，如下所示。</p>
+<pre><code>·/Applications：存放所有的系统App和来自于Cydia的App，不包括StoreApp。
+·/Developer：如果一台设备连接Xcode后被指定为调试用机（如图2-4所示），Xcode就会在iOS中生成这个目录，其中会含有一些调试需要的工具和数据。
+·/Library：存放一些提供系统支持的数据。其中/Library/MobileSubstrate下存放了所有基于CydiaSubstrate（原名MobileSubstrate）的插件。
+·/System/Library：iOS文件系统中最重要的目录之一，存放大量系统组件，其目录结构如图2-7所示。</code></pre><p>在逆向工程的初学阶段，需要重点关注<code>·/System/Library</code></p>
+<h3 id="1-2-iOS文件权限简介"><a href="#1-2-iOS文件权限简介" class="headerlink" title="1.2 iOS文件权限简介"></a>1.2 iOS文件权限简介</h3><p>iOS是一个多用户操作系统。“用户”是一个抽象的概念，代表对操作系统的所有权和使用权；“组”使用户的一种组织方式，一个组可以包含多个用户，一个用户也可以属于多个组。</p>
+<p>iOS中的每一个文件都有一个属主用户和一个属主组，每个文件都有一系列的权限。iOS用3位（bit）来表示文件的权限，iOS用3位（bit）来表示文件的权限，从高位到低位分别是r（read）权限、w（write）权限，以及x（execute）权限。文件与用户的关系存在以下三种可能性：</p>
+<pre><code>* 此用户是属主用户；
+* 此用户不是属主用户，但在属主组里；
+* 此用户既不是属主用户，又不在属主组里。</code></pre><p>所以需要用3*3位来表示一个文件的权限，如果某一位为1，则这一位代表的权限生效，否则无效。例如，111101101代表rwxr-xr-x，即该文件的属主用户拥有r、w、x权限，而属主组和其他所有人只具有r和x权限；同时，二进制的111101101转换成十六进制是755，也是一种常见的权限表示法。</p>
+<h2 id="2-iOS二进制文件类型"><a href="#2-iOS二进制文件类型" class="headerlink" title="2. iOS二进制文件类型"></a>2. iOS二进制文件类型</h2><p>iOS逆向初学阶段，我们目标是是Application、Dynamic Library（简称dylib）和Daemon这三类二进制文件，对它们的了解越深入，逆向工程就会越顺利。</p>
+<h3 id="2-1-Application"><a href="#2-1-Application" class="headerlink" title="2.1 Application"></a>2.1 Application</h3><h4 id="2-1-1-bundle"><a href="#2-1-1-bundle" class="headerlink" title="2.1.1 bundle"></a>2.1.1 bundle</h4><p>bundle的概念来源于NeXTSTEP,它不是一个文件，而是一个按照某种标准来组织的一个目录，其中包含了二进制文件以及运行所需的资源。</p>
+<p>普通APP中的framework是以bundle形式存在的；越狱iOS中常见的PerferenceBundle本质也是bundle。Framework也是bundle，但framework的bundle中存放的是一个dylib，而不是可执行文件。</p>
+<h4 id="2-1-2-App目录结构"><a href="#2-1-2-App目录结构" class="headerlink" title="2.1.2 App目录结构"></a>2.1.2 App目录结构</h4><ol>
+<li><p><strong>Info.plist</strong></p>
+<p> 记录APP基本信息</p>
+</li>
+<li><p><strong>可执行文件</strong></p>
+</li>
+<li><p><strong>Lproj</strong></p>
+<p> lproj目录下存放的是各种本地化的字符串(.strings)</p>
+</li>
+</ol>
+<h4 id="2-1-3-系统App-VS-StoreApp"><a href="#2-1-3-系统App-VS-StoreApp" class="headerlink" title="2.1.3 系统App VS.StoreApp"></a>2.1.3 系统App VS.StoreApp</h4><ol>
+<li>目录结构</li>
+<li>安装包格式与权限</li>
+<li>沙盒（sandbox）</li>
+</ol>
+<h3 id="2-2-Dynamic-Library"><a href="#2-2-Dynamic-Library" class="headerlink" title="2.2 Dynamic Library"></a>2.2 Dynamic Library</h3><h3 id="2-3-Daemon"><a href="#2-3-Daemon" class="headerlink" title="2.3 Daemon"></a>2.3 Daemon</h3>
+      
+    </div>
+    <div class="article-footer">
+      <br/>
+<br/>
+<br/>
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文作者：</strong>
+      <a href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/" title="No.2 越狱iOS平台简介" target="_blank" rel="external">大兵</a>
+    </li>
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/" title="No.2 越狱iOS平台简介" target="_blank" rel="external">https://xujiebing.github.io/2019/10/17/No-2-越狱iOS平台简介/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="../../23/No-3-OSX工具集/" title="No.3 OSX工具集"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="../Mac Launchpad(启动台)图标大小调整/" title="Mac Launchpad(启动台)图标大小调整"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="../../../../images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="../../../../images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xujiebing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="../../../../atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2019 大兵
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="../../../../js/plugin.min.js"></script>
+<script src="../../../../js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
+
+
+
+
+
+</body>
+</html>

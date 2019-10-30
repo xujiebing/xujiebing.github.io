@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>App启动速度优化与监控 | 大兵</title>
+  <meta name="description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
+<meta name="keywords" content="Objective-C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="App启动速度优化与监控">
+<meta property="og:url" content="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/index.html">
+<meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-13T14:45:29.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="App启动速度优化与监控">
+<meta name="twitter:description" content="App启动App启动类型 冷启动 冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。  热启动 热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。   App启动三个阶段 main() 函数执行前； 在 main() 函数执行前">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="大兵的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+  
+  
+  
+    <link href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.css" rel="stylesheet">
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/xujiebing" target="_blank">
+          <img class="img-circle img-rotate" src="../../../../images/avatar.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">大兵的博客</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">好记性不如烂笔头</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 杭州·中国</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="../../../../.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="../../../../archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="../../../../categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="../../../../tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="../../../../repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="../../../../books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="../../../../links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="../../../../about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xujiebing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="../../../../atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.25px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/10/">十月 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/07/">七月 2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/06/">六月 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/iOS/">iOS</a>
+              </p>
+              <p class="item-title">
+                <a href="../../../10/30/组件化生命周期管理/" class="title">组件化生命周期管理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-30T03:50:41.000Z" itemprop="datePublished">2019-10-30</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/开发工具/">开发工具</a>
+              </p>
+              <p class="item-title">
+                <a href="../../../10/24/class-dump安装/" class="title">class-dump安装</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-24T13:35:40.000Z" itemprop="datePublished">2019-10-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
+              </p>
+              <p class="item-title">
+                <a href="../../../10/23/No-3-OSX工具集/" class="title">No.3 OSX工具集</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-23T15:40:29.000Z" itemprop="datePublished">2019-10-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/逆向工程/">逆向工程</a>
+              </p>
+              <p class="item-title">
+                <a href="../../../10/17/No-2-越狱iOS平台简介/" class="title">No.2 越狱iOS平台简介</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-17T15:07:55.000Z" itemprop="datePublished">2019-10-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="../../../../categories/Mac相关/">Mac相关</a>
+              </p>
+              <p class="item-title">
+                <a href="../../../10/17/Mac Launchpad(启动台)图标大小调整/" class="title">Mac Launchpad(启动台)图标大小调整</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-10-17T10:12:13.000Z" itemprop="datePublished">2019-10-17</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动"><span class="toc-number">1.</span> <span class="toc-text">App启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动类型"><span class="toc-number">1.1.</span> <span class="toc-text">App启动类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#App启动三个阶段"><span class="toc-number">1.2.</span> <span class="toc-text">App启动三个阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看App启动耗时"><span class="toc-number">2.</span> <span class="toc-text">查看App启动耗时</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看main-调用前花费的总时间"><span class="toc-number">2.1.</span> <span class="toc-text">查看main()调用前花费的总时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看加载了多少动态库"><span class="toc-number">2.2.</span> <span class="toc-text">查看加载了多少动态库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看Main函数启动后的耗时"><span class="toc-number">2.3.</span> <span class="toc-text">查看Main函数启动后的耗时</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App启动速度优化"><span class="toc-number">3.</span> <span class="toc-text">App启动速度优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能级别的启动优化"><span class="toc-number">3.1.</span> <span class="toc-text">功能级别的启动优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法级别的启动优化"><span class="toc-number">3.2.</span> <span class="toc-text">方法级别的启动优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#优化对资源的操作"><span class="toc-number">3.2.1.</span> <span class="toc-text">优化对资源的操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对App启动方法耗时进行监控"><span class="toc-number">3.2.2.</span> <span class="toc-text">对App启动方法耗时进行监控</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何做一个方法级别启动耗时检查工具来辅助分析和监控？"><span class="toc-number">4.</span> <span class="toc-text">如何做一个方法级别启动耗时检查工具来辅助分析和监控？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#欢迎各位大佬指教"><span class="toc-number">5.</span> <span class="toc-text">欢迎各位大佬指教</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-App启动速度优化与监控" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      App启动速度优化与监控
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="" class="article-date">
+	  <time datetime="2019-06-26T12:00:46.000Z" itemprop="datePublished">2019-06-26</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="../../../../tags/Objective-C/">Objective-C</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.9k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="App启动"><a href="#App启动" class="headerlink" title="App启动"></a>App启动</h2><h3 id="App启动类型"><a href="#App启动类型" class="headerlink" title="App启动类型"></a>App启动类型</h3><ul>
+<li><p>冷启动</p>
+<p>冷启动是指， App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。</p>
+</li>
+<li><p>热启动</p>
+<p>热启动是指 ，App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。</p>
+</li>
+</ul>
+<h3 id="App启动三个阶段"><a href="#App启动三个阶段" class="headerlink" title="App启动三个阶段"></a>App启动三个阶段</h3><ul>
+<li><p>main() 函数执行前；</p>
+<p>在 main() 函数执行前，系统主要会做下面几件事情：</p>
+<ul>
+<li>加载可执行文件（App 的.o 文件的集合）；</li>
+<li>加载动态链接库，进行 rebase 指针调整和 bind 符号绑定；</li>
+<li>Objc 运行时的初始处理，包括 Objc 相关类的注册、category 注册、selector 唯一性检查等；</li>
+<li>初始化，包括了执行 +load() 方法、attribute((constructor)) 修饰的函数的调用、创建 C++ 静态全局变量。</li>
+</ul>
+<p>在该阶段可以做一些事情来优化App的启动速度：</p>
+<ul>
+<li>减少动态库加载。每个库本身都有依赖关系，苹果公司建议使用更少的动态库，并且建议在使用动态库的数量较多时，尽量将多个动态库进行合并。数量上，苹果公司最多可以支持 6 个非系统动态库合并为一个。</li>
+<li>减少加载启动后不会去使用的类或者方法。</li>
+<li>+load() 方法里的内容可以放到首屏渲染完成后再执行，或使用 +initialize() 方法替换掉。因为，在一个+load() 方法里，进行运行时方法替换操作会带来 4 毫秒的消耗。不要小看这 4 毫秒，积少成多，执行 +load() 方法对启动速度的影响会越来越大。</li>
+<li>控制 C++ 全局变量的数量。</li>
+</ul>
+</li>
+<li><p>main() 函数执行后；</p>
+<p>main() 函数执行后的阶段，指的是从 main() 函数执行开始，到 appDelegate 的 didFinishLaunchingWithOptions方法里首屏渲染相关方法执行完成。</p>
+<p>首页的业务代码都是要在这个阶段，也就是首屏渲染前执行的，主要包括：</p>
+<ul>
+<li>首屏初始化所需配置文件的读写操作；</li>
+<li>首屏列表大数据的读取；</li>
+<li>首屏渲染的大量计算等。</li>
+</ul>
+</li>
+<li><p>首屏渲染完成后。</p>
+<p>首屏渲染后的这个阶段，主要完成的是，非首屏其他业务服务模块的初始化、监听的注册、配置文件的读取等。从函数上来看，这个阶段指的就是截止到 didFinishLaunchingWithOptions 方法作用域内执行首屏渲染之后的所有方法执行完成。简单说的话，这个阶段就是从渲染完成时开始，到 didFinishLaunchingWithOptions 方法作用域结束时结束。</p>
+<p>这个阶段用户已经能够看到 App 的首页信息了，所以优化的优先级排在最后。但是，那些会卡住主线程的方法还是需要最优先处理的，不然还是会影响到用户后面的交互操作。</p>
+</li>
+</ul>
+<h2 id="查看App启动耗时"><a href="#查看App启动耗时" class="headerlink" title="查看App启动耗时"></a>查看App启动耗时</h2><h3 id="查看main-调用前花费的总时间"><a href="#查看main-调用前花费的总时间" class="headerlink" title="查看main()调用前花费的总时间"></a>查看main()调用前花费的总时间</h3><p>在<code>Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Arguments-&gt;Environment Variables-&gt;DYLD_PRINT_STATISTICS</code>设置为YES，就可以在控制台中查看main函数执行前总共花费的多长时间。</p>
+<h3 id="查看加载了多少动态库"><a href="#查看加载了多少动态库" class="headerlink" title="查看加载了多少动态库"></a>查看加载了多少动态库</h3><p>在<code>Product-&gt;Scheme-&gt;Edit Scheme-&gt;Run-&gt;Diagnostics-&gt;Logging-&gt;勾选Dynamic Library Loads</code>，就可以在控制台中查看本项目中加载的所有动态库（包括系统的和自己的）。</p>
+<h3 id="查看Main函数启动后的耗时"><a href="#查看Main函数启动后的耗时" class="headerlink" title="查看Main函数启动后的耗时"></a>查看Main函数启动后的耗时</h3><p>main函数调用后的耗时，可以使用一些工具来监控，有一种非常笨但是很实用的方法，就是通过打点，在didFinishLaunchingWithOptions开始前打一个点，在App显示完成第一个界面再打一个点，计算两个点之间的耗时，就可以知道main函数调用后到界面显示出来的耗时了，但是这样只能笼统的知道总的耗时，并不能准确的知道时间花在了哪里。</p>
+<p>如果想用这个打点法的话，推荐一个打点工具<a href="https://links.jianshu.com/go?to=%5Bhttps%3A%2F%2Fgithub.com%2Fbeiliao-mobile%2FBLStopwatch%5D(https%3A%2F%2Fgithub.com%2Fbeiliao-mobile%2FBLStopwatch)" target="_blank" rel="noopener">BLStopwatch</a></p>
+<h2 id="App启动速度优化"><a href="#App启动速度优化" class="headerlink" title="App启动速度优化"></a>App启动速度优化</h2><h3 id="功能级别的启动优化"><a href="#功能级别的启动优化" class="headerlink" title="功能级别的启动优化"></a>功能级别的启动优化</h3><p>功能级别的启动优化要从main()函数执行后这个阶段下手。思路：</p>
+<blockquote>
+<p>main() 函数开始执行后到首屏渲染完成前只处理首屏相关的业务，其他非首屏业务的初始化、监听注册、配置文件读取等都放到首屏渲染完成后去做。</p>
+</blockquote>
+<h3 id="方法级别的启动优化"><a href="#方法级别的启动优化" class="headerlink" title="方法级别的启动优化"></a>方法级别的启动优化</h3><h4 id="优化对资源的操作"><a href="#优化对资源的操作" class="headerlink" title="优化对资源的操作"></a>优化对资源的操作</h4><p>将主线程上线耗时方法滞后或者异步执行。通常情况下，耗时较长的方法主要发生在计算大量数据的情况下，具体的表现就是加载、编辑、存储图片和文件等资源。</p>
+<h4 id="对App启动方法耗时进行监控"><a href="#对App启动方法耗时进行监控" class="headerlink" title="对App启动方法耗时进行监控"></a>对App启动方法耗时进行监控</h4><ol>
+<li><p>定时抓取主线程上的方法调用栈，计算一段时间里各个方法耗时</p>
+<ul>
+<li><p>定时间隔设置得长了，会漏掉一些方法，从而导致检查出来的耗时不精确</p>
+</li>
+<li><p>而定时间隔设置得短了，抓取堆栈这个方法本身调用过多也会影响整体耗时，导致结果不准确</p>
+</li>
+</ul>
+<p>这个定时时间小于所有方法的执行时间(如：0.002秒)，那么基本就能监控到所有方法，但是这样计算出来的整体耗时不够准确。一般将这个时间间隔设置成0.01秒，这样虽然很多方法耗时不准确，但是整体耗时比较准确。所以这种方式虽然单个方法耗时不是非常准确，但是相对来说，整体耗时精度够用。如，Xcode自带TimeProfiler就是采用这种方式计算的。</p>
+</li>
+<li><p>对 objc_msgSend 方法进行 hook 来掌握所有方法的执行耗时。</p>
+<ul>
+<li>hook 方法的意思是，在原方法开始执行时换成执行其他你指定的方法，或者在原有方法执行前后执行你指定的方法，来达到掌握和改变指定方法的目的</li>
+<li>hook objc_msgSend 这种方式的优点是非常精确，而缺点是只能针对 Objective-C 的方法。当然，对于 c 方法和 block 也不是没有办法，你可以使用 libffi 的 ffi_call 来达成 hook，但缺点就是编写维护相关工具门槛高</li>
+</ul>
+<p>综上，如果对于检查结果精准度要求高的话，我比较推荐你使用 hook objc_msgSend 方式来检查启动方法的执行耗时。</p>
+</li>
+</ol>
+<h2 id="如何做一个方法级别启动耗时检查工具来辅助分析和监控？"><a href="#如何做一个方法级别启动耗时检查工具来辅助分析和监控？" class="headerlink" title="如何做一个方法级别启动耗时检查工具来辅助分析和监控？"></a>如何做一个方法级别启动耗时检查工具来辅助分析和监控？</h2><p>根据TimeProfiler原理，实现了一个计算主线程上所有方法耗时的<a href="https://github.com/xujiebing/DBMonitorTime" target="_blank" rel="noopener">工具(点我)</a>，大致思路如下：</p>
+<ol>
+<li>通过定时器，每隔0.01s，获取一次主线程的函数堆栈，将函数名称、函数地址、函数耗时模型化为<code>TimeModel</code>，保存在<code>callStackDict</code>中，其中key为函数地址，value为TimeModel</li>
+<li>定时执行的回调中，每次都判断函数地址是否存在，如果已经存在此函数地址，就讲对应的TimeModel中的耗时增加0.01s；如果不存在此函数地址，就初始化一个TimeModel，并将时间设置为0.01s。</li>
+<li>当主界面显示完成之后，输出此<code>callStackDict</code>，即可查看主线程中每个方法的耗时</li>
+</ol>
+<blockquote>
+<h2 id="欢迎各位大佬指教"><a href="#欢迎各位大佬指教" class="headerlink" title="欢迎各位大佬指教"></a>欢迎各位大佬指教</h2></blockquote>
+
+      
+    </div>
+    <div class="article-footer">
+      <br/>
+<br/>
+<br/>
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文作者：</strong>
+      <a href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/" title="App启动速度优化与监控" target="_blank" rel="external">大兵</a>
+    </li>
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/" title="App启动速度优化与监控" target="_blank" rel="external">https://xujiebing.github.io/2019/06/26/App启动速度优化与监控/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="../../../07/03/ReactNative开发踩坑记录/" title="ReactNative开发踩坑记录"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="../../25/Cocoapods常用操作命令/" title="Cocoapods常用操作命令"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="../../../../images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="../../../../images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xujiebing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="../../../../atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2019 大兵
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="../../../../js/plugin.min.js"></script>
+<script src="../../../../js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
+
+
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.3.5/dist/jquery.fancybox.min.js"></script>
+  <script>
+  //利用 FancyBox 实现点击图片放大
+  $(document).ready(function() {
+    $('article img').not('[hidden]').not('.panel-body img').each(function() {
+      var $image = $(this);
+      var imageCaption = $image.attr('alt');
+      var $imageWrapLink = $image.parent('a');
+      if ($imageWrapLink.length < 1) {
+        var src = this.getAttribute('src');
+        var idx = src.lastIndexOf('?');
+        if (idx != -1) {
+          src = src.substring(0, idx);
+        }
+        $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+      }
+      $imageWrapLink.attr('data-fancybox', 'images');
+      if (imageCaption) {
+        $imageWrapLink.attr('data-caption', imageCaption);
+      }
+    });
+    $().fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+    });
+  });
+  </script>
+
+
+
+
+
+</body>
+</html>
