@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/</loc>
+    
+    <lastmod>2019-11-17T22:54:26.217Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/10/30/%E7%BB%84%E4%BB%B6%E5%8C%96%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/</loc>
     
     <lastmod>2019-10-30T07:22:59.319Z</lastmod>
@@ -191,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/repository/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/tags/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.298Z</lastmod>
@@ -205,14 +205,21 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/links/index.html</loc>
+    <loc>https://xujiebing.github.io/repository/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/categories/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.297Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/categories/index.html</loc>
+    <loc>https://xujiebing.github.io/links/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.297Z</lastmod>
     

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[App监听生命周期事件]]></title>
+    <url>%2F2019%2F11%2F18%2FApp%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>Objective-C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[组件化生命周期管理]]></title>
     <url>%2F2019%2F10%2F30%2F%E7%BB%84%E4%BB%B6%E5%8C%96%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86%2F</url>
     <content type="text"><![CDATA[组件化之生命周期管理组件化过程中，不同模块可能需要实现UIApplicationDelegate的代理方法。非组件化开发过程中可能就是直接在工程AppDelegate中处理不同业务功能的需求，但是在组件化之后，这么做明显是不合理的。 既然组件化了，业务逻辑应该是在各个组件中去处理，不应该跟主工程的业务代码耦合。那么如何实现将UIApplicationDelegate中的代理方法分发到各个组件中去实现呢？ 思路： hook UIApplication的setDelegate方法，将delegate设置成我们指定的实体类 在delegate中实现消息转发，将AppDelegate的方法转发到我们的目标实例中，也就是主工程的AppDelegate以及组件中的实现AppDelegate代理的实例 GitHub源码]]></content>

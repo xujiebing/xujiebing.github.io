@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-10-30T07:22:59.319Z</updated>
+  <updated>2019-11-17T22:54:26.217Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>App监听生命周期事件</title>
+    <link href="https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/"/>
+    <id>https://xujiebing.github.io/2019/11/18/App监听生命周期事件/</id>
+    <published>2019-11-17T22:52:31.000Z</published>
+    <updated>2019-11-17T22:54:26.217Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
+    
+  </entry>
   
   <entry>
     <title>组件化生命周期管理</title>
@@ -454,29 +472,6 @@
     
     
       <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ReactNative开发踩坑记录</title>
-    <link href="https://xujiebing.github.io/2019/07/03/ReactNative%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>https://xujiebing.github.io/2019/07/03/ReactNative开发踩坑记录/</id>
-    <published>2019-07-03T02:48:58.000Z</published>
-    <updated>2019-09-22T15:16:41.278Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Could-not-find-iPhone-XXX&quot;&gt;&lt;a href=&quot;#Could-not-find-iPhone-XXX&quot; class=&quot;headerlink&quot; title=&quot;Could not find iPhone XXX&quot;&gt;&lt;/a&gt;Could not f
-      
-    
-    </summary>
-    
-      <category term="ReactNative" scheme="https://xujiebing.github.io/categories/ReactNative/"/>
-    
-    
-      <category term="React" scheme="https://xujiebing.github.io/tags/React/"/>
     
   </entry>
   
