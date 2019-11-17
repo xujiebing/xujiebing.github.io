@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-11-17T22:54:26.217Z</updated>
+  <updated>2019-11-17T23:24:51.382Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -21,9 +21,14 @@
     <link href="https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/"/>
     <id>https://xujiebing.github.io/2019/11/18/App监听生命周期事件/</id>
     <published>2019-11-17T22:52:31.000Z</published>
-    <updated>2019-11-17T22:54:26.217Z</updated>
+    <updated>2019-11-17T23:24:51.382Z</updated>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;App监听生命周期事件&quot;&gt;&lt;a href=&quot;#App监听生命周期事件&quot; class=&quot;headerlink&quot; title=&quot;App监听生命周期事件&quot;&gt;&lt;/a&gt;App监听生命周期事件&lt;/h1&gt;&lt;p&gt;在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通
+      
     
     </summary>
     

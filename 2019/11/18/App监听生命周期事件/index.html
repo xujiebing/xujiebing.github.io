@@ -18,15 +18,18 @@
   
   
   <title>App监听生命周期事件 | 大兵</title>
-  <meta name="keywords" content="Objective-C">
+  <meta name="description" content="App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIA">
+<meta name="keywords" content="Objective-C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="App监听生命周期事件">
 <meta property="og:url" content="https://xujiebing.github.io/2019/11/18/App监听生命周期事件/index.html">
 <meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T22:54:26.217Z">
+<meta property="og:updated_time" content="2019-11-17T23:24:51.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App监听生命周期事件">
+<meta name="twitter:description" content="App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIA">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/11/18/App监听生命周期事件/index.html">
   
@@ -343,7 +346,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#App监听生命周期事件"><span class="toc-number">1.</span> <span class="toc-text">App监听生命周期事件</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -394,7 +397,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 232(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -404,7 +407,21 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <h1 id="App监听生命周期事件"><a href="#App监听生命周期事件" class="headerlink" title="App监听生命周期事件"></a>App监听生命周期事件</h1><p>在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。</p>
+<p><strong>实现三步曲：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.添加监听</span><br><span class="line">  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIApplicationDidFinishLaunchingNotification object:nil];</span><br><span class="line"></span><br><span class="line">2.定义接收函数</span><br><span class="line">  - (void)p_didFinishLaunching:(NSNotification *)obj &#123;</span><br><span class="line">    // TODO:处理业务代码</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">3.销毁监听</span><br><span class="line">  - (void)dealloc &#123;</span><br><span class="line">    [NSNotificationCenter.defaultCenter removeObserver:self];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看出，整个过程虽然比较简单，但是步骤较多，每次监听都这么写比较浪费时间。于是本篇文章的主角诞生。</p>
+<p>引入<code>AJAppEvent</code>库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod 'AJAppEvent'</span><br></pre></td></tr></table></figure>
+
+<p><strong>实现代码：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[AJAppEvent didFinishLaunching:^(AJAppEventModel * _Nonnull eventModel) &#123;</span><br><span class="line">        NSLog(@&quot;%@&quot;, eventModel.name);</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
+
+<p>一步搞定，是不是效率高很多。</p>
+<p><strong>实现思路：</strong></p>
+<p><a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">AJAppEvent</a>库实现并非有什么难点，只是将简单重复的事情集中统一处理，提供开发效率。源码请点击<a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">链接</a></p>
+
       
     </div>
     <div class="article-footer">

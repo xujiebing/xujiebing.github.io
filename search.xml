@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[App监听生命周期事件]]></title>
     <url>%2F2019%2F11%2F18%2FApp%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听 [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIApplicationDidFinishLaunchingNotification object:nil];2.定义接收函数 - (void)p_didFinishLaunching:(NSNotification *)obj &#123; // TODO:处理业务代码&#125;3.销毁监听 - (void)dealloc &#123; [NSNotificationCenter.defaultCenter removeObserver:self];&#125; 可以看出，整个过程虽然比较简单，但是步骤较多，每次监听都这么写比较浪费时间。于是本篇文章的主角诞生。 引入AJAppEvent库 1pod 'AJAppEvent' 实现代码： 123[AJAppEvent didFinishLaunching:^(AJAppEventModel * _Nonnull eventModel) &#123; NSLog(@&quot;%@&quot;, eventModel.name); &#125;]; 一步搞定，是不是效率高很多。 实现思路： AJAppEvent库实现并非有什么难点，只是将简单重复的事情集中统一处理，提供开发效率。源码请点击链接]]></content>
       <categories>
         <category>iOS</category>
       </categories>
