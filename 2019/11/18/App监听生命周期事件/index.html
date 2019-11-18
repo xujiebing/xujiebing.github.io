@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="大兵的博客">
 <meta property="og:description" content="App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIA">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T23:24:51.382Z">
+<meta property="og:updated_time" content="2019-11-18T23:08:26.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App监听生命周期事件">
 <meta name="twitter:description" content="App监听生命周期事件在App开发过程中，我们经常需要监听App的生命周期。一般情况下是通过注册监听，接收系统的通知，处理通知结果。 实现三步曲： 1234567891011121.添加监听  [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(p_didFinishLaunching:) name:UIA">
@@ -397,7 +397,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 232(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 433(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -420,7 +420,10 @@
 
 <p>一步搞定，是不是效率高很多。</p>
 <p><strong>实现思路：</strong></p>
-<p><a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">AJAppEvent</a>库实现并非有什么难点，只是将简单重复的事情集中统一处理，提供开发效率。源码请点击<a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">链接</a></p>
+<p><a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">AJAppEvent</a>库实现并非有什么难点，只是将简单重复的事情集中统一处理，提高开发效率。源码请点击<a href="https://github.com/xujiebing/AJAppEvent" target="_blank" rel="noopener">链接</a></p>
+<p><code>AJAppEvent</code>中支持一下通知类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// 应用程序进入后台</span><br><span class="line">UIApplicationDidEnterBackgroundNotification</span><br><span class="line">// 应用程序将要进入前台</span><br><span class="line">UIApplicationWillEnterForegroundNotification</span><br><span class="line">// 应用程序完成启动</span><br><span class="line">UIApplicationDidFinishLaunchingNotification</span><br><span class="line">// 应用程序由挂起变的活跃</span><br><span class="line">UIApplicationDidBecomeActiveNotification</span><br><span class="line">// 应用程序挂起(有电话进来或者锁屏)</span><br><span class="line">UIApplicationWillResignActiveNotification</span><br><span class="line">// 应用程序终止(后台杀死、手机关机等)</span><br><span class="line">UIApplicationWillTerminateNotification</span><br><span class="line">// 应用程序收到内存警告</span><br><span class="line">UIApplicationDidReceiveMemoryWarningNotification</span><br><span class="line">// 当有重大时间改变(凌晨0点，设备时间被修改，时区改变等)</span><br><span class="line">UIApplicationSignificantTimeChangeNotification</span><br><span class="line">// 设备方向将要改变</span><br><span class="line">UIApplicationWillChangeStatusBarOrientationNotification</span><br><span class="line">// 设备方向改变</span><br><span class="line">UIApplicationDidChangeStatusBarOrientationNotification</span><br><span class="line">// 设备状态栏frame将要改变</span><br><span class="line">UIApplicationWillChangeStatusBarFrameNotification</span><br><span class="line">// 设备状态栏frame改变</span><br><span class="line">UIApplicationDidChangeStatusBarFrameNotification</span><br><span class="line">// 应用程序在后台下载内容的状态发生变化</span><br><span class="line">UIApplicationBackgroundRefreshStatusDidChangeNotification</span><br><span class="line">// 本地受保护的文件被锁定,无法访问</span><br><span class="line">UIApplicationProtectedDataWillBecomeUnavailable</span><br><span class="line">// 本地受保护的文件可用了</span><br><span class="line">UIApplicationProtectedDataDidBecomeAvailable</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
