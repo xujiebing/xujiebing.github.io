@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-11-18T23:08:26.695Z</updated>
+  <updated>2019-11-26T23:26:05.420Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>禁用Apple Pay</title>
+    <link href="https://xujiebing.github.io/2019/11/27/%E7%A6%81%E7%94%A8Apple-Pay/"/>
+    <id>https://xujiebing.github.io/2019/11/27/禁用Apple-Pay/</id>
+    <published>2019-11-26T23:26:05.000Z</published>
+    <updated>2019-11-26T23:26:05.420Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>App监听生命周期事件</title>
@@ -444,31 +458,6 @@
       
         &lt;p&gt;Auto Layout ，是苹果公司提供的一个基于约束布局，动态计算视图大小和位置的库，并且已经集成到了 Xcode 开发环境里。&lt;/p&gt;
 &lt;p&gt;在引入 Auto Layout 这种自动布局方式之前，iOS 开发都是采用手动布局的方式。而手动布局的方式，原始落后、界面开发维
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS申请后台活跃时间</title>
-    <link href="https://xujiebing.github.io/2019/07/05/iOS%E7%94%B3%E8%AF%B7%E5%90%8E%E5%8F%B0%E6%B4%BB%E8%B7%83%E6%97%B6%E9%97%B4/"/>
-    <id>https://xujiebing.github.io/2019/07/05/iOS申请后台活跃时间/</id>
-    <published>2019-07-04T22:48:15.000Z</published>
-    <updated>2019-10-13T14:47:56.959Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;由于苹果的后台机制，当我们按下home键的时候，所有线程包括主线程的任务都会被挂起，一些资源比如socket也会被系统回收，会导致很多问题，比如一个很重要的资源中断下载，或者定时器方法被暂停等等。&lt;/p&gt;
-&lt;p&gt;苹果在4.0以后提供了一种申请后台时间的机制：&lt;/p&gt;
-&lt;fi
       
     
     </summary>

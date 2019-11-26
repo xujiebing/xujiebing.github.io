@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/11/27/%E7%A6%81%E7%94%A8Apple-Pay/</loc>
+    
+    <lastmod>2019-11-26T23:26:05.420Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/</loc>
     
     <lastmod>2019-11-18T23:08:26.695Z</lastmod>
@@ -198,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/repository/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.298Z</lastmod>
@@ -212,9 +212,9 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/categories/index.html</loc>
+    <loc>https://xujiebing.github.io/tags/index.html</loc>
     
-    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    <lastmod>2019-09-22T15:16:41.298Z</lastmod>
     
   </url>
   
@@ -226,14 +226,21 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/books/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/books/index.html</loc>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
