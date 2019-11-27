@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-11-26T23:26:05.420Z</updated>
+  <updated>2019-11-27T02:17:29.163Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -21,12 +21,21 @@
     <link href="https://xujiebing.github.io/2019/11/27/%E7%A6%81%E7%94%A8Apple-Pay/"/>
     <id>https://xujiebing.github.io/2019/11/27/禁用Apple-Pay/</id>
     <published>2019-11-26T23:26:05.000Z</published>
-    <updated>2019-11-26T23:26:05.420Z</updated>
+    <updated>2019-11-27T02:17:29.163Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;禁用Apple-Pay&quot;&gt;&lt;a href=&quot;#禁用Apple-Pay&quot; class=&quot;headerlink&quot; title=&quot;禁用Apple Pay&quot;&gt;&lt;/a&gt;禁用Apple Pay&lt;/h1&gt;&lt;p&gt;本篇文章主要介绍如何屏蔽iOS手机弹出Apple Pay页面。&lt;/p
+      
+    
     </summary>
     
+      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
+    
+    
+      <category term="Objctive-C" scheme="https://xujiebing.github.io/tags/Objctive-C/"/>
     
   </entry>
   
@@ -35,7 +44,7 @@
     <link href="https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/"/>
     <id>https://xujiebing.github.io/2019/11/18/App监听生命周期事件/</id>
     <published>2019-11-17T22:52:31.000Z</published>
-    <updated>2019-11-18T23:08:26.695Z</updated>
+    <updated>2019-11-27T14:44:21.323Z</updated>
     
     <summary type="html">
     

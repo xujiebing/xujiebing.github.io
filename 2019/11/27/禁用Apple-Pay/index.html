@@ -18,14 +18,18 @@
   
   
   <title>禁用Apple Pay | 大兵</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="禁用Apple Pay本篇文章主要介绍如何屏蔽iOS手机弹出Apple Pay页面。 业务场景当iPhone打开Apple Pay功能，并靠近具备NFC识别的设备时，iPhone的Apple Pay会被自动唤起，在屏幕上弹出一个Apple Pay页面。大部分的业务场景下并没有什么不妥，但是今天我们这个业务场景下，用户体验会非常糟糕。 某一天你去杭州、上海或者其他能够使用二维码进出站的城市坐地铁，当">
+<meta name="keywords" content="Objctive-C">
+<meta property="og:type" content="article">
 <meta property="og:title" content="禁用Apple Pay">
 <meta property="og:url" content="https://xujiebing.github.io/2019/11/27/禁用Apple-Pay/index.html">
 <meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="禁用Apple Pay本篇文章主要介绍如何屏蔽iOS手机弹出Apple Pay页面。 业务场景当iPhone打开Apple Pay功能，并靠近具备NFC识别的设备时，iPhone的Apple Pay会被自动唤起，在屏幕上弹出一个Apple Pay页面。大部分的业务场景下并没有什么不妥，但是今天我们这个业务场景下，用户体验会非常糟糕。 某一天你去杭州、上海或者其他能够使用二维码进出站的城市坐地铁，当">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-26T23:26:05.420Z">
+<meta property="og:updated_time" content="2019-11-27T02:17:29.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禁用Apple Pay">
+<meta name="twitter:description" content="禁用Apple Pay本篇文章主要介绍如何屏蔽iOS手机弹出Apple Pay页面。 业务场景当iPhone打开Apple Pay功能，并靠近具备NFC识别的设备时，iPhone的Apple Pay会被自动唤起，在屏幕上弹出一个Apple Pay页面。大部分的业务场景下并没有什么不妥，但是今天我们这个业务场景下，用户体验会非常糟糕。 某一天你去杭州、上海或者其他能够使用二维码进出站的城市坐地铁，当">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/11/27/禁用Apple-Pay/index.html">
   
@@ -211,7 +215,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +225,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objctive-C/">Objctive-C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +235,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.25px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
+      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objctive-C/" style="font-size: 13px;">Objctive-C</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.25px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
     </div>
   </div>
 
@@ -256,7 +260,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="../../../../categories/iOS/">iOS</a>
               </p>
               <p class="item-title">
                 <a href="" class="title">禁用Apple Pay</a>
@@ -342,7 +346,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#禁用Apple-Pay"><span class="toc-number">1.</span> <span class="toc-text">禁用Apple Pay</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#业务场景"><span class="toc-number">1.1.</span> <span class="toc-text">业务场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#需求分析"><span class="toc-number">1.2.</span> <span class="toc-text">需求分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现思路"><span class="toc-number">1.3.</span> <span class="toc-text">实现思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源码实现"><span class="toc-number">1.4.</span> <span class="toc-text">源码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码示例"><span class="toc-number">1.5.</span> <span class="toc-text">代码示例</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -369,7 +373,17 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="../../../../categories/iOS/">iOS</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="../../../../tags/Objctive-C/">Objctive-C</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -383,7 +397,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 433(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -393,7 +407,23 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <h1 id="禁用Apple-Pay"><a href="#禁用Apple-Pay" class="headerlink" title="禁用Apple Pay"></a>禁用Apple Pay</h1><p>本篇文章主要介绍如何屏蔽iOS手机弹出Apple Pay页面。</p>
+<h2 id="业务场景"><a href="#业务场景" class="headerlink" title="业务场景"></a>业务场景</h2><p>当iPhone打开Apple Pay功能，并靠近具备NFC识别的设备时，iPhone的Apple Pay会被自动唤起，在屏幕上弹出一个Apple Pay页面。大部分的业务场景下并没有什么不妥，但是今天我们这个业务场景下，用户体验会非常糟糕。</p>
+<p>某一天你去杭州、上海或者其他能够使用二维码进出站的城市坐地铁，当你把手机屏幕上的二维码对准闸机，准备迈开腿进站的时候，闸机没开，平移手机，希望闸机能尽快读到二维码，这样你就可以进站了。然而，这并没有什么卵用，闸机毫无反应。你拿起手机一看，我了个叉，一个Apple Pay页面遮挡在二维码页面上面，闸机根本识别不到二维码，能进站才是见鬼了。</p>
+<p>需求已经明确，我们就要考虑下怎么实现了。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>通过分析Apple Pay页面，以及查看Apple Pay相关知识，发现弹出的页面是一个<code>PKAddPassesViewController</code>,且一个iPhone同时只能弹出一个<code>PKAddPassesViewController</code>，也就是说，当iPhone的Apple Pay，即<code>PKAddPassesViewController</code>页面，被唤起之后，不能再唤起其他任何的<code>PKAddPassesViewController</code>页面。根据这个现象，分析出具体的实现思路。</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ol>
+<li>在需要禁用Apple Pay的页面弹出一个<code>PKAddPassesViewController</code>页面，然后将<code>hidden</code>属性设置为<code>NO</code></li>
+<li>结束</li>
+<li>就是这么简单粗暴</li>
+</ol>
+<h2 id="源码实现"><a href="#源码实现" class="headerlink" title="源码实现"></a>源码实现</h2><p><a href="https://github.com/xujiebing/DBInvalidApplePay" target="_blank" rel="noopener">DBInvalidApplePay</a></p>
+<p>已发布到Cocoapods，可直接：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'DBInvalidApplePay'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 屏蔽Apple Pay</span><br><span class="line">[DBInvalidApplePay dbInValidApplePay];</span><br><span class="line"></span><br><span class="line">// 取消屏蔽Apple Pay</span><br><span class="line">[DBInvalidApplePay dbValidApplePay];</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <div class="article-footer">
