@@ -40,9 +40,13 @@ pod 'AJAppEvent'
 **实现代码：**
 
 ```objective-c
-[AJAppEvent didFinishLaunching:^(AJAppEventModel * _Nonnull eventModel) {
+// 添加监听
+[self ajAddObserverName:name block:^(AJAppEventModel * _Nonnull eventModel) {
         NSLog(@"%@", eventModel.name);
     }];
+
+// 发送通知
+[self ajPostNotificationName:name object:nil userInfo:nil];
 ```
 
 一步搞定，是不是效率高很多。
