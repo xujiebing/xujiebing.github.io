@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xujiebing.github.io/2019/12/24/Xcode%E4%B8%AD%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF/</loc>
+    
+    <lastmod>2019-12-24T15:37:32.398Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xujiebing.github.io/2019/11/18/App%E7%9B%91%E5%90%AC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6/</loc>
     
     <lastmod>2019-11-27T14:44:21.323Z</lastmod>
@@ -219,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/links/index.html</loc>
-    
-    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xujiebing.github.io/categories/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.297Z</lastmod>
@@ -233,14 +233,21 @@
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/about/index.html</loc>
+    <loc>https://xujiebing.github.io/links/index.html</loc>
+    
+    <lastmod>2019-09-22T15:16:41.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xujiebing.github.io/books/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xujiebing.github.io/books/index.html</loc>
+    <loc>https://xujiebing.github.io/about/index.html</loc>
     
     <lastmod>2019-09-22T15:16:41.296Z</lastmod>
     

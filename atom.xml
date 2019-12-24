@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xujiebing.github.io/"/>
-  <updated>2019-11-27T02:17:29.163Z</updated>
+  <updated>2019-12-24T15:37:32.398Z</updated>
   <id>https://xujiebing.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Xcode中打开终端</title>
+    <link href="https://xujiebing.github.io/2019/12/24/Xcode%E4%B8%AD%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF/"/>
+    <id>https://xujiebing.github.io/2019/12/24/Xcode中打开终端/</id>
+    <published>2019-12-24T15:37:32.000Z</published>
+    <updated>2019-12-24T15:37:32.398Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>禁用Apple Pay</title>
@@ -443,30 +457,6 @@
       
         &lt;p&gt;简单架构向大型项目架构演进中，解决三个问题，即：模块粒度应该如何划分？如何分层？多团队如何协作？而在这其中，模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。&lt;/p&gt;
 &lt;h1 id=&quot;模块粒度应该怎么划分&quot;&gt;&lt;a 
-      
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://xujiebing.github.io/categories/iOS/"/>
-    
-    
-      <category term="Objective-C" scheme="https://xujiebing.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Auto Layout自动布局</title>
-    <link href="https://xujiebing.github.io/2019/07/10/Auto-Layout%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80/"/>
-    <id>https://xujiebing.github.io/2019/07/10/Auto-Layout自动布局/</id>
-    <published>2019-07-10T12:04:21.000Z</published>
-    <updated>2019-10-13T14:45:35.172Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Auto Layout ，是苹果公司提供的一个基于约束布局，动态计算视图大小和位置的库，并且已经集成到了 Xcode 开发环境里。&lt;/p&gt;
-&lt;p&gt;在引入 Auto Layout 这种自动布局方式之前，iOS 开发都是采用手动布局的方式。而手动布局的方式，原始落后、界面开发维
       
     
     </summary>
