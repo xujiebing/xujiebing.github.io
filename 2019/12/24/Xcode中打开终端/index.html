@@ -18,14 +18,20 @@
   
   
   <title>Xcode中打开终端 | 大兵</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="本篇主要讲实现Xcode中直接打开终端，并定位到当前工程文件目录。 1. 新建.sh文件123456#!/bin/shif [ -n &quot;$XcodeProjectPath&quot; ]; then	open -a Terminal &quot;$XcodeProjectPath&quot;/..else	open -a Terminal &quot;$XcodeWorkspacePath&quot;/..fi  2.配置Xcode 打开Xcod">
+<meta name="keywords" content="Xcode">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Xcode中打开终端">
 <meta property="og:url" content="https://xujiebing.github.io/2019/12/24/Xcode中打开终端/index.html">
 <meta property="og:site_name" content="大兵的博客">
+<meta property="og:description" content="本篇主要讲实现Xcode中直接打开终端，并定位到当前工程文件目录。 1. 新建.sh文件123456#!/bin/shif [ -n &quot;$XcodeProjectPath&quot; ]; then	open -a Terminal &quot;$XcodeProjectPath&quot;/..else	open -a Terminal &quot;$XcodeWorkspacePath&quot;/..fi  2.配置Xcode 打开Xcod">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-24T15:37:32.398Z">
+<meta property="og:image" content="https://xujiebing.github.io/2019/12/24/Xcode中打开终端/1.png">
+<meta property="og:updated_time" content="2019-12-24T16:01:35.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode中打开终端">
+<meta name="twitter:description" content="本篇主要讲实现Xcode中直接打开终端，并定位到当前工程文件目录。 1. 新建.sh文件123456#!/bin/shif [ -n &quot;$XcodeProjectPath&quot; ]; then	open -a Terminal &quot;$XcodeProjectPath&quot;/..else	open -a Terminal &quot;$XcodeWorkspacePath&quot;/..fi  2.配置Xcode 打开Xcod">
+<meta name="twitter:image" content="https://xujiebing.github.io/2019/12/24/Xcode中打开终端/1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="https://xujiebing.github.io/2019/12/24/Xcode中打开终端/index.html">
   
@@ -211,7 +217,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/Mac相关/">Mac相关</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/ReactNative/">ReactNative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/iOS/">iOS</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/开发工具/">开发工具</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/逆向工程/">逆向工程</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +227,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objctive-C/">Objctive-C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Mac/">Mac</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objctive-C/">Objctive-C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Objective-C/">Objective-C</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/UI/">UI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Xcode/">Xcode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/组件化/">组件化</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +237,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objctive-C/" style="font-size: 13px;">Objctive-C</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.25px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
+      <a href="../../../../tags/CocoaPods/" style="font-size: 13.25px;">CocoaPods</a> <a href="../../../../tags/Mac/" style="font-size: 13.75px;">Mac</a> <a href="../../../../tags/Objctive-C/" style="font-size: 13px;">Objctive-C</a> <a href="../../../../tags/Objective-C/" style="font-size: 14px;">Objective-C</a> <a href="../../../../tags/React/" style="font-size: 13px;">React</a> <a href="../../../../tags/UI/" style="font-size: 13px;">UI</a> <a href="../../../../tags/Xcode/" style="font-size: 13.5px;">Xcode</a> <a href="../../../../tags/iOS/" style="font-size: 13.5px;">iOS</a> <a href="../../../../tags/算法/" style="font-size: 13.25px;">算法</a> <a href="../../../../tags/组件化/" style="font-size: 13px;">组件化</a>
     </div>
   </div>
 
@@ -256,7 +262,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="../../../../categories/开发工具/">开发工具</a>
               </p>
               <p class="item-title">
                 <a href="" class="title">Xcode中打开终端</a>
@@ -342,7 +348,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新建-sh文件"><span class="toc-number">1.</span> <span class="toc-text">1. 新建.sh文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置Xcode"><span class="toc-number">2.</span> <span class="toc-text">2.配置Xcode</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -369,7 +375,17 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="../../../../categories/开发工具/">开发工具</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="../../../../tags/Xcode/">Xcode</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -383,7 +399,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 150(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -393,7 +409,24 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>本篇主要讲实现Xcode中直接打开终端，并定位到当前工程文件目录。</p>
+<h3 id="1-新建-sh文件"><a href="#1-新建-sh文件" class="headerlink" title="1. 新建.sh文件"></a>1. 新建.sh文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line">if [ -n "$XcodeProjectPath" ]; then</span><br><span class="line">	open -a Terminal "$XcodeProjectPath"/..</span><br><span class="line">else</span><br><span class="line">	open -a Terminal "$XcodeWorkspacePath"/..</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置Xcode"><a href="#2-配置Xcode" class="headerlink" title="2.配置Xcode"></a>2.配置Xcode</h3><ol>
+<li>打开<code>Xcode</code>-&gt;<code>设置</code>-&gt;<code>Behaviors</code>，选择左下角“+”，添加自定义选项，如图所示</li>
+</ol>
+<p><img src="1.png" alt="1"></p>
+<ol start="2">
+<li>选择第一步中创建的.sh文件，若文件时灰色不可点击，可执行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 XXXX.sh</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>勾选run，否则脚本无法生效</li>
+<li>配置快捷键，上面截图中我配置的是<code>Command + T</code>,根据个人习惯配置</li>
+<li>配置完成，可以使用了</li>
+</ol>
+
       
     </div>
     <div class="article-footer">
@@ -533,7 +566,7 @@
 
     <div class="copyright">
     	
-        &copy; 2019 大兵
+        &copy; 2020 大兵
         
         <div class="publishby">
         	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
